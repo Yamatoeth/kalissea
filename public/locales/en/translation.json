@@ -1,0 +1,175 @@
+{
+  "header": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "label": "Digital Agency",
+    "titlePrefix": "We build websites that ",
+    "titleHighlight": "convert",
+    "description": "Web development, SEO, branding, and automation. Clear pricing. No surprises. Results that matter.",
+    "startProject": "Start a Project",
+    "viewPricing": "View Pricing",
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction",
+      "delivery": "Average Delivery",
+      "support": "Support Available"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "Our Expertise",
+    "items": {
+      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399" },
+      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From $999" },
+      "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo" },
+      "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo" },
+      "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote" },
+      "automation": { "title": "Automation & AI", "description": "Chatbots, workflows, and AI tools to scale your business.", "price": "Custom Quote" }
+    }
+  },
+  "features": {
+    "label": "What You Get",
+    "title": "Everything Included",
+    "categories": {
+        "design": { "title": "Design & Development", "features": ["Custom UI/UX design", "Mobile-first responsive layout", "Fast loading speeds", "Cross-browser compatibility", "Accessibility standards"] },
+        "setup": { "title": "Technical Setup", "features": ["SSL security certificate", "Domain configuration", "Professional hosting", "Analytics integration", "Performance optimization"] },
+        "seo": { "title": "SEO Foundation", "features": ["Meta tags optimization", "Sitemap generation", "Schema markup", "Google indexing", "Page speed optimization"] },
+        "support": { "title": "Support & Delivery", "features": ["Clear project timeline", "Regular progress updates", "30-day post-launch support", "Training documentation", "Source files included"] }
+    }
+  },
+  "process": {
+      "label": "How We Work",
+      "title": "Our Process",
+      "steps": {
+          "brief": { "title": "Brief", "description": "Tell us about your project, goals, and requirements." },
+          "design": { "title": "Design", "description": "We create mockups and designs for your approval." },
+          "development": { "title": "Development", "description": "We build your website with clean, optimized code." },
+          "delivery": { "title": "Delivery", "description": "Launch your site with full training and documentation." },
+          "followup": { "title": "Follow-up", "description": "30 days of support and ongoing maintenance options." }
+      }
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "title": "Selected Projects",
+    "categories": {
+      "restaurant": "Restaurant",
+      "hotel": "Hotel",
+      "company": "Company",
+      "personal": "Personal",
+      "onlineshop": "Online Shop",
+      "business": "Business / Corporate"
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Transparent Pricing",
+    "paymentTerms": "Payment terms: 50% at order — 50% on delivery",
+    "common": {
+      "popular": "POPULAR",
+      "included": "Included:",
+      "notIncluded": "Not included:",
+      "delivery": "Delivery: {{days}}",
+      "getStarted": "Get Started"
+    },
+    "plans": {
+      "essential": { "name": "Landing Page", "price": "$399", "features": ["Premium homepage design", "Services & About sections", "Contact form integration", "Social media links", "Fully responsive design", "Basic SEO setup"], "excluded": ["E-commerce features", "Advanced SEO"] },
+      "popular": { "name": "Business Website", "price": "$699", "features": ["Up to 5 custom pages", "Advanced animations", "CMS for easy updates", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
+      "ultimate": { "name": "E-Commerce Store", "price": "From $999", "features": ["Complete online store", "Product management", "Stripe/PayPal payments", "Inventory management", "Order notifications", "Sales dashboard", "Fully responsive design", "Advanced SEO setup"], "excluded": [] }
+    }
+  },
+  "seoPricing": {
+    "label": "SEO Services",
+    "title": "Search Engine Optimization",
+    "annualPlansTitle": "Annual Plans",
+    "common": {
+      "getStarted": "Get Started",
+      "viewDetails": "View Details"
+    },
+    "monthlyPlans": {
+      "local": { "name": "SEO Local", "tier": "Local", "features": ["15 local keywords", "Google Business optimization", "Google Business posts", "1 optimized photo/month", "On-site optimization", "Monthly SEO report"] },
+      "boost": { "name": "SEO Boost", "tier": "Boost", "features": ["20-25 targeted keywords", "Advanced GB optimization", "1 SEO article/month", "Technical fixes", "Competitive analysis", "Detailed monthly report", "15 min follow-up call"] },
+      "pro": { "name": "SEO Pro", "tier": "Pro", "features": ["Quarterly SEO audit", "Up to 40 keywords", "2 SEO articles/month", "Continuous optimization", "2-3 backlinks/month", "Conversion tracking", "Monthly strategy meeting"] }
+    },
+    "annualPlans": {
+      "local": { "name": "Local Annual Plan", "tier": "Annual Local", "features": ["12-month local SEO package", "15 local keywords tracked", "Initial G. Business optimization", "12 G. Business posts (1/month)", "Continuous technical optimization", "4 quarterly reports", "1 complete year-end audit", "1 annual strategy call"] },
+      "national": { "name": "National Annual Plan", "tier": "Annual National", "features": ["National visibility (US/EU...)", "30-40 national keywords", "12 SEO articles/year (1/month)", "Regular netlinking", "Year-round technical optimization", "4 quarterly reports", "2 complete SEO audits", "2 strategic sessions (start & mid-year)"] }
+    }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "Client Success Stories",
+    "items": [
+      {
+        "quote": "We wanted something visually strong without being flashy. The site is premium, clean, and very well structured. Our brand finally looks as high-end online as it is in reality.",
+        "name": "Sarah M.",
+        "role": "Founder",
+        "company": "Luxury Mobility Company"
+      },
+      {
+        "quote": "What impressed us most is the clarity. Complex technology explained simply. The site helped us appear credible immediately to investors.",
+        "name": "James P.",
+        "role": "Product Director",
+        "company": "Tech Startup"
+      },
+      {
+        "quote": "We were looking for something very clean, very high-end. The site is elegant, fast, and most importantly, it generates qualified leads.",
+        "name": "Michael R.",
+        "role": "Director",
+        "company": "Prestige Real Estate Agency"
+      },
+      {
+        "quote": "The work on user experience is remarkable. The site tells a story, creates desire, and perfectly reflects our universe.",
+        "name": "Emily L.",
+        "role": "Marketing Manager",
+        "company": "Hotel Establishment"
+      },
+      {
+        "quote": "What I appreciated is the holistic vision. Not just a site or marketing, but a real business reflection.",
+        "name": "David K.",
+        "role": "Entrepreneur",
+        "company": "International Project"
+      },
+      {
+        "quote": "Our industry demands trust. The site design and content tone helped us appear credible, professional, and premium at the same time.",
+        "name": "Dr. Anna C.",
+        "role": "Clinical Director",
+        "company": "Wellness & Longevity Brand"
+      }
+    ]
+  },
+  "maintenance": {
+    "label": "Maintenance",
+    "title": "Website Management",
+    "common": {
+      "popular": "POPULAR",
+      "getStarted": "Get Started",
+      "viewDetails": "View Details"
+    },
+    "plans": {
+      "basic": { "tier": "Essential", "name": "Basic Care", "price": "$39", "img": "Basic", "period": "/mo", "features": ["Security updates", "Regular backups", "Minor bug fixes", "Uptime monitoring"] },
+      "business": { "tier": "Popular", "name": "Business Care", "price": "$59", "img": "Business", "period": "/mo", "features": ["Everything in Basic", "Content updates (text/images)", "Priority support", "Basic optimization"] },
+      "premium": { "tier": "Ultimate", "name": "Premium Care", "price": "$99", "img": "Premium", "period": "/mo", "features": ["Full site management", "Reasonable modifications", "SEO monitoring", "Priority WhatsApp support"] }
+    },
+    "additional": {
+      "unlimited": { "tier": "Unlimited", "name": "WebCare Unlimited", "description": "Complete site management, on demand.", "price": "$119", "period": "/mo", "features": ["Unlimited modifications (reasonable)", "Absolute priority on all requests", "SEO monitoring", "Continuous adjustments"], "note": "" },
+      "hosting": { "tier": "Hosting", "name": "Hosting & Security", "description": "Essential infrastructure for your site.", "price": "$89", "period": "/year", "features": ["Domain name (1 year)", "Secure hosting (1 year)", "SSL certificate (https)", "Anti-bot protection", "Basic monitoring"], "note": "Content updates managed via WebCare plans" }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Ready to Start Your Project?",
+    "description": "Chat with us directly on WhatsApp for a quick response and custom quote.",
+    "whatsappButton": "Contact via WhatsApp",
+    "preferEmail": "Prefer email?",
+    "ariaWhatsapp": "Contact on WhatsApp"
+  },
+  "footer": {
+    "rights": "© {{year}} Kalissea. All rights reserved."
+  }
+}
