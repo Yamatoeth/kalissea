@@ -68,7 +68,7 @@ const Portfolio = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative aspect-[3/2] overflow-hidden"
+                className="block relative aspect-3/2 overflow-hidden"
               >
                 <Image
                   src={project.image}
@@ -77,7 +77,7 @@ const Portfolio = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-foreground mb-1">
