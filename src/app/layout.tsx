@@ -1,5 +1,5 @@
 "use client";
-  import "@/index.css";
+import "./index.css";
 import Providers from "./providers"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 
