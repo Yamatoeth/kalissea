@@ -10,11 +10,12 @@ const Header = () => {
   const { t } = useTranslation();
 
   const navLinks = [
-    { href: "#services", label: t('header.services') },
-    { href: "#pricing", label: t('header.pricing') },
-    { href: "#portfolio", label: t('header.portfolio') },
-    { href: "#testimonials", label: t('header.testimonials') },
-    { href: "#contact", label: t('header.contact') },
+    { href: "/#services", label: t('header.services') },
+    { href: "/#pricing", label: t('header.pricing') },
+    { href: "/#portfolio", label: t('header.portfolio') },
+    { href: "/#testimonials", label: t('header.testimonials') },
+    { href: "/#contact", label: t('header.contact') },
+    { href: "https://automation.kalissea.com", label: t('header.automationFlow'), external: true },
   ];
 
   return (
@@ -39,6 +40,8 @@ const Header = () => {
               key={link.href}
               href={link.href}
               className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
             >
               {link.label}
             </a>
@@ -48,8 +51,9 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-4">
           <LanguageSwitcher />
           <Button variant="hero" size="default" asChild>
-            <a href="#contact">{t('header.getQuote')}</a>
+            <a href="/#contact">{t('header.getQuote')}</a>
           </Button>
+
         </div>
       </div>
 
@@ -63,6 +67,8 @@ const Header = () => {
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
                 onClick={() => setIsMenuOpen(false)}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
               >
                 {link.label}
               </a>
@@ -70,8 +76,9 @@ const Header = () => {
             <div className="flex items-center justify-between mt-2">
                <LanguageSwitcher />
                <Button variant="hero" size="default" className="flex-1 ml-4" asChild>
-                 <a href="#contact">{t('header.getQuote')}</a>
+                 <a href="/#contact">{t('header.getQuote')}</a>
                </Button>
+
             </div>
           </nav>
         </div>

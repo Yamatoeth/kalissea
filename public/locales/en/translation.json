@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "testimonials": "Testimonials",
     "contact": "Contact",
+    "automationFlow": "AutomationFlow",
     "getQuote": "Get a Quote"
   },
   "hero": {
@@ -31,7 +32,78 @@
       "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo" },
       "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote" },
       "automation": { "title": "Automation & AI", "description": "Chatbots, workflows, and AI tools to scale your business.", "price": "Custom Quote" }
+    },
+    "details": {
+      "benefitsTitle": "Why Choose Us?",
+      "resultsTitle": "Concrete Results",
+      "creation": {
+        "heroTitle": "Websites that leave a lasting impression",
+        "heroDescription": "We don’t just create beautiful sites. We build powerful sales tools, optimized for conversion and user experience.",
+        "benefits": [
+          { "title": "Unique Design", "description": "No templates. Every design is built from scratch for your brand." },
+          { "title": "Ultra-Fast Speed", "description": "Maximum optimization for instant loading on all devices." },
+          { "title": "Conversion-First", "description": "Every element is strategically placed to turn visitors into customers." }
+        ],
+        "ctaTitle": "Ready to transform your online presence?",
+        "ctaDescription": "Let's discuss your project and create the site that will propel your business forward."
+      },
+      "ecommerce": {
+        "heroTitle": "Sell more, everywhere, all the time",
+        "heroDescription": "Launch your online store with robust technology and a seamless shopping experience that builds customer loyalty.",
+        "benefits": [
+          { "title": "Simplified Management", "description": "An intuitive interface to manage your products, stocks, and orders without stress." },
+          { "title": "Secure Payments", "description": "Integration with Stripe, PayPal, and other solutions for trusted transactions." },
+          { "title": "Mobile Optimized", "description": "Over 60% of purchases happen on mobile. Your store will be ready." }
+        ],
+        "ctaTitle": "Launch your store today",
+        "ctaDescription": "Don't let your competitors get ahead. Create your e-commerce empire now."
+      },
+      "maintenance": {
+        "heroTitle": "Your peace of mind, our priority",
+        "heroDescription": "Focus on your business, we'll take care of the rest. Guaranteed security, updates, and performance.",
+        "benefits": [
+          { "title": "Maximum Security", "description": "24/7 monitoring and protection against intrusions and malware." },
+          { "title": "Daily Backups", "description": "Never lose your data. We back up your site every day." },
+          { "title": "Priority Support", "description": "A question? A change? Our team is there for you in a click." }
+        ],
+        "ctaTitle": "Secure your investment",
+        "ctaDescription": "Choose the maintenance plan that suits you and sleep soundly."
+      },
+      "seo": {
+        "heroTitle": "Dominate search results",
+        "heroDescription": "Don't just be present online—be visible to those looking for you. A results-driven SEO strategy.",
+        "benefits": [
+          { "title": "Full Audit", "description": "In-depth technical analysis to identify all growth levers." },
+          { "title": "Strategic Content", "description": "Optimized articles to attract and engage your target audience." },
+          { "title": "Quality Backlinks", "description": "Strengthen your domain authority with links from trusted sites." }
+        ],
+        "ctaTitle": "Boost your organic traffic",
+        "ctaDescription": "Schedule a free analysis of your SEO potential today."
+      },
+      "branding": {
+        "heroTitle": "An unforgettable visual identity",
+        "heroDescription": "More than a logo, we create a universe that tells your story and resonates with your ideal customers.",
+        "benefits": [
+          { "title": "Brand Strategy", "description": "Defining your values, tone, and unique positioning." },
+          { "title": "Visual Identity", "description": "Cohesive color palettes, typography, and graphic elements." },
+          { "title": "Brand Guidelines", "description": "A complete document to ensure brand consistency across all platforms." }
+        ],
+        "ctaTitle": "Bring your brand to life",
+        "ctaDescription": "Let's create a brand image that reflects you and captivates your audience."
+      },
+      "automation": {
+        "heroTitle": "AI at the service of your growth",
+        "heroDescription": "Automate repetitive tasks and integrate artificial intelligence to gain efficiency and scale without limits.",
+        "benefits": [
+          { "title": "Smart Workflows", "description": "Connect your tools and automate your complex business processes." },
+          { "title": "AI Chatbots", "description": "Respond to your customers 24/7 with smart, personalized assistants." },
+          { "title": "Save Time", "description": "Free yourself from low-value tasks to focus on what matters most." }
+        ],
+        "ctaTitle": "Automate your success",
+        "ctaDescription": "Discover how AI can radically transform your productivity."
+      }
     }
+
   },
   "features": {
     "label": "What You Get",

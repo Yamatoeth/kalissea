@@ -1,0 +1,22 @@
+"use client";
+import ServiceDetailTemplate from "@/components/ServiceDetailTemplate";
+import { useTranslation } from "react-i18next";
+
+export default function SEOPage() {
+  const { t } = useTranslation();
+  const benefits = t("services.details.seo.benefits", { returnObjects: true }) as any[];
+
+  return (
+    <ServiceDetailTemplate
+      serviceKey="seo"
+      benefits={benefits}
+      results={[
+        {
+          type: "image",
+          url: "/placeholder.svg",
+          caption: t("services.details.seo.heroTitle")
+        }
+      ]}
+    />
+  );
+}

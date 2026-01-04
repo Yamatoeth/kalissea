@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "testimonials": "Témoignages",
     "contact": "Contact",
+    "automationFlow": "AutomationFlow",
     "getQuote": "Obtenir un devis"
   },
   "hero": {
@@ -31,7 +32,78 @@
       "seo": { "title": "SEO & Croissance", "description": "Soyez mieux classé sur Google. Obtenez plus de trafic organique.", "price": "À partir de 149$/mois" },
       "branding": { "title": "Branding", "description": "Logo, identité visuelle et charte graphique qui se démarquent.", "price": "Devis personnalisé" },
       "automation": { "title": "Automatisation & IA", "description": "Chatbots, workflows et outils IA pour scaler votre business.", "price": "Devis personnalisé" }
+    },
+    "details": {
+      "benefitsTitle": "Pourquoi nous choisir ?",
+      "resultsTitle": "Résultats Concrets",
+      "creation": {
+        "heroTitle": "Des sites web qui marquent les esprits",
+        "heroDescription": "Nous ne nous contentons pas de créer de beaux sites. Nous construisons des outils de vente performants, optimisés pour la conversion et l'expérience utilisateur.",
+        "benefits": [
+          { "title": "Design Unique", "description": "Pas de templates. Chaque design est créé de toutes pièces pour votre marque." },
+          { "title": "Vitesse Ultra-Rapide", "description": "Optimisation maximale pour un chargement instantané sur tous les appareils." },
+          { "title": "Conversion-First", "description": "Chaque élément est placé stratégiquement pour transformer vos visiteurs en clients." }
+        ],
+        "ctaTitle": "Prêt à transformer votre présence en ligne ?",
+        "ctaDescription": "Discutons de votre projet et créons ensemble le site qui propulsera votre business."
+      },
+      "ecommerce": {
+        "heroTitle": "Vendez plus, partout, tout le temps",
+        "heroDescription": "Lancez votre boutique en ligne avec une technologie robuste et une expérience d'achat fluide qui fidélise vos clients.",
+        "benefits": [
+          { "title": "Gestion Simplifiée", "description": "Une interface intuitive pour gérer vos produits, stocks et commandes sans stress." },
+          { "title": "Paiements Sécurisés", "description": "Intégration de Stripe, PayPal et autres solutions pour des transactions en toute confiance." },
+          { "title": "Optimisé pour Mobile", "description": "Plus de 60% des achats se font sur mobile. Votre boutique sera prête." }
+        ],
+        "ctaTitle": "Lancez votre boutique dès aujourd'hui",
+        "ctaDescription": "Ne laissez pas vos concurrents prendre l'avance. Créez votre empire e-commerce maintenant."
+      },
+      "maintenance": {
+        "heroTitle": "Votre tranquillité d'esprit, notre priorité",
+        "heroDescription": "Concentrez-vous sur votre business, nous nous occupons du reste. Sécurité, mises à jour et performance garanties.",
+        "benefits": [
+          { "title": "Sécurité Maximale", "description": "Surveillance 24/7 et protections contre les intrusions et malwares." },
+          { "title": "Sauvegardes Quotidiennes", "description": "Ne perdez jamais vos données. Nous sauvegardons votre site chaque jour." },
+          { "title": "Support Prioritaire", "description": "Une question ? Une modification ? Notre équipe est là pour vous en un clic." }
+        ],
+        "ctaTitle": "Sécurisez votre investissement",
+        "ctaDescription": "Choisissez le plan de maintenance qui vous convient et dormez sur vos deux oreilles."
+      },
+      "seo": {
+        "heroTitle": "Dominez les résultats de recherche",
+        "heroDescription": "Ne soyez pas seulement présent en ligne, soyez visible par ceux qui vous cherchent. Une stratégie SEO basée sur les résultats.",
+        "benefits": [
+          { "title": "Audit Complet", "description": "Analyse technique approfondie pour identifier tous les leviers de croissance." },
+          { "title": "Contenu Stratégique", "description": "Rédaction d'articles optimisés pour attirer et engager votre audience cible." },
+          { "title": "Backlinks de Qualité", "description": "Renforcez l'autorité de votre domaine avec des liens provenant de sites de confiance." }
+        ],
+        "ctaTitle": "Boostez votre trafic organique",
+        "ctaDescription": "Prenez rendez-vous pour une analyse gratuite de votre potentiel SEO."
+      },
+      "branding": {
+        "heroTitle": "Une identité visuelle inoubliable",
+        "heroDescription": "Plus qu'un logo, nous créons un univers qui raconte votre histoire et résonne avec vos clients idéaux.",
+        "benefits": [
+          { "title": "Stratégie de Marque", "description": "Définition de vos valeurs, de votre ton et de votre positionnement unique." },
+          { "title": "Identité Visuelle", "description": "Palette de couleurs, typographies et éléments graphiques cohérents." },
+          { "title": "Charte Graphique", "description": "Un document complet pour assurer la cohérence de votre marque sur tous les supports." }
+        ],
+        "ctaTitle": "Donnez vie à votre marque",
+        "ctaDescription": "Créons ensemble une image de marque qui vous ressemble et qui captive."
+      },
+      "automation": {
+        "heroTitle": "L'IA au service de votre croissance",
+        "heroDescription": "Automatisez vos tâches répétitives et intégrez l'intelligence artificielle pour gagner en efficacité et scaler sans limites.",
+        "benefits": [
+          { "title": "Workflows Intelligents", "description": "Connectez vos outils et automatisez vos processus métiers complexes." },
+          { "title": "Chatbots IA", "description": "Répondez à vos clients 24/7 avec des assistants intelligents et personnalisés." },
+          { "title": "Gain de Temps", "description": "Libérez-vous des tâches à faible valeur ajoutée pour vous concentrer sur l'essentiel." }
+        ],
+        "ctaTitle": "Automatisez votre succès",
+        "ctaDescription": "Découvrez comment l'IA peut transformer radicalement votre productivité."
+      }
     }
+
   },
   "features": {
     "label": "Ce que vous obtenez",

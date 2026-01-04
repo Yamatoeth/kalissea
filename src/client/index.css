@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap') layer(base);
 @import 'tailwindcss';
 
 @plugin 'tailwindcss-animate';
@@ -115,7 +114,10 @@ layer(base);
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  background-image: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @utility card-hover {
@@ -144,7 +146,7 @@ layer(base);
     --popover: 220 14% 10%;
     --popover-foreground: 220 10% 80%;
 
-    --primary: 217 91% 60%;
+    --primary: 43 96% 56%;
     --primary-foreground: 220 16% 8%;
 
     --secondary: 220 14% 16%;
@@ -153,7 +155,7 @@ layer(base);
     --muted: 220 14% 18%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 217 91% 60%;
+    --accent: 43 96% 56%;
     --accent-foreground: 220 16% 8%;
 
     --destructive: 0 72% 50%;
@@ -161,30 +163,36 @@ layer(base);
 
     --border: 220 14% 18%;
     --input: 220 14% 18%;
-    --ring: 217 91% 60%;
+    --ring: 43 96% 56%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 220 16% 8%;
     --sidebar-foreground: 220 10% 75%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary: 43 96% 56%;
     --sidebar-primary-foreground: 220 16% 8%;
     --sidebar-accent: 220 14% 16%;
     --sidebar-accent-foreground: 220 10% 80%;
     --sidebar-border: 220 14% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 43 96% 56%;
 
-    --chart-1: 217 91% 60%;
-    --chart-2: 217 70% 55%;
-    --chart-3: 217 50% 50%;
-    --chart-4: 217 40% 45%;
-    --chart-5: 217 30% 40%;
+    --chart-1: 43 96% 56%;
+    --chart-2: 35 100% 50%;
+    --chart-3: 40 90% 45%;
+    --chart-4: 45 80% 40%;
+    --chart-5: 50 70% 35%;
 
     --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
       sans-serif;
 
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.15);
+    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.15);
+    
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(43 96% 56%) 0%,
+      hsl(35 100% 50%) 100%
+    );
   }
 
   .dark {
@@ -197,7 +205,7 @@ layer(base);
     --popover: 220 14% 10%;
     --popover-foreground: 220 10% 80%;
 
-    --primary: 217 91% 60%;
+    --primary: 43 96% 56%;
     --primary-foreground: 220 16% 8%;
 
     --secondary: 220 14% 16%;
@@ -206,7 +214,7 @@ layer(base);
     --muted: 220 14% 18%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 217 91% 60%;
+    --accent: 43 96% 56%;
     --accent-foreground: 220 16% 8%;
 
     --destructive: 0 72% 50%;
@@ -214,22 +222,30 @@ layer(base);
 
     --border: 220 14% 18%;
     --input: 220 14% 18%;
-    --ring: 217 91% 60%;
+    --ring: 43 96% 56%;
 
     --sidebar-background: 220 16% 8%;
     --sidebar-foreground: 220 10% 75%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary: 43 96% 56%;
     --sidebar-primary-foreground: 220 16% 8%;
     --sidebar-accent: 220 14% 16%;
     --sidebar-accent-foreground: 220 10% 80%;
     --sidebar-border: 220 14% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 43 96% 56%;
 
-    --chart-1: 217 91% 60%;
-    --chart-2: 217 70% 55%;
-    --chart-3: 217 50% 50%;
-    --chart-4: 217 40% 45%;
-    --chart-5: 217 30% 40%;
+    --chart-1: 43 96% 56%;
+    --chart-2: 35 100% 50%;
+    --chart-3: 40 90% 45%;
+    --chart-4: 45 80% 40%;
+    --chart-5: 50 70% 35%;
+
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(43 96% 56%) 0%,
+      hsl(35 100% 50%) 100%
+    );
+
+    --shadow-glow: 0 0 40px hsl(43 96% 56% / 0.15);
   }
 }
 

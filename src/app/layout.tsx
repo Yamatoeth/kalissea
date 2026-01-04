@@ -1,6 +1,7 @@
 "use client";
   import "@/index.css";
 import Providers from "./providers"
+import WhatsAppFloat from "@/components/WhatsAppFloat"
 
 export default function RootLayout({
   children,
@@ -28,7 +29,10 @@ export default function RootLayout({
   </head>
 
   <body>
-    <Providers>{children}</Providers>
+    <Providers>
+      {children}
+      <WhatsAppFloat />
+    </Providers>
     
   </body>
 </html>
