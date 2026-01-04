@@ -2,6 +2,13 @@
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+};
+
 const Testimonials = () => {
   const { t } = useTranslation();
 
@@ -14,7 +21,7 @@ const Testimonials = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(t('testimonials.items', { returnObjects: true }) as any[]).map((testimonial, index) => (
+          {(t('testimonials.items', { returnObjects: true }) as Testimonial[]).map((testimonial, index) => (
             <div
               key={index}
               className="bg-card border border-border rounded-xl p-6 card-hover flex flex-col h-full"
