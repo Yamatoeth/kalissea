@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import atelierParisien from "../assets/atelierparisien.png";
-import kalissea from "../assets/kalissea.png";
-import teclis from "../assets/teclis.png";
-import terrathread from "../assets/terrathread.png";
-import glc from "../assets/glc.png";
-import villa88 from "../assets/villa88.png";
+import atelierParisien from "../assets/atelierparisien.avif";
+import kalissea from "../assets/kalissea.avif";
+import teclis from "../assets/teclis.avif";
+import terrathread from "../assets/terrathread.avif";
+import glc from "../assets/glc.avif";
+import villa88 from "../assets/villa88.avif";
 import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
