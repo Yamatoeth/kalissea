@@ -89,7 +89,7 @@ const Contact = () => {
             </Button>
 
              <p className="text-sm text-muted-foreground mt-4">
-              {t('contact.preferEmail')} <a href="mailto:simon.lechevalier@hotmail.fr" className="text-primary hover:underline">simon.lechevalier@hotmail.fr</a>
+              {t('contact.preferEmail')} <a href="mailto:contact@kalissea.com" className="text-primary hover:underline">contact@kalissea.com</a>
             </p>
           </div>
 
