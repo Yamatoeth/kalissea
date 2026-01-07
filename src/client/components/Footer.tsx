@@ -1,15 +1,24 @@
 "use client";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Footer = () => {
   const { t } = useTranslation();
   
   return (
-    <footer className="py-12 px-6 border-t border-border">
+    <footer className="py-4 px-6 border-t border-border">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-xl font-bold text-foreground">
-            kalissea<span className="text-primary">.</span>
+          <div className="flex items-center">
+            <div className="relative h-32 w-32">
+              <Image
+                src="/kalissealogo.png"
+                alt="Kalissea logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
           
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">

@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Image from "next/image"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,15 @@ const Header = () => {
         </button>
 
         <a href="/" className="text-xl font-bold text-foreground absolute left-1/2 -translate-x-1/2 md:static md:transform-none">
-          kalissea<span className="text-primary">.</span>
+          <div className="relative h-16 w-16">
+            <Image
+              src="/kalissealogo.png"
+              alt="Kalissea logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </a>
 
         {/* Desktop Navigation */}
