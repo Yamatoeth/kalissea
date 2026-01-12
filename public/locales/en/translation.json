@@ -36,95 +36,212 @@
     "details": {
       "benefitsTitle": "Why Choose Us?",
       "resultsTitle": "Concrete Results",
+      "faqTitle": "Frequently Asked Questions",
+      "featuresTitle": "Key Features",
+      "featuresDescription": "Everything you need for a high-performance website.",
       "creation": {
         "heroTitle": "Websites that leave a lasting impression",
         "heroDescription": "We don’t just create beautiful sites. We build powerful sales tools, optimized for conversion and user experience.",
+        "longDescription": "In a saturated digital world, having a website isn't enough. Your online presence must be a strategic extension of your brand, capable of capturing attention in seconds and guiding user action.\n\nAt Kalissea, we design custom websites that blend premium aesthetics with technical performance. Every line of code is thought out for speed, every pixel for emotion. We don't use generic templates; we create a unique architecture adapted to your business goals, whether it's generating leads, selling services, or informing your audience.",
         "benefits": [
           { "title": "Unique Design", "description": "No templates. Every design is built from scratch for your brand." },
           { "title": "Ultra-Fast Speed", "description": "Maximum optimization for instant loading on all devices." },
           { "title": "Conversion-First", "description": "Every element is strategically placed to turn visitors into customers." }
         ],
+        "features": [
+          { "title": "Responsive Design", "description": "Perfect display on mobile, tablet, and desktop." },
+          { "title": "SEO Optimization", "description": "Technical structure optimized for Google (tags, sitemap, speed)." },
+          { "title": "Intuitive CMS", "description": "Easy admin interface to modify your texts and images." },
+          { "title": "SSL Security", "description": "HTTPS certificate included to secure visitor data." },
+          { "title": "Analytics", "description": "Google Analytics integration to track your performance." },
+          { "title": "Forms", "description": "Advanced contact forms with anti-spam protection." }
+        ],
+        "faq": [
+          { "question": "How long does it take to create a site?", "answer": "For a standard showcase site, expect between 2 and 4 weeks. This includes design, development, and revisions." },
+          { "question": "Will the site be mobile-friendly?", "answer": "Absolutely. We adopt a 'Mobile First' approach. Your site will be designed to offer a perfect experience on smartphone first." },
+          { "question": "Can I update the content myself?", "answer": "Yes, we integrate a CMS (content management system) that allows you to change texts and images without touching the code." },
+          { "question": "Do I own the website?", "answer": "Yes, 100%. Once final payment is made, you own the full code and design." }
+        ],
+        "seo": {
+           "title": "Professional Website Creation | Kalissea Web Agency",
+           "description": "Custom website creation agency. Unique design, maximum performance, and conversion-optimized. Get your free quote.",
+           "keywords": ["website creation", "web agency", "showcase site", "web development", "custom site"]
+        },
         "ctaTitle": "Ready to transform your online presence?",
         "ctaDescription": "Let's discuss your project and create the site that will propel your business forward."
       },
       "ecommerce": {
         "heroTitle": "Sell more, everywhere, all the time",
         "heroDescription": "Launch your online store with robust technology and a seamless shopping experience that builds customer loyalty.",
+        "longDescription": "Online commerce is a race for speed and trust. A high-performing e-commerce store must instantly reassure the buyer, load fast, and simplify the checkout process to the extreme.\n\nWe develop complete e-commerce solutions that manage not only sales but also all digital logistics: inventory management, shipping, automated taxes, and customer notifications. Whether you have 10 or 10,000 products, our scalable architectures grow with your revenue, without compromising security or speed.",
         "benefits": [
           { "title": "Simplified Management", "description": "An intuitive interface to manage your products, stocks, and orders without stress." },
           { "title": "Secure Payments", "description": "Integration with Stripe, PayPal, and other solutions for trusted transactions." },
           { "title": "Mobile Optimized", "description": "Over 60% of purchases happen on mobile. Your store will be ready." }
         ],
+        "features": [
+          { "title": "Product Catalog", "description": "Unlimited management of products, variants, and categories." },
+          { "title": "Cart & Checkout", "description": "Optimized ordering process to reduce cart abandonment." },
+          { "title": "Multiple Payments", "description": "Credit cards, Apple Pay, Google Pay, PayPal." },
+          { "title": "Customer Area", "description": "Client accounts with order history and tracking." },
+          { "title": "Promo Codes", "description": "Discount engine and gift cards." },
+          { "title": "Transactional Emails", "description": "Automatic order and shipping confirmations." }
+        ],
+        "faq": [
+          { "question": "What payment methods can I accept?", "answer": "We mainly integrate Stripe and PayPal, allowing acceptance of Visa, Mastercard, AMEX, Apple Pay, and Google Pay." },
+          { "question": "Is there a product limit?", "answer": "No, our technical solutions can handle thousands of references without slowdown." },
+          { "question": "How is inventory managed?", "answer": "Stock is automatically decremented with each sale. You can set low stock alerts." }
+        ],
+        "seo": {
+          "title": "E-Commerce Store Creation | Kalissea Agency",
+          "description": "Launch your online store with expert help. Secure payments, stock management, and sales-driven design. Free quote.",
+          "keywords": ["e-commerce creation", "online store", "e-commerce agency", "sell online", "merchant site"]
+        },
         "ctaTitle": "Launch your store today",
         "ctaDescription": "Don't let your competitors get ahead. Create your e-commerce empire now."
       },
       "maintenance": {
         "heroTitle": "Your peace of mind, our priority",
         "heroDescription": "Focus on your business, we'll take care of the rest. Guaranteed security, updates, and performance.",
+        "longDescription": "A website isn't a finished product; it's a living organism that requires constant care to remain performant and secure against changing web threats.\n\nOur preventive and corrective maintenance service ensures your work tool is always operational. We monitor your site 24/7, apply security patches even before you know a vulnerability exists, and regularly optimize the database to maintain optimal loading speed.",
         "benefits": [
           { "title": "Maximum Security", "description": "24/7 monitoring and protection against intrusions and malware." },
           { "title": "Daily Backups", "description": "Never lose your data. We back up your site every day." },
           { "title": "Priority Support", "description": "A question? A change? Our team is there for you in a click." }
         ],
+        "features": [
+          { "title": "Plugin/Core Updates", "description": "Weekly CMS and extension updates." },
+          { "title": "Uptime Monitoring", "description": "Site availability check every minute." },
+          { "title": "Cloud Backups", "description": "Encrypted backups stored on external server." },
+          { "title": "Malware Scan", "description": "Daily infected file analysis." },
+          { "title": "Monthly Report", "description": "Detailed PDF of actions performed and site status." },
+          { "title": "Fast Restoration", "description": "Site restoration in case of crash in less than 1h." }
+        ],
+        "faq": [
+          { "question": "What happens if my site is hacked?", "answer": "If you are under a maintenance contract, we clean and restore your site for free and immediately." },
+          { "question": "Can I cancel anytime?", "answer": "Yes, our plans are non-binding. You are free." },
+          { "question": "Does the plan include edits?", "answer": "Business and Premium plans include hours of small content changes (text, images)." }
+        ],
+        "seo": {
+          "title": "Website Maintenance & Security | Kalissea",
+          "description": "Web maintenance contracts for WordPress and Next.js. Security, backups, updates, and priority support. Sleep easy.",
+          "keywords": ["website maintenance", "wordpress security", "webmaster", "website management", "web support"]
+        },
         "ctaTitle": "Secure your investment",
         "ctaDescription": "Choose the maintenance plan that suits you and sleep soundly."
       },
       "seo": {
         "heroTitle": "Dominate search results",
         "heroDescription": "Don't just be present online—be visible to those looking for you. A results-driven SEO strategy.",
+        "longDescription": "The most beautiful site in the world is useless if no one finds it. SEO (Search Engine Optimization) isn't magic; it's a precision science that aligns your content with your customers' search intent.\n\nOur SEO approach is holistic: we work on technique (speed, structure), content (semantics, relevance), and authority (netlinking). We don't just aim for the first position; we aim for the position that generates qualified revenue.",
         "benefits": [
           { "title": "Full Audit", "description": "In-depth technical analysis to identify all growth levers." },
           { "title": "Strategic Content", "description": "Optimized articles to attract and engage your target audience." },
           { "title": "Quality Backlinks", "description": "Strengthen your domain authority with links from trusted sites." }
         ],
+        "features": [
+          { "title": "Keyword Research", "description": "Identification of high-potential transactional terms." },
+          { "title": "On-Page Optimization", "description": "Titles, metas, Hn tags, and internal linking." },
+          { "title": "Technical SEO", "description": "Core Web Vitals, indexing, and crawl budget." },
+          { "title": "Content Marketing", "description": "Creation of rich content positioning your expertise." },
+          { "title": "Netlinking", "description": "Thematic link acquisition campaigns." },
+          { "title": "Tracking & Reporting", "description": "Ranking and organic traffic monitoring." }
+        ],
+        "faq": [
+          { "question": "How long before seeing results?", "answer": "SEO is a long game. First results typically appear between 3 and 6 months but are lasting." },
+          { "question": "Do you guarantee #1 ranking?", "answer": "No serious agency can guarantee #1 ranking because Google's algorithm is secret. We guarantee an increase in qualified traffic." },
+          { "question": "What's the difference between SEO and Google Ads?", "answer": "SEO is organic and free per click (long term). Google Ads is paid immediately (short term). Both are complementary." }
+        ],
+        "seo": {
+          "title": "SEO Agency & Organic Search | Kalissea",
+          "description": "Boost your visibility on Google. SEO audit, content strategy, and netlinking for more traffic and clients.",
+          "keywords": ["seo agency", "seo consultant", "organic search", "seo audit", "google first page"]
+        },
         "ctaTitle": "Boost your organic traffic",
         "ctaDescription": "Schedule a free analysis of your SEO potential today."
       },
       "branding": {
         "heroTitle": "An unforgettable visual identity",
         "heroDescription": "More than a logo, we create a universe that tells your story and resonates with your ideal customers.",
+        "longDescription": "Your brand is what people say about you when you're not in the room. It's a precious intangible asset that inspires trust and justifies your prices.\n\nWe build cohesive brand identities that stand the test of time. From color psychology to typographic choice, every creative decision is rooted in your business strategy. We don't just make 'pretty'; we make 'right'.",
         "benefits": [
           { "title": "Brand Strategy", "description": "Defining your values, tone, and unique positioning." },
           { "title": "Visual Identity", "description": "Cohesive color palettes, typography, and graphic elements." },
           { "title": "Brand Guidelines", "description": "A complete document to ensure brand consistency across all platforms." }
         ],
+        "features": [
+          { "title": "Logo Design", "description": "Creation of logotype, symbol, and variations." },
+          { "title": "Color Palette", "description": "Selection of harmonious primary and secondary colors." },
+          { "title": "Typography", "description": "Choice of readable and distinctive fonts." },
+          { "title": "Iconography", "description": "Custom icon set for your communication." },
+          { "title": "Brand Book", "description": "Complete usage guide for your brand." },
+          { "title": "Print Materials", "description": "Business cards, letterheads, brochures." }
+        ],
+        "faq": [
+          { "question": "How many logo proposals do you make?", "answer": "We typically present 3 distinct creative directions before refining the one you prefer." },
+          { "question": "What does the brand book contain?", "answer": "It contains rules for logo usage, color codes (CMYK, RGB, Web), fonts, and layout examples." },
+          { "question": "Do you transfer copyrights?", "answer": "Yes, once the service is paid, you own full exploitation rights to your visual identity." }
+        ],
+        "seo": {
+          "title": "Branding Agency & Visual Identity | Kalissea",
+          "description": "Logo creation and brand guidelines. Give your company a strong and memorable brand image.",
+          "keywords": ["branding", "logo creation", "visual identity", "brand guidelines", "graphic design"]
+        },
         "ctaTitle": "Bring your brand to life",
         "ctaDescription": "Let's create a brand image that reflects you and captivates your audience."
       },
       "automation": {
         "heroTitle": "AI at the service of your growth",
         "heroDescription": "Automate repetitive tasks and integrate artificial intelligence to gain efficiency and scale without limits.",
+        "longDescription": "Automation isn't reserved for tech giants. Today, every company can multiply its productivity by delegating time-consuming tasks to intelligent algorithms.\n\nWe connect your existing tools (CRM, Email, Website, Project Management) to create fluid workflows. Imagine: a lead fills out a form, gets automatically added to your CRM, receives a personalized email, and a task is created for your sales rep. Zero clicks, zero errors, 100% efficiency.",
         "benefits": [
           { "title": "Smart Workflows", "description": "Connect your tools and automate your complex business processes." },
           { "title": "AI Chatbots", "description": "Respond to your customers 24/7 with smart, personalized assistants." },
           { "title": "Save Time", "description": "Free yourself from low-value tasks to focus on what matters most." }
         ],
+        "features": [
+          { "title": "Zapier / Make", "description": "Creation of complex automation scenarios." },
+          { "title": "GPT Chatbots", "description": "Conversational agents trained on your data." },
+          { "title": "CRM Automation", "description": "Automatic cleaning and enrichment of your contacts." },
+          { "title": "Content Generation", "description": "AI tools to write emails and social posts." },
+          { "title": "Data Scraping", "description": "Automatic web data extraction." },
+          { "title": "Dashboarding", "description": "Automated dashboards for your KPIs." }
+        ],
+        "faq": [
+          { "question": "Will AI replace my employees?", "answer": "No, it will augment them. AI rids them of tedious tasks so they can focus on customer relations and strategy." },
+          { "question": "Is it secure?", "answer": "Yes, we use recognized tools (Make, Zapier, OpenAI) with high security standards (SOC2, GDPR)." },
+          { "question": "How much does it cost?", "answer": "Automation has a very fast ROI. We bill per project or flow maintenance, often profitable in a few months." }
+        ],
+        "seo": {
+          "title": "AI Automation & No-Code Agency | Kalissea",
+          "description": "Automate your business with AI and No-Code. Chatbots, CRM, Workflows. Save time and money.",
+          "keywords": ["business automation", "ai agency", "no-code", "make", "zapier", "enterprise chatbot"]
+        },
         "ctaTitle": "Automate your success",
         "ctaDescription": "Discover how AI can radically transform your productivity."
       }
     }
-
   },
   "features": {
     "label": "What You Get",
     "title": "Everything Included",
     "categories": {
-        "design": { "title": "Design & Development", "features": ["Custom UI/UX design", "Mobile-first responsive layout", "Fast loading speeds", "Cross-browser compatibility", "Accessibility standards"] },
-        "setup": { "title": "Technical Setup", "features": ["SSL security certificate", "Domain configuration", "Professional hosting", "Analytics integration", "Performance optimization"] },
-        "seo": { "title": "SEO Foundation", "features": ["Meta tags optimization", "Sitemap generation", "Schema markup", "Google indexing", "Page speed optimization"] },
-        "support": { "title": "Support & Delivery", "features": ["Clear project timeline", "Regular progress updates", "30-day post-launch support", "Training documentation", "Source files included"] }
+      "design": { "title": "Design & Development", "features": ["Custom UI/UX design", "Mobile-first responsive layout", "Fast loading speeds", "Cross-browser compatibility", "Accessibility standards"] },
+      "setup": { "title": "Technical Setup", "features": ["SSL security certificate", "Domain configuration", "Professional hosting", "Analytics integration", "Performance optimization"] },
+      "seo": { "title": "SEO Foundation", "features": ["Meta tags optimization", "Sitemap generation", "Schema markup", "Google indexing", "Page speed optimization"] },
+      "support": { "title": "Support & Delivery", "features": ["Clear project timeline", "Regular progress updates", "30-day post-launch support", "Training documentation", "Source files included"] }
     }
   },
   "process": {
-      "label": "How We Work",
-      "title": "Our Process",
-      "steps": {
-          "brief": { "title": "Brief", "description": "Tell us about your project, goals, and requirements." },
-          "design": { "title": "Design", "description": "We create mockups and designs for your approval." },
-          "development": { "title": "Development", "description": "We build your website with clean, optimized code." },
-          "delivery": { "title": "Delivery", "description": "Launch your site with full training and documentation." },
-          "followup": { "title": "Follow-up", "description": "30 days of support and ongoing maintenance options." }
-      }
+    "label": "How We Work",
+    "title": "Our Process",
+    "steps": {
+      "brief": { "title": "Brief", "description": "Tell us about your project, goals, and requirements." },
+      "design": { "title": "Design", "description": "We create mockups and designs for your approval." },
+      "development": { "title": "Development", "description": "We build your website with clean, optimized code." },
+      "delivery": { "title": "Delivery", "description": "Launch your site with full training and documentation." },
+      "followup": { "title": "Follow-up", "description": "30 days of support and ongoing maintenance options." }
+    }
   },
   "portfolio": {
     "label": "Portfolio",

@@ -1,45 +1,101 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
-
-import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import React from "react";
+import Link from "next/link"; 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-interface Benefit {
+export interface Benefit {
   title: string;
   description: string;
 }
 
-interface Result {
+export interface Result {
   type: "image" | "video";
   url: string;
   caption: string;
 }
 
-interface ServiceDetailTemplateProps {
-  serviceKey: string;
-  benefits: Benefit[];
-  results: Result[];
+export interface Feature {
+  title: string;
+  description: string;
 }
 
-const ServiceDetailTemplate = ({ serviceKey, benefits, results }: ServiceDetailTemplateProps) => {
-  const { t } = useTranslation();
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
 
+export interface ServiceDetailTemplateProps {
+  // Content Props
+  title: string; 
+  heroTitle: string;
+  heroDescription: string;
+  benefitsTitle: string;
+  benefits: Benefit[];
+  resultsTitle: string;
+  results: Result[];
+  ctaTitle: string;
+  ctaDescription: string;
+  
+  // New SEO sections
+  longDescription?: string;
+  featuresTitle?: string;
+  featuresDescription?: string;
+  features?: Feature[];
+  faqTitle?: string;
+  faq?: FAQItem[];
+
+  // UI Labels
+  backLabel: string;
+  startProjectLabel: string;
+
+  children?: React.ReactNode;
+}
+
+const ServiceDetailTemplate = ({
+  title,
+  heroTitle,
+  heroDescription,
+  longDescription,
+  benefitsTitle,
+  benefits,
+  featuresTitle,
+  featuresDescription,
+  features,
+  resultsTitle,
+  results,
+  faqTitle,
+  faq,
+  ctaTitle,
+  ctaDescription,
+  backLabel,
+  startProjectLabel,
+  children
+}: ServiceDetailTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24 pb-20 relative">
         {/* Sticky Back Button */}
-        <a
+        <Link
           href="/#services"
           className="fixed top-24 left-6 z-40 flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium group px-3 py-1.5 bg-background/60 backdrop-blur-md rounded-full border border-border/40 shadow-sm"
         >
           <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors bg-background">
             <ArrowLeft className="w-4 h-4" />
           </div>
-          <span className="pr-2">{t('header.services')}</span>
-        </a>
+          <span className="pr-2">{backLabel}</span>
+        </Link>
 
 
         {/* Hero Section */}
@@ -47,19 +103,19 @@ const ServiceDetailTemplate = ({ serviceKey, benefits, results }: ServiceDetailT
         <section className="px-6 mb-20 text-center">
           <div className="container mx-auto max-w-4xl">
             <div className="section-label justify-center mb-6">
-              {t(`services.items.${serviceKey}.title`)}
+              {title}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              {t(`services.details.${serviceKey}.heroTitle`)}
+              {heroTitle}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              {t(`services.details.${serviceKey}.heroDescription`)}
+              {heroDescription}
             </p>
             <Button variant="hero" size="xl" asChild>
-              <a href="/#contact">
-                {t('hero.startProject')}
+              <Link href="/#contact">
+                {startProjectLabel}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </Button>
           </div>
         </section>
@@ -68,7 +124,7 @@ const ServiceDetailTemplate = ({ serviceKey, benefits, results }: ServiceDetailT
         <section className="px-6 py-20 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-              {t(`services.details.benefitsTitle`)}
+              {benefitsTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, i) => (
@@ -92,17 +148,21 @@ const ServiceDetailTemplate = ({ serviceKey, benefits, results }: ServiceDetailT
         <section className="px-6 py-20">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-              {t(`services.details.resultsTitle`)}
+              {resultsTitle}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className={`grid gap-8 ${results.length === 1 ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 md:grid-cols-2'}`}>
               {results.map((result, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-2xl border border-border bg-card">
+                <div key={index} className="group relative overflow-hidden rounded-lg border border-border bg-card">
                   {result.type === "image" ? (
-                    <img
-                      src={result.url}
-                      alt={result.caption}
-                      className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+                    <div className="relative w-full aspect-video">
+                      <Image
+                        src={result.url}
+                        alt={result.caption}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
                   ) : (
                     <video
                       src={result.url}
@@ -122,20 +182,85 @@ const ServiceDetailTemplate = ({ serviceKey, benefits, results }: ServiceDetailT
           </div>
         </section>
 
+        {/* Long Description Section - SEO Content */}
+        {longDescription && (
+           <section className="px-6 py-20 bg-background">
+             <div className="container mx-auto max-w-3xl">
+               <div className="prose prose-lg dark:prose-invert mx-auto">
+                 <div className="whitespace-pre-line text-muted-foreground leading-relaxed">
+                   {longDescription}
+                 </div>
+               </div>
+             </div>
+           </section>
+        )}
+
+        {/* Features Grid Section */}
+        {features && features.length > 0 && (
+          <section className="px-6 py-20 bg-muted/30">
+            <div className="container mx-auto max-w-6xl">
+              <div className="text-center mb-16">
+                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  {featuresTitle || "Features"}
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  {featuresDescription}
+                </p>
+              </div>
+             
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {features.map((feature, i) => (
+                  <div key={i} className="p-6 bg-card border border-border rounded-xl">
+                    <h3 className="font-semibold text-lg text-foreground mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* FAQ Section */}
+        {faq && faq.length > 0 && (
+          <section className="px-6 py-20 bg-background">
+            <div className="container mx-auto max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+                {faqTitle || "FAQ"}
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {faq.map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`}>
+                    <AccordionTrigger>{item.question}</AccordionTrigger>
+                    <AccordionContent>
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </section>
+        )}
+
+        {children}
+
         {/* CTA Section */}
         <section className="px-6 py-20 text-center">
-          <div className="container mx-auto max-w-4xl p-12 bg-primary/10 rounded-3xl border border-primary/20">
+          <div className="container mx-auto max-w-4xl p-12 bg-primary/10 rounded-xl border border-primary/20">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {t(`services.details.${serviceKey}.ctaTitle`)}
+              {ctaTitle}
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
-              {t(`services.details.${serviceKey}.ctaDescription`)}
+              {ctaDescription}
             </p>
             <Button variant="hero" size="xl" asChild>
-              <a href="/#contact">
-                {t('hero.startProject')}
+              <Link href="/#contact">
+                {startProjectLabel}
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </Button>
           </div>
         </section>

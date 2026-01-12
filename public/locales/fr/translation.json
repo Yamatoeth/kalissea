@@ -36,74 +36,191 @@
     "details": {
       "benefitsTitle": "Pourquoi nous choisir ?",
       "resultsTitle": "Résultats Concrets",
+      "faqTitle": "Questions Fréquentes",
+      "featuresTitle": "Fonctionnalités Incluses",
+      "featuresDescription": "Tout ce dont vous avez besoin pour un site performant.",
       "creation": {
         "heroTitle": "Des sites web qui marquent les esprits",
         "heroDescription": "Nous ne nous contentons pas de créer de beaux sites. Nous construisons des outils de vente performants, optimisés pour la conversion et l'expérience utilisateur.",
+        "longDescription": "Dans un monde numérique saturé, avoir un site web ne suffit plus. Votre présence en ligne doit être une extension stratégique de votre marque, capable de capturer l'attention en quelques secondes et de guider l'utilisateur vers l'action.\n\nChez Kalissea, nous concevons des sites web sur-mesure qui allient esthétique premium et performance technique. Chaque ligne de code est pensée pour la rapidité, chaque pixel pour l'émotion. Nous n'utilisons pas de modèles génériques ; nous créons une architecture unique adaptée à vos objectifs commerciaux, qu'il s'agisse de générer des leads, de vendre des services ou d'informer votre audience.",
         "benefits": [
           { "title": "Design Unique", "description": "Pas de templates. Chaque design est créé de toutes pièces pour votre marque." },
           { "title": "Vitesse Ultra-Rapide", "description": "Optimisation maximale pour un chargement instantané sur tous les appareils." },
           { "title": "Conversion-First", "description": "Chaque élément est placé stratégiquement pour transformer vos visiteurs en clients." }
         ],
+        "features": [
+          { "title": "Responsive Design", "description": "Affichage parfait sur mobile, tablette et desktop." },
+          { "title": "Optimisation SEO", "description": "Structure technique optimisée pour Google (balises, sitemap, vitesse)." },
+          { "title": "CMS Intuitif", "description": "Interface d'admin facile pour modifier vos textes et images." },
+          { "title": "Sécurité SSL", "description": "Certificat HTTPS inclus pour sécuriser les données visiteurs." },
+          { "title": "Analytics", "description": "Intégration de Google Analytics pour suivre vos performances." },
+          { "title": "Formulaires", "description": "Formulaires de contact avancés avec protection anti-spam." }
+        ],
+        "faq": [
+          { "question": "Combien de temps faut-il pour créer un site ?", "answer": "Pour un site vitrine standard, comptez entre 2 et 4 semaines. Ce délai inclut la phase de design, le développement et les révisions." },
+          { "question": "Le site sera-t-il optimisé pour les mobiles ?", "answer": "Absolument. Nous adoptons une approche 'Mobile First'. Votre site sera conçu pour offrir une expérience parfaite sur smartphone avant tout." },
+          { "question": "Puis-je modifier le contenu moi-même ?", "answer": "Oui, nous intégrons un CMS (système de gestion de contenu) qui vous permet de changer textes et images sans toucher au code." },
+          { "question": "Le site m'appartient-il ?", "answer": "Oui, à 100%. Une fois le paiement final effectué, vous êtes propriétaire de l'intégralité du code et du design." }
+        ],
+        "seo": {
+          "title": "Création de Site Web Professionnel | Agence Web Kalissea",
+          "description": "Agence de création de sites web sur-mesure. Design unique, performance maximale et optimisé pour la conversion. Demandez votre devis gratuit.",
+          "keywords": ["création site web", "agence web", "site vitrine", "développement web", "site sur mesure"]
+        },
         "ctaTitle": "Prêt à transformer votre présence en ligne ?",
         "ctaDescription": "Discutons de votre projet et créons ensemble le site qui propulsera votre business."
       },
       "ecommerce": {
         "heroTitle": "Vendez plus, partout, tout le temps",
         "heroDescription": "Lancez votre boutique en ligne avec une technologie robuste et une expérience d'achat fluide qui fidélise vos clients.",
+        "longDescription": "Le commerce en ligne est une course de vitesse et de confiance. Une boutique e-commerce performante doit rassurer instantanément l'acheteur, charger vite et simplifier le processus de paiement à l'extrême.\n\nNous développons des solutions e-commerce complètes qui gèrent non seulement la vente, mais aussi toute la logistique digitale : gestion des stocks, expéditions, taxes automatisées et notifications clients. Que vous ayez 10 ou 10 000 produits, nos architectures scalables grandissent avec votre chiffre d'affaires, sans compromis sur la sécurité ou la vitesse.",
         "benefits": [
           { "title": "Gestion Simplifiée", "description": "Une interface intuitive pour gérer vos produits, stocks et commandes sans stress." },
           { "title": "Paiements Sécurisés", "description": "Intégration de Stripe, PayPal et autres solutions pour des transactions en toute confiance." },
           { "title": "Optimisé pour Mobile", "description": "Plus de 60% des achats se font sur mobile. Votre boutique sera prête." }
         ],
+        "features": [
+          { "title": "Catalogue Produits", "description": "Gestion illimitée de produits, variantes et catégories." },
+          { "title": "Panier & Checkout", "description": "Processus de commande optimisé pour réduire les abandons." },
+          { "title": "Paiements Multiples", "description": "Cartes bancaires, Apple Pay, Google Pay, PayPal." },
+          { "title": "Espace Client", "description": "Comptes clients avec historique de commandes et suivi." },
+          { "title": "Codes Promo", "description": "Moteur de réductions et cartes cadeaux." },
+          { "title": "Emails Transactionnels", "description": "Confirmations de commande et d'expédition automatiques." }
+        ],
+        "faq": [
+          { "question": "Quels moyens de paiement puis-je accepter ?", "answer": "Nous intégrons principalement Stripe et PayPal qui permettent d'accepter Visa, Mastercard, AMEX, Apple Pay et Google Pay." },
+          { "question": "Y a-t-il une limite de produits ?", "answer": "Non, nos solutions techniques peuvent gérer des milliers de références sans ralentissement." },
+          { "question": "Comment se passe la gestion des stocks ?", "answer": "Le stock est décrémenté automatiquement à chaque vente. Vous pouvez définir des alertes de stock bas." }
+        ],
+        "seo": {
+          "title": "Création Boutique E-Commerce | Agence E-commerce Kalissea",
+          "description": "Lancez votre boutique en ligne avec une agence experte. Paiements sécurisés, gestion de stock et design vendeur. Devis gratuit.",
+          "keywords": ["création site e-commerce", "boutique en ligne", "agence e-commerce", "vendre en ligne", "site marchand"]
+        },
         "ctaTitle": "Lancez votre boutique dès aujourd'hui",
         "ctaDescription": "Ne laissez pas vos concurrents prendre l'avance. Créez votre empire e-commerce maintenant."
       },
       "maintenance": {
         "heroTitle": "Votre tranquillité d'esprit, notre priorité",
         "heroDescription": "Concentrez-vous sur votre business, nous nous occupons du reste. Sécurité, mises à jour et performance garanties.",
+        "longDescription": "Un site web n'est pas un produit fini, c'est un organisme vivant qui nécessite des soins constants pour rester performant et sécurisé face aux menaces changeantes du web.\n\nNotre service de maintenance préventive et corrective vous assure que votre outil de travail est toujours opérationnel. Nous surveillons votre site 24/7, appliquons les correctifs de sécurité avant même que vous ne sachiez qu'une faille existe, et optimisons régulièrement la base de données pour maintenir une vitesse d'affichage optimale.",
         "benefits": [
           { "title": "Sécurité Maximale", "description": "Surveillance 24/7 et protections contre les intrusions et malwares." },
           { "title": "Sauvegardes Quotidiennes", "description": "Ne perdez jamais vos données. Nous sauvegardons votre site chaque jour." },
           { "title": "Support Prioritaire", "description": "Une question ? Une modification ? Notre équipe est là pour vous en un clic." }
         ],
+        "features": [
+          { "title": "Updates Plugin/Core", "description": "Mise à jour hebdomadaire du CMS et des extensions." },
+          { "title": "Uptime Monitoring", "description": "Vérification de la disponibilité du site toutes les minutes." },
+          { "title": "Cloud Backups", "description": "Sauvegardes cryptées stockées sur serveur externe." },
+          { "title": "Scan Malware", "description": "Analyse quotidienne des fichiers infectés." },
+          { "title": "Rapport Mensuel", "description": "PDF détaillé des actions effectuées et de l'état du site." },
+          { "title": "Restoration Rapide", "description": "Remise en ligne du site en cas de crash en moins d'1h." }
+        ],
+        "faq": [
+          { "question": "Que se passe-t-il si mon site est piraté ?", "answer": "Si vous êtes sous contrat de maintenance, nous nettoyons et restaurons votre site gratuitement et immédiatement." },
+          { "question": "Puis-je annuler à tout moment ?", "answer": "Oui, nos forfaits sont sans engagement de durée. Vous êtes libre." },
+          { "question": "Le forfait inclut-il des modifications ?", "answer": "Les forfaits Business et Premium incluent des heures de petites modifications de contenu (texte, images)." }
+        ],
+        "seo": {
+          "title": "Maintenance Site Web & Sécurité | Kalissea",
+          "description": "Contrats de maintenance web pour WordPress et Next.js. Sécurité, sauvegardes, mises à jour et support prioritaire. Dormez tranquille.",
+          "keywords": ["maintenance site web", "sécurité wordpress", "webmaster", "gestion site internet", "support web"]
+        },
         "ctaTitle": "Sécurisez votre investissement",
         "ctaDescription": "Choisissez le plan de maintenance qui vous convient et dormez sur vos deux oreilles."
       },
       "seo": {
         "heroTitle": "Dominez les résultats de recherche",
         "heroDescription": "Ne soyez pas seulement présent en ligne, soyez visible par ceux qui vous cherchent. Une stratégie SEO basée sur les résultats.",
+        "longDescription": "Le plus beau site du monde ne sert à rien si personne ne le trouve. Le SEO (Search Engine Optimization) n'est pas de la magie, c'est une science de précision qui aligne votre contenu avec les intentions de recherche de vos clients.\n\nNotre approche SEO est holistique : nous travaillons la technique (vitesse, structure), le contenu (sémantique, pertinence) et l'autorité (netlinking). Nous ne visons pas seulement la première position, nous visons la position qui génère du chiffre d'affaires qualifié.",
         "benefits": [
           { "title": "Audit Complet", "description": "Analyse technique approfondie pour identifier tous les leviers de croissance." },
           { "title": "Contenu Stratégique", "description": "Rédaction d'articles optimisés pour attirer et engager votre audience cible." },
           { "title": "Backlinks de Qualité", "description": "Renforcez l'autorité de votre domaine avec des liens provenant de sites de confiance." }
         ],
+        "features": [
+          { "title": "Recherche Mots-clés", "description": "Identification des termes à fort potentiel transactionnel." },
+          { "title": "Optimisation On-Page", "description": "Titres, métas, balisage Hn et maillage interne." },
+          { "title": "SEO Technique", "description": "Core Web Vitals, indexation et crawl budget." },
+          { "title": "Content Marketing", "description": "Création de contenus riches qui positionnent votre expertise." },
+          { "title": "Netlinking", "description": "Campagnes d'acquisition de liens thématiques." },
+          { "title": "Tracking & Reporting", "description": "Suivi des positions et du trafic organique." }
+        ],
+        "faq": [
+          { "question": "Combien de temps avant de voir des résultats ?", "answer": "Le SEO est un travail de fond. Les premiers résultats apparaissent généralement entre 3 et 6 mois, mais sont durables." },
+          { "question": "Garantissez-vous la 1ère position ?", "answer": "Aucune agence sérieuse ne peut garantir la 1ère position car l'algorithme de Google est secret. Nous garantissons une augmentation du trafic qualifié." },
+          { "question": "Quelle est la différence entre SEO et Google Ads ?", "answer": "Le SEO est organique et gratuit au clic (long terme). Google Ads est payant immédiatement (court terme). Les deux sont complémentaires." }
+        ],
+        "seo": {
+          "title": "Agence SEO & Référencement Naturel | Kalissea",
+          "description": "Boostez votre visibilité sur Google. Audit SEO, stratégie de contenu et netlinking pour plus de trafic et de clients.",
+          "keywords": ["agence seo", "consultant seo", "référencement naturel", "audit seo", "première page google"]
+        },
         "ctaTitle": "Boostez votre trafic organique",
         "ctaDescription": "Prenez rendez-vous pour une analyse gratuite de votre potentiel SEO."
       },
       "branding": {
         "heroTitle": "Une identité visuelle inoubliable",
         "heroDescription": "Plus qu'un logo, nous créons un univers qui raconte votre histoire et résonne avec vos clients idéaux.",
+        "longDescription": "Votre marque est ce que les gens disent de vous quand vous n'êtes pas dans la pièce. C'est un capital immatériel précieux qui inspire la confiance et justifie vos prix.\n\nNous construisons des identités de marque cohérentes qui traversent le temps. De la psychologie des couleurs au choix typographique, chaque décision créative est ancrée dans votre stratégie d'entreprise. Nous ne faisons pas du 'joli', nous créons du 'juste'.",
         "benefits": [
           { "title": "Stratégie de Marque", "description": "Définition de vos valeurs, de votre ton et de votre positionnement unique." },
           { "title": "Identité Visuelle", "description": "Palette de couleurs, typographies et éléments graphiques cohérents." },
           { "title": "Charte Graphique", "description": "Un document complet pour assurer la cohérence de votre marque sur tous les supports." }
         ],
+        "features": [
+          { "title": "Logo Design", "description": "Création de logotype, isotype et déclinaisons." },
+          { "title": "Palette Couleurs", "description": "Sélection de couleurs primaires et secondaires harmonieuses." },
+          { "title": "Typographie", "description": "Choix de polices lisibles et caractéristiques." },
+          { "title": "Iconographie", "description": "Set d'icônes personnalisé pour votre communication." },
+          { "title": "Brand Book", "description": "Guide d'utilisation complet de votre marque." },
+          { "title": "Supports Print", "description": "Cartes de visite, papier à en-tête, plaquettes." }
+        ],
+        "faq": [
+          { "question": "Combien de propositions de logo faites-vous ?", "answer": "Nous présentons généralement 3 directions créatives distinctes avant d'affiner celle que vous préférez." },
+          { "question": "Que contient la charte graphique ?", "answer": "Elle contient les règles d'utilisation du logo, les codes couleurs (CMJN, RVB, Web), les polices et des exemples de mise en page." },
+          { "question": "Cédez-vous les droits d'auteur ?", "answer": "Oui, une fois la prestation réglée, vous possédez les pleins droits d'exploitation sur votre identité visuelle." }
+        ],
+        "seo": {
+          "title": "Agence de Branding & Identité Visuelle | Kalissea",
+          "description": "Création de logos et chartes graphiques. Donnez à votre entreprise une image de marque forte et mémorable.",
+          "keywords": ["branding", "création logo", "identité visuelle", "charte graphique", "design graphique"]
+        },
         "ctaTitle": "Donnez vie à votre marque",
         "ctaDescription": "Créons ensemble une image de marque qui vous ressemble et qui captive."
       },
       "automation": {
         "heroTitle": "L'IA au service de votre croissance",
         "heroDescription": "Automatisez vos tâches répétitives et intégrez l'intelligence artificielle pour gagner en efficacité et scaler sans limites.",
+        "longDescription": "L'automatisation n'est pas réservée aux géants de la tech. Aujourd'hui, chaque entreprise peut décupler sa productivité en déléguant les tâches chronophages à des algorithmes intelligents.\n\nNous connectons vos outils existants (CRM, Email, Site Web, Gestion de projet) pour créer des flux de travail fluides. Imaginez : un prospect remplit un formulaire, il est automatiquement ajouté à votre CRM, reçoit un email personnalisé, et une tâche est créée pour votre commercial. Zéro clic, zéro erreur, 100% d'efficacité.",
         "benefits": [
           { "title": "Workflows Intelligents", "description": "Connectez vos outils et automatisez vos processus métiers complexes." },
           { "title": "Chatbots IA", "description": "Répondez à vos clients 24/7 avec des assistants intelligents et personnalisés." },
           { "title": "Gain de Temps", "description": "Libérez-vous des tâches à faible valeur ajoutée pour vous concentrer sur l'essentiel." }
         ],
+        "features": [
+          { "title": "Zapier / Make", "description": "Création de scénarios d'automatisation complexes." },
+          { "title": "Chatbots GPT", "description": "Agents conversationnels entraînés sur vos données." },
+          { "title": "CRM Automation", "description": "Nettoyage et enrichissement automatique de vos contacts." },
+          { "title": "Génération Contenu", "description": "Outils IA pour rédiger emails et posts sociaux." },
+          { "title": "Scraping de Données", "description": "Extraction automatique de données web." },
+          { "title": "Dashboarding", "description": "Tableaux de bord automatisés pour vos KPIs." }
+        ],
+        "faq": [
+          { "question": "L'IA va-t-elle remplacer mes employés ?", "answer": "Non, elle va les augmenter. L'IA les débarrasse des tâches rébarbatives pour qu'ils se concentrent sur la relation client et la stratégie." },
+          { "question": "Est-ce sécurisé ?", "answer": "Oui, nous utilisons des outils reconnus (Make, Zapier, OpenAI) avec des standards de sécurité élevés (SOC2, GDPR)." },
+          { "question": "Combien ça coûte ?", "answer": "L'automatisation a un ROI très rapide. Nous facturons au projet ou à la maintenance des flux, souvent rentabilisé en quelques mois." }
+        ],
+        "seo": {
+          "title": "Agence Automatisation IA & No-Code | Kalissea",
+          "description": "Automatisez votre business avec l'IA et le No-Code. Chatbots, CRM, Workflows. Gagnez du temps et de l'argent.",
+          "keywords": ["automatisation business", "agence ia", "no-code", "make", "zapier", "chatbot entreprise"]
+        },
         "ctaTitle": "Automatisez votre succès",
         "ctaDescription": "Découvrez comment l'IA peut transformer radicalement votre productivité."
       }
     }
-
   },
   "features": {
     "label": "Ce que vous obtenez",

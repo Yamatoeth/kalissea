@@ -10,8 +10,15 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'en',
-    fallbackLng: 'en',
+    // lng property removed to allow detector to work
+    fallbackLng: 'en', // Default fallback
+    supportedLngs: ['en', 'fr'],
+    
+    detection: {
+      order: ['cookie', 'htmlTag', 'localStorage', 'navigator'],
+      lookupCookie: 'i18next',
+      caches: ['cookie'],
+    },
     debug: false,
     
     resources: {

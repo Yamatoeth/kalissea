@@ -1,12 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+function canUseWebGL() {
+  try {
+    const canvas = document.createElement('canvas');
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+    );
+  } catch {
+    return false;
+  }
+}
+
 const IsometricCube = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
     const mountNode = mountRef.current;
     if (!mountNode) return;
+
+    if (!canUseWebGL()) {
+      mountNode.style.background = 'radial-gradient(circle at center, #111 0%, #000 70%)';
+      return;
+    }
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -22,7 +39,18 @@ const IsometricCube = () => {
     camera.position.set(15, 25, 15);
     camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        antialias: false,
+        alpha: true,
+        powerPreference: 'default',
+        failIfMajorPerformanceCaveat: true
+      });
+    } catch {
+      mountNode.style.background = 'radial-gradient(circle at center, #111 0%, #000 70%)';
+      return;
+    }
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     mountNode.appendChild(renderer.domElement);
@@ -255,7 +283,7 @@ const IsometricCube = () => {
       });
       planeGeometry.dispose();
       planeMaterial.dispose();
-      renderer.dispose();
+      if (renderer) renderer.dispose();
     };
   }, []);
 
