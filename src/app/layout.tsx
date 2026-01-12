@@ -2,6 +2,7 @@ import "./index.css";
 import Providers from "./providers"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { DM_Sans, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -49,6 +50,26 @@ export default function RootLayout({
         <meta
           name="twitter:description"
           content="Développement web, SEO technique et automatisation orientés performance."
+        />
+        <Script
+          id="schema-org-organization"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Kalissea",
+              url: "https://kalissea.com",
+              description:
+                "Web development agency specialized in high-performance websites, technical SEO, and automation.",
+              sameAs: [
+                "https://medium.com/@kalissea",
+                "https://kalissea.substack.com",
+                "https://github.com/kalissea"
+              ]
+            })
+          }}
         />
       </head>
 
