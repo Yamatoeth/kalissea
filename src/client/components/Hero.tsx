@@ -1,19 +1,9 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import IsometricCube from "@/components/IsometricCube";
 
-const Hero = () => {
-  const { t } = useTranslation();
-
+const Hero = ({ t }: { t: (key: string) => string }) => {
   return (
     <section className="relative min-h-screen pt-16 pb-20 px-6 overflow-hidden">
-      {/* Three.js background */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <IsometricCube />
-      </div>
-
       {/* Foreground content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="container mx-auto max-w-4xl text-center">

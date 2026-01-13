@@ -15,6 +15,7 @@ const Footer = () => {
                 src="/kalissealogo.png"
                 alt="Kalissea logo"
                 fill
+                sizes="128px"
                 className="object-contain"
                 priority
               />

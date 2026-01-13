@@ -8,12 +8,14 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
   display: "swap",
+  preload: true, // Précharger la police
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   display: "swap",
+  preload: true,
 });
 
 export default function RootLayout({
@@ -27,6 +29,10 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Préconnexion aux domaines externes */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
         <title>Kalissea – Agence web spécialisée en développement, SEO et automatisation</title>
 
@@ -51,6 +57,8 @@ export default function RootLayout({
           name="twitter:description"
           content="Développement web, SEO technique et automatisation orientés performance."
         />
+        
+        {/* Script Schema.org chargé après interaction */}
         <Script
           id="schema-org-organization"
           type="application/ld+json"

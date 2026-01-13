@@ -1,5 +1,22 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+// Import uniquement ce qui est nécessaire de Three.js
+import {
+  Scene,
+  PerspectiveCamera,
+  WebGLRenderer,
+  BoxGeometry,
+  PlaneGeometry,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
+  Mesh,
+  Group,
+  Color,
+  Raycaster,
+  Vector2,
+  Vector3,
+  DoubleSide
+} from 'three';
 
 function canUseWebGL() {
   try {
@@ -26,10 +43,10 @@ const IsometricCube = () => {
     }
 
     // Scene setup
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
+    const scene = new Scene();
+    scene.background = new Color(0x000000);
     
-    const camera = new THREE.PerspectiveCamera(
+    const camera = new PerspectiveCamera(
       45,
       window.innerWidth / window.innerHeight,
       0.1,
@@ -41,7 +58,7 @@ const IsometricCube = () => {
 
     let renderer;
     try {
-      renderer = new THREE.WebGLRenderer({
+      renderer = new WebGLRenderer({
         antialias: false,
         alpha: true,
         powerPreference: 'default',
@@ -52,7 +69,7 @@ const IsometricCube = () => {
       return;
     }
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limiter pour perfs
     mountNode.appendChild(renderer.domElement);
 
     // Create cubes grid
@@ -62,52 +79,52 @@ const IsometricCube = () => {
     const gridSizeZ = 25;
     const cubes = [];
 
-    const colorStart = new THREE.Color(0xFACC15); 
-    const colorEnd   = new THREE.Color(0xEAB308); 
+    const colorStart = new Color(0xFACC15); 
+    const colorEnd   = new Color(0xEAB308); 
 
     for (let x = 0; x < gridSizeX; x++) {
       for (let z = 0; z < gridSizeZ; z++) {
-        const geometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
+        const geometry = new BoxGeometry(cubeSize, cubeSize, cubeSize);
         
         const progress = (x + z) / (gridSizeX + gridSizeZ);
         const color = colorStart.clone().lerp(colorEnd, progress);
         
-        const material = new THREE.MeshBasicMaterial({
-          color: 0x000000, // Cube face color
+        const material = new MeshBasicMaterial({
+          color: 0x000000,
           transparent: false,
           opacity: 1
         });
         
-        const cube = new THREE.Mesh(geometry, material);
+        const cube = new Mesh(geometry, material);
         
         // Platform/shadow at base
-        const platformGeometry = new THREE.PlaneGeometry(cubeSize * 1.1, cubeSize * 1.1);
-        const platformMaterial = new THREE.MeshStandardMaterial({
+        const platformGeometry = new PlaneGeometry(cubeSize * 1.1, cubeSize * 1.1);
+        const platformMaterial = new MeshStandardMaterial({
           color: color,
           transparent: true,
           opacity: 0,
-          side: THREE.DoubleSide,
+          side: DoubleSide,
           emissive: color,
           emissiveIntensity: 0
         });
-        const platform = new THREE.Mesh(platformGeometry, platformMaterial);
+        const platform = new Mesh(platformGeometry, platformMaterial);
         platform.rotation.x = -Math.PI / 2;
         platform.position.y = -cubeSize / 2;
         cube.add(platform);
         
         // Thick edges as meshes
         const edgeThickness = 0.08;
-        const edgeMaterial = new THREE.MeshBasicMaterial({
+        const edgeMaterial = new MeshBasicMaterial({
           color: color,
           transparent: true,
           opacity: 0
         });
 
-        const edgesGroup = new THREE.Group();
+        const edgesGroup = new Group();
 
         const createEdge = (w, h, d, x, y, z) => {
-          const geom = new THREE.BoxGeometry(w, h, d);
-          const edge = new THREE.Mesh(geom, edgeMaterial);
+          const geom = new BoxGeometry(w, h, d);
+          const edge = new Mesh(geom, edgeMaterial);
           edge.position.set(x, y, z);
           edgesGroup.add(edge);
         };
@@ -164,56 +181,47 @@ const IsometricCube = () => {
       }
     }
 
-
     // Mouse tracking avec raycaster
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
-    const mouseWorldPosition = new THREE.Vector3(999, 0, 999);
+    const raycaster = new Raycaster();
+    const mouse = new Vector2();
+    const mouseWorldPosition = new Vector3(999, 0, 999);
     
     // Create an invisible plane for mouse tracking
-    const planeGeometry = new THREE.PlaneGeometry(1000, 1000);
-    const planeMaterial = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 });
-    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-    plane.rotation.x = -Math.PI / 2; // Rotate to be horizontal
+    const planeGeometry = new PlaneGeometry(1000, 1000);
+    const planeMaterial = new MeshBasicMaterial({ transparent: true, opacity: 0 });
+    const plane = new Mesh(planeGeometry, planeMaterial);
+    plane.rotation.x = -Math.PI / 2;
     scene.add(plane);
     
     const onMouseMove = (event) => {
-      // Normalized device coordinates
       mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
       
-      // Update raycaster
       raycaster.setFromCamera(mouse, camera);
       
-      // Intersect with plane
       const intersects = raycaster.intersectObject(plane);
       if (intersects.length > 0) {
         const point = intersects[0].point;
         mouseWorldPosition.x = point.x;
         mouseWorldPosition.z = point.z;
       } else {
-        // If no intersection, move mouse far away
         mouseWorldPosition.set(999, 0, 999);
       }
     };
     
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
 
     // Animation
     const animate = () => {
       requestAnimationFrame(animate);
       
-      const time = Date.now() * 0.001;
-      
-      cubes.forEach((cube, index) => {
-        // Calculate distance from mouse
+      cubes.forEach((cube) => {
         const dx = cube.position.x - mouseWorldPosition.x;
         const dz = cube.position.z - mouseWorldPosition.z;
         const dist = Math.sqrt(dx * dx + dz * dz);
         
         const effectRadius = 8;
         
-        // Apply mouse effect
         if (dist < effectRadius) {
           const strength = Math.pow(1 - (dist / effectRadius), 2);
           cube.userData.targetY = strength * cubeSize * 2.5;
@@ -225,12 +233,10 @@ const IsometricCube = () => {
           cube.userData.targetEmissive = 0;
         }
         
-        // Smooth interpolation
         cube.userData.currentY += (cube.userData.targetY - cube.userData.currentY) * 0.15;
         cube.userData.currentOpacity += (cube.userData.targetOpacity - cube.userData.currentOpacity) * 0.15;
         cube.userData.currentEmissive += (cube.userData.targetEmissive - cube.userData.currentEmissive) * 0.15;
         
-        // IMPORTANT: Mettre à jour la position Y du cube
         cube.position.y = cube.userData.currentY;
         
         const edgeOpacity = cube.userData.currentOpacity;
@@ -242,9 +248,7 @@ const IsometricCube = () => {
         });
         cube.userData.platform.material.opacity = platformOpacity;
         cube.userData.platform.material.emissiveIntensity = emissiveIntensity;
-        cube.material.opacity = 0;
       });
-      
       
       renderer.render(scene, camera);
     };
@@ -288,26 +292,10 @@ const IsometricCube = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        width: '100vw',
-        height: '100vh',
-        position: 'relative',
-        overflow: 'hidden',
-        background: '#000'
-      }}
-    >
-      <div ref={mountRef} style={{ width: '100%', height: '100%' }} />
+    <div className="w-full h-full">
+      <div ref={mountRef} className="w-full h-full" />
 
-      <div
-        style={{
-          pointerEvents: 'none',
-          position: 'absolute',
-          inset: 0,
-          background:
-            'radial-gradient(circle at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.75) 100%)'
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/75" />
     </div>
   );
 };

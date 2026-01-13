@@ -36,6 +36,7 @@ const Header = () => {
               src="/kalissealogo.png"
               alt="Kalissea logo"
               fill
+              sizes="64px"
               className="object-contain"
               priority
             />
