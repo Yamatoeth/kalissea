@@ -42,6 +42,19 @@ const IsometricCube = () => {
       return;
     }
 
+    // Intersection Observer to stop animation when not visible
+    let isVisible = true;
+    let animId: number;
+    
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (!isVisible) {
+        cancelAnimationFrame(animId);
+      }
+    }, { threshold: 0.1 });
+    
+    observer.observe(mountNode);
+
     // Scene setup
     const scene = new Scene();
     scene.background = new Color(0x000000);
@@ -213,7 +226,9 @@ const IsometricCube = () => {
 
     // Animation
     const animate = () => {
-      requestAnimationFrame(animate);
+      if (isVisible) {
+        animId = requestAnimationFrame(animate);
+      }
       
       cubes.forEach((cube) => {
         const dx = cube.position.x - mouseWorldPosition.x;
@@ -261,10 +276,12 @@ const IsometricCube = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
 
     // Cleanup
     return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animId);
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', onMouseMove);
       if (mountNode && renderer.domElement && mountNode.contains(renderer.domElement)) {

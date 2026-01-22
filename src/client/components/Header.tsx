@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image"
@@ -9,6 +9,10 @@ import Image from "next/image"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+
+  const handleMenuToggle = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
 
   const navLinks = [
     { href: "/#services", label: t('header.services') },
@@ -25,7 +29,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-foreground"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={handleMenuToggle}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -76,7 +80,7 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleMenuToggle()}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
               >
