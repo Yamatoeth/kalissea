@@ -25,13 +25,14 @@
   "services": {
     "label": "Services",
     "title": "Our Expertise",
+    "flipHint": "Hover to flip",
     "items": {
-      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399" },
-      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From $999" },
-      "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo" },
-      "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo" },
-      "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote" },
-      "automation": { "title": "Automation & AI", "description": "Chatbots, workflows, and AI tools to scale your business.", "price": "Custom Quote" }
+      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399", "details": ["Responsive design", "SEO optimized", "Fast loading", "CMS included", "Analytics setup"] },
+      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From $999", "details": ["Payment processing", "Inventory management", "Mobile optimized", "Multiple product variants", "Order notifications"] },
+      "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo", "details": ["24/7 monitoring", "Daily backups", "Security patches", "Performance tuning", "Priority support"] },
+      "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo", "details": ["Keyword research", "On-page optimization", "Content strategy", "Backlink building", "Monthly reporting"] },
+      "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote", "details": ["Logo design", "Color palette", "Typography selection", "Brand guidelines", "Print materials"] },
+      "automation": { "title": "Automation & AI", "description": "Chatbots, workflows, and AI tools to scale your business.", "price": "Custom Quote", "details": ["Workflow automation", "AI chatbots", "CRM integration", "Data processing", "Custom solutions"] }
     },
     "details": {
       "benefitsTitle": "Why Choose Us?",
@@ -259,6 +260,8 @@
     "label": "Pricing",
     "title": "Transparent Pricing",
     "paymentTerms": "Payment terms: 50% at order — 50% on delivery",
+    "flipHint": "Hover to flip",
+    "flipBack": "Hover to flip back",
     "common": {
       "popular": "POPULAR",
       "included": "Included:",
