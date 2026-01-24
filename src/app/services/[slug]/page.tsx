@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import { getAllServiceSlugs, getServiceData, getDictionary } from "@lib/i18n-server";
 import ServiceDetailTemplate from "@/components/ServiceDetailTemplate";
+import Script from "next/script";
 import type { Metadata } from "next";
 
-// Mapping specific result images for services if needed
-// This mimics the previous hardcoded logic in individual pages
+  // Mapping specific result images for services
 const RESULTS_MAP: Record<string, { type: "image" | "video"; url: string; caption: string }[]> = {
   'website-creation': [
     {
@@ -65,7 +65,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const cookieStore = await cookies();
-  const lang = (cookieStore.get("i18next")?.value as "fr" | "en") || "fr"; // Default to fr
+  const lang = (cookieStore.get("i18next")?.value as "fr" | "en") || "fr";
   
   const serviceData = await getServiceData(slug, lang); 
 
@@ -75,7 +75,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // Use the specific SEO data if available, fallback to hero info
+  const baseUrl = "https://kalissea.com";
+  const serviceUrl = `${baseUrl}/services/${slug}`;
+  const ogImageUrl = `${baseUrl}/og/${slug}.png`;
+
   const title = serviceData.seo?.title || `${serviceData.title} | Kalissea`;
   const description = serviceData.seo?.description || serviceData.heroDescription;
   const keywords = serviceData.seo?.keywords || [];
@@ -83,16 +86,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    keywords,
+    keywords: [...keywords, "agence web", "Kalissea"],
     alternates: {
-      canonical: `https://kalissea.com/services/${slug}`,
+      canonical: serviceUrl,
+      languages: {
+        'fr': serviceUrl,
+        'en': serviceUrl,
+        'x-default': serviceUrl,
+      },
     },
     openGraph: {
       title,
       description,
-      url: `https://kalissea.com/services/${slug}`,
+      url: serviceUrl,
       type: 'website',
-    }
+      locale: 'fr_CA',
+      countryName: 'Canada',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: serviceData.title,
+          type: 'image/png',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageUrl],
+      creator: '@kalissea',
+    },
   };
 }
 
@@ -130,24 +156,117 @@ export default async function ServicePage({ params }: Props) {
   }
 
   return (
-    <ServiceDetailTemplate
-      title={serviceData.title}
-      heroTitle={serviceData.heroTitle}
-      heroDescription={serviceData.heroDescription}
-      longDescription={serviceData.longDescription}
-      benefitsTitle={dict.services.details.benefitsTitle}
-      benefits={serviceData.benefits}
-      featuresTitle={dict.services.details.featuresTitle}
-      featuresDescription={dict.services.details.featuresDescription}
-      features={serviceData.features}
-      resultsTitle={dict.services.details.resultsTitle}
-      results={results}
-      faqTitle={dict.services.details.faqTitle}
-      faq={serviceData.faq}
-      ctaTitle={serviceData.ctaTitle}
-      ctaDescription={serviceData.ctaDescription}
-      backLabel={dict.header.services}
-      startProjectLabel={dict.hero.startProject}
-    />
+    <>
+      {/* Breadcrumb Schema */}
+      <Script
+        id={`breadcrumb-${slug}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://kalissea.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://kalissea.com/#services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": serviceData.title,
+                "item": `https://kalissea.com/services/${slug}`
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* FAQ Schema */}
+      {serviceData.faq && serviceData.faq.length > 0 && (
+        <Script
+          id={`faq-${slug}`}
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": serviceData.faq.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer
+                }
+              }))
+            })
+          }}
+        />
+      )}
+
+      {/* Service + LocalBusiness Schema */}
+      <Script
+        id={`service-${slug}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Kalissea",
+            "description": "Agence web spécialisée en développement, SEO et automatisation",
+            "url": "https://kalissea.com",
+            "telephone": "",
+            "areaServed": {
+              "@type": "Country",
+              "name": "CA"
+            },
+            "service": {
+              "@type": "Service",
+              "name": serviceData.title,
+              "description": serviceData.seo?.description || serviceData.heroDescription,
+              "provider": {
+                "@type": "Organization",
+                "name": "Kalissea",
+                "url": "https://kalissea.com"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "CA"
+              }
+            }
+          })
+        }}
+      />
+
+      <ServiceDetailTemplate
+        title={serviceData.title}
+        heroTitle={serviceData.heroTitle}
+        heroDescription={serviceData.heroDescription}
+        longDescription={serviceData.longDescription}
+        benefitsTitle={dict.services.details.benefitsTitle}
+        benefits={serviceData.benefits}
+        featuresTitle={dict.services.details.featuresTitle}
+        featuresDescription={dict.services.details.featuresDescription}
+        features={serviceData.features}
+        resultsTitle={dict.services.details.resultsTitle}
+        results={results}
+        faqTitle={dict.services.details.faqTitle}
+        faq={serviceData.faq}
+        ctaTitle={serviceData.ctaTitle}
+        ctaDescription={serviceData.ctaDescription}
+        backLabel={dict.header.services}
+        startProjectLabel={dict.hero.startProject}
+      />
+    </>
   );
 }

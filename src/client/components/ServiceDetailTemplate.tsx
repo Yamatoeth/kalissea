@@ -99,7 +99,6 @@ const ServiceDetailTemplate = ({
 
 
         {/* Hero Section */}
-
         <section className="px-6 mb-20 text-center">
           <div className="container mx-auto max-w-4xl">
             <div className="section-label justify-center mb-6">
@@ -120,6 +119,17 @@ const ServiceDetailTemplate = ({
           </div>
         </section>
 
+        {/* Long Description Section - SEO Content */}
+        {longDescription && (
+          <section className="px-6 py-20 bg-muted/20">
+            <div className="container mx-auto max-w-4xl prose prose-invert">
+              <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-wrap">
+                {longDescription}
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* Benefits Section */}
         <section className="px-6 py-20 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
@@ -129,7 +139,7 @@ const ServiceDetailTemplate = ({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex gap-4 p-6 bg-card border border-border rounded-xl card-hover">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">
                       {benefit.title}
@@ -200,8 +210,8 @@ const ServiceDetailTemplate = ({
           <section className="px-6 py-20 bg-muted/30">
             <div className="container mx-auto max-w-6xl">
               <div className="text-center mb-16">
-                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  {featuresTitle || "Features"}
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  {featuresTitle || "Fonctionnalités"}
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                   {featuresDescription}
@@ -226,7 +236,7 @@ const ServiceDetailTemplate = ({
 
         {/* FAQ Section */}
         {faq && faq.length > 0 && (
-          <section className="px-6 py-20 bg-background">
+          <section className="px-6 py-20 bg-background" aria-label="Questions fréquemment posées">
             <div className="container mx-auto max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
                 {faqTitle || "FAQ"}

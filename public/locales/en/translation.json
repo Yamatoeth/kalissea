@@ -27,7 +27,7 @@
     "title": "Our Expertise",
     "flipHint": "Hover to flip",
     "items": {
-      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399", "details": ["Responsive design", "SEO optimized", "Fast loading", "CMS included", "Analytics setup"] },
+      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399", "details": ["Responsive design", "SEO optimized", "Fast loading", "Analytics setup"] },
       "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From $999", "details": ["Payment processing", "Inventory management", "Mobile optimized", "Multiple product variants", "Order notifications"] },
       "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo", "details": ["24/7 monitoring", "Daily backups", "Security patches", "Performance tuning", "Priority support"] },
       "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo", "details": ["Keyword research", "On-page optimization", "Content strategy", "Backlink building", "Monthly reporting"] },
@@ -52,7 +52,7 @@
         "features": [
           { "title": "Responsive Design", "description": "Perfect display on mobile, tablet, and desktop." },
           { "title": "SEO Optimization", "description": "Technical structure optimized for Google (tags, sitemap, speed)." },
-          { "title": "Intuitive CMS", "description": "Easy admin interface to modify your texts and images." },
+          { "title": "Responsive Design", "description": "Perfect display on mobile, tablet and desktop." },
           { "title": "SSL Security", "description": "HTTPS certificate included to secure visitor data." },
           { "title": "Analytics", "description": "Google Analytics integration to track your performance." },
           { "title": "Forms", "description": "Advanced contact forms with anti-spam protection." }
@@ -60,7 +60,7 @@
         "faq": [
           { "question": "How long does it take to create a site?", "answer": "For a standard showcase site, expect between 2 and 4 weeks. This includes design, development, and revisions." },
           { "question": "Will the site be mobile-friendly?", "answer": "Absolutely. We adopt a 'Mobile First' approach. Your site will be designed to offer a perfect experience on smartphone first." },
-          { "question": "Can I update the content myself?", "answer": "Yes, we integrate a CMS (content management system) that allows you to change texts and images without touching the code." },
+          { "question": "Do I own the website?", "answer": "Yes, 100%. Once final payment is made, you own all the code and design. You have full control." },
           { "question": "Do I own the website?", "answer": "Yes, 100%. Once final payment is made, you own the full code and design." }
         ],
         "seo": {
@@ -111,7 +111,7 @@
           { "title": "Priority Support", "description": "A question? A change? Our team is there for you in a click." }
         ],
         "features": [
-          { "title": "Plugin/Core Updates", "description": "Weekly CMS and extension updates." },
+          { "title": "Automatic Updates", "description": "Weekly updates for security and performance." },
           { "title": "Uptime Monitoring", "description": "Site availability check every minute." },
           { "title": "Cloud Backups", "description": "Encrypted backups stored on external server." },
           { "title": "Malware Scan", "description": "Daily infected file analysis." },
@@ -271,7 +271,7 @@
     },
     "plans": {
       "essential": { "name": "Landing Page", "price": "$399", "features": ["Premium homepage design", "Services & About sections", "Contact form integration", "Social media links", "Fully responsive design", "Basic SEO setup"], "excluded": ["E-commerce features", "Advanced SEO"] },
-      "popular": { "name": "Business Website", "price": "$699", "features": ["Up to 5 custom pages", "Advanced animations", "CMS for easy updates", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
+      "popular": { "name": "Business Website", "price": "$699", "features": ["Up to 5 custom pages", "Advanced animations", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
       "ultimate": { "name": "E-Commerce Store", "price": "From $999", "features": ["Complete online store", "Product management", "Stripe/PayPal payments", "Inventory management", "Order notifications", "Sales dashboard", "Fully responsive design", "Advanced SEO setup"], "excluded": [] }
     }
   },

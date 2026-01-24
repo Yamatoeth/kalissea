@@ -27,7 +27,7 @@
     "title": "Notre Expertise",
     "flipHint": "Survolez pour retourner",
     "items": {
-      "creation": { "title": "Création de Site Web", "description": "Sites web sur mesure conçus pour convertir vos visiteurs en clients.", "price": "À partir de 399$", "details": ["Design responsive", "Optimisé SEO", "Chargement rapide", "CMS inclus", "Suivi analytics"] },
+      "creation": { "title": "Création de Site Web", "description": "Sites web sur mesure conçus pour convertir vos visiteurs en clients.", "price": "À partir de 399$", "details": ["Design responsive", "Optimisé SEO", "Chargement rapide", "Suivi analytics"] },
       "ecommerce": { "title": "E-Commerce", "description": "Boutiques en ligne complètes avec paiements et gestion des stocks.", "price": "À partir de 999$", "details": ["Traitement des paiements", "Gestion des stocks", "Optimisé mobile", "Variantes de produits", "Notifications commandes"] },
       "maintenance": { "title": "Maintenance", "description": "Gardez votre site sécurisé, rapide et toujours à jour.", "price": "À partir de 99$/mois", "details": ["Monitoring 24/7", "Sauvegardes quotidiennes", "Correctifs sécurité", "Optimisation performance", "Support prioritaire"] },
       "seo": { "title": "SEO & Croissance", "description": "Soyez mieux classé sur Google. Obtenez plus de trafic organique.", "price": "À partir de 149$/mois", "details": ["Recherche de mots-clés", "Optimisation on-page", "Stratégie contenu", "Construction liens", "Rapports mensuels"] },
@@ -52,7 +52,7 @@
         "features": [
           { "title": "Responsive Design", "description": "Affichage parfait sur mobile, tablette et desktop." },
           { "title": "Optimisation SEO", "description": "Structure technique optimisée pour Google (balises, sitemap, vitesse)." },
-          { "title": "CMS Intuitif", "description": "Interface d'admin facile pour modifier vos textes et images." },
+          { "title": "Design Responsive", "description": "Affichage parfait sur mobile, tablette et desktop." },
           { "title": "Sécurité SSL", "description": "Certificat HTTPS inclus pour sécuriser les données visiteurs." },
           { "title": "Analytics", "description": "Intégration de Google Analytics pour suivre vos performances." },
           { "title": "Formulaires", "description": "Formulaires de contact avancés avec protection anti-spam." }
@@ -60,7 +60,7 @@
         "faq": [
           { "question": "Combien de temps faut-il pour créer un site ?", "answer": "Pour un site vitrine standard, comptez entre 2 et 4 semaines. Ce délai inclut la phase de design, le développement et les révisions." },
           { "question": "Le site sera-t-il optimisé pour les mobiles ?", "answer": "Absolument. Nous adoptons une approche 'Mobile First'. Votre site sera conçu pour offrir une expérience parfaite sur smartphone avant tout." },
-          { "question": "Puis-je modifier le contenu moi-même ?", "answer": "Oui, nous intégrons un CMS (système de gestion de contenu) qui vous permet de changer textes et images sans toucher au code." },
+          { "question": "Le site m'appartient-il ?", "answer": "Oui, à 100%. Une fois le paiement final effectué, vous êtes propriétaire de l'intégralité du code et du design." },
           { "question": "Le site m'appartient-il ?", "answer": "Oui, à 100%. Une fois le paiement final effectué, vous êtes propriétaire de l'intégralité du code et du design." }
         ],
         "seo": {
@@ -111,7 +111,7 @@
           { "title": "Support Prioritaire", "description": "Une question ? Une modification ? Notre équipe est là pour vous en un clic." }
         ],
         "features": [
-          { "title": "Updates Plugin/Core", "description": "Mise à jour hebdomadaire du CMS et des extensions." },
+          { "title": "Mises à Jour Automatiques", "description": "Mise à jour hebdomadaire pour la sécurité et la performance." },
           { "title": "Uptime Monitoring", "description": "Vérification de la disponibilité du site toutes les minutes." },
           { "title": "Cloud Backups", "description": "Sauvegardes cryptées stockées sur serveur externe." },
           { "title": "Scan Malware", "description": "Analyse quotidienne des fichiers infectés." },
@@ -271,7 +271,7 @@
     },
     "plans": {
       "essential": { "name": "Landing Page", "price": "399$", "features": ["Design page d'accueil premium", "Sections Services & À propos", "Intégration formulaire de contact", "Liens réseaux sociaux", "Design entièrement responsive", "Configuration SEO de base"], "excluded": ["Fonctionnalités E-commerce", "SEO Avancé"] },
-      "popular": { "name": "Site Vitrine Business", "price": "699$", "features": ["Jusqu'à 5 pages personnalisées", "Animations avancées", "CMS pour mises à jour faciles", "Optimisation SEO de base", "Intégration Google Maps", "Liens profil entreprise", "Design entièrement responsive"], "excluded": ["Paiements en ligne"] },
+      "popular": { "name": "Site Vitrine Business", "price": "699$", "features": ["Jusqu'à 5 pages personnalisées", "Animations avancées", "Optimisation SEO de base", "Intégration Google Maps", "Liens profil entreprise", "Design entièrement responsive"], "excluded": ["Paiements en ligne"] },
       "ultimate": { "name": "Boutique E-Commerce", "price": "À partir de 999$", "features": ["Boutique en ligne complète", "Gestion des produits", "Paiements Stripe/PayPal", "Gestion des stocks", "Notifications de commande", "Tableau de bord des ventes", "Design entièrement responsive", "Configuration SEO avancée"], "excluded": [] }
     }
   },
