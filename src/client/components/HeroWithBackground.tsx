@@ -10,7 +10,7 @@ const DynamicIsometricCube = dynamic(
   { 
     ssr: false,
     loading: () => (
-      <div className="absolute inset-0 bg-black" style={{ background: 'radial-gradient(circle at center, #27272a 0%, #000 70%)' }} />
+      <div className="absolute inset-0 bg-black" />
     )
   }
 );
