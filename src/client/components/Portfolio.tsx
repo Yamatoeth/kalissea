@@ -6,6 +6,9 @@ import teclis from "../assets/teclis.avif";
 import terrathread from "../assets/terrathread.avif";
 import glc from "../assets/glc.avif";
 import villa88 from "../assets/villa88.avif";
+import burkett from "../assets/burkett.avif";
+import coupal from "../assets/coupal.avif";
+import mamamouchou from "../assets/mamamouchou.avif";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
@@ -61,6 +64,34 @@ const Portfolio = () => {
       image: teclis,
       link: "https://teclis-scientific.vercel.app/",
       depth: 2,
+    },
+    {
+      title: "Viced",
+      categoryKey: "business",
+      image: burkett,
+      link: "https://viced.vercel.app/",
+      depth: 1,
+    },
+    {
+      title: "Vi-Nha Kitchen",
+      categoryKey: "restaurant",
+      image: coupal,
+      link: "https://vi-nha-kitchen.vercel.app/",
+      depth: 0,
+    },
+    {
+      title: "Mieng Restaurant",
+      categoryKey: "restaurant",
+      image: mamamouchou,
+      link: "https://mieng-restaurant.vercel.app/",
+      depth: 2,
+    },
+    {
+      title: "AL Plomberie",
+      categoryKey: "business",
+      image: coupal,
+      link: "https://al-plomberie.vercel.app/",
+      depth: 1,
     },
   ];
 
