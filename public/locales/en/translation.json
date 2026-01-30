@@ -27,8 +27,8 @@
     "title": "Our Expertise",
     "flipHint": "Hover to flip",
     "items": {
-      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From $399", "details": ["Responsive design", "SEO optimized", "Fast loading", "Analytics setup"] },
-      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From $999", "details": ["Payment processing", "Inventory management", "Mobile optimized", "Multiple product variants", "Order notifications"] },
+      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From €399", "details": ["Responsive design", "SEO optimized", "Fast loading", "Analytics setup"] },
+      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From €899", "details": ["Payment processing", "Inventory management", "Mobile optimized", "Multiple product variants", "Order notifications"] },
       "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo", "details": ["24/7 monitoring", "Daily backups", "Security patches", "Performance tuning", "Priority support"] },
       "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo", "details": ["Keyword research", "On-page optimization", "Content strategy", "Backlink building", "Monthly reporting"] },
       "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote", "details": ["Logo design", "Color palette", "Typography selection", "Brand guidelines", "Print materials"] },
@@ -41,35 +41,35 @@
       "featuresTitle": "Key Features",
       "featuresDescription": "Everything you need for a high-performance website.",
       "creation": {
-        "heroTitle": "Websites that leave a lasting impression",
-        "heroDescription": "We don’t just create beautiful sites. We build powerful sales tools, optimized for conversion and user experience.",
-        "longDescription": "In a saturated digital world, having a website isn't enough. Your online presence must be a strategic extension of your brand, capable of capturing attention in seconds and guiding user action.\n\nAt Kalissea, we design custom websites that blend premium aesthetics with technical performance. Every line of code is thought out for speed, every pixel for emotion. We don't use generic templates; we create a unique architecture adapted to your business goals, whether it's generating leads, selling services, or informing your audience.",
+        "heroTitle": "A Professional Website that Works for You",
+        "heroDescription": "More than just a site\u2014I build a complete digital tool that helps you get found, build trust, and serve your customers better.",
+        "longDescription": "Having a website is about more than just being online; it's about being visible where your customers are looking. I specialize in creating fast, beautiful websites that act as your 24/7 shop front. I handle everything from making you appear on Google and Google Maps to integrating your customer reviews, ensuring your business looks as professional as the services you provide.",
         "benefits": [
-          { "title": "Unique Design", "description": "No templates. Every design is built from scratch for your brand." },
-          { "title": "Ultra-Fast Speed", "description": "Maximum optimization for instant loading on all devices." },
-          { "title": "Conversion-First", "description": "Every element is strategically placed to turn visitors into customers." }
+          { "title": "Found Locally", "description": "Be visible on Google and Google Maps right where your customers search." },
+          { "title": "Trusted Image", "description": "Showcase your real Google reviews and a premium design that builds confidence." },
+          { "title": "Always Open", "description": "Your business info, services, and contact details are available 24/7." }
         ],
         "features": [
-          { "title": "Responsive Design", "description": "Perfect display on mobile, tablet, and desktop." },
-          { "title": "SEO Optimization", "description": "Technical structure optimized for Google (tags, sitemap, speed)." },
-          { "title": "Responsive Design", "description": "Perfect display on mobile, tablet and desktop." },
-          { "title": "SSL Security", "description": "HTTPS certificate included to secure visitor data." },
-          { "title": "Analytics", "description": "Google Analytics integration to track your performance." },
-          { "title": "Forms", "description": "Advanced contact forms with anti-spam protection." }
+          { "title": "Google Maps Ready", "description": "Appear on the map so local customers can find your location easily." },
+          { "title": "Review Integration", "description": "Display your best client feedback directly on your site to prove your quality." },
+          { "title": "Fast & Beautiful", "description": "A site that loads instantly and looks great, reflecting your professionalism." },
+          { "title": "Found on Search", "description": "Setup to help your business climb Google's results in your area." },
+          { "title": "Hassle-Free Sync", "description": "I manage the connection between your site, your domain, and your business profile." },
+          { "title": "Clear Info", "description": "Your services and contact details are organized to be found in seconds." }
         ],
         "faq": [
-          { "question": "How long does it take to create a site?", "answer": "For a standard showcase site, expect between 2 and 4 weeks. This includes design, development, and revisions." },
-          { "question": "Will the site be mobile-friendly?", "answer": "Absolutely. We adopt a 'Mobile First' approach. Your site will be designed to offer a perfect experience on smartphone first." },
-          { "question": "Do I own the website?", "answer": "Yes, 100%. Once final payment is made, you own all the code and design. You have full control." },
-          { "question": "Do I own the website?", "answer": "Yes, 100%. Once final payment is made, you own the full code and design." }
+          { "question": "What do I need to provide?", "answer": "Just your basic info and photos. If you're missing some, I can help you find professional images that match your craft." },
+          { "question": "Will I show up on Google?", "answer": "Yes, I perform the necessary steps so that your business correctly appears on search results and Google Maps." },
+          { "question": "Can I show my client reviews?", "answer": "Absolutely. I can integrate your Google reviews so new visitors can see the quality of your work immediately." },
+          { "question": "What if my info changes?", "answer": "I'm always a WhatsApp message away to help you update your hours, phone number, or services." }
         ],
         "seo": {
-           "title": "Professional Website Creation | Kalissea Web Agency",
-           "description": "Custom website creation agency. Unique design, maximum performance, and conversion-optimized. Get your free quote.",
-           "keywords": ["website creation", "web agency", "showcase site", "web development", "custom site"]
+          "title": "Professional Website Creation | Google Maps & Reviews Included",
+          "description": "Get a professional website that works. Google visibility, reviews integration, and 24/7 customer access. Start growing today.",
+          "keywords": ["google maps visibility", "website with reviews", "local business website", "professional web design"]
         },
-        "ctaTitle": "Ready to transform your online presence?",
-        "ctaDescription": "Let's discuss your project and create the site that will propel your business forward."
+        "ctaTitle": "Ready to be found by more customers?",
+        "ctaDescription": "Let's build the tool that will make your business visible and trusted online."
       },
       "ecommerce": {
         "heroTitle": "Sell more, everywhere, all the time",
@@ -270,27 +270,45 @@
       "getStarted": "Get Started"
     },
     "plans": {
-      "essential": { "name": "Landing Page", "price": "$399", "features": ["Premium homepage design", "Services & About sections", "Contact form integration", "Social media links", "Fully responsive design", "Basic SEO setup"], "excluded": ["E-commerce features", "Advanced SEO"] },
-      "popular": { "name": "Business Website", "price": "$699", "features": ["Up to 5 custom pages", "Advanced animations", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
-      "ultimate": { "name": "E-Commerce Store", "price": "From $999", "features": ["Complete online store", "Product management", "Stripe/PayPal payments", "Inventory management", "Order notifications", "Sales dashboard", "Fully responsive design", "Advanced SEO setup"], "excluded": [] }
+      "essential": { "name": "Landing Page", "price": "399€", "features": ["Premium homepage design", "Services & About sections", "Contact form integration", "Social media links", "Fully responsive design", "Basic SEO setup"], "excluded": ["E-commerce features", "Advanced SEO"] },
+      "popular": { "name": "On Demand Business Site", "price": "Custom Quote", "features": ["Up to 5 custom pages", "Animations advanced", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
+      "ultimate": { "name": "E-Commerce Store", "price": "from 899€", "features": ["Complete online store", "Product management", "Stripe/PayPal payments", "Inventory management", "Order notifications", "Sales dashboard", "Fully responsive design", "Advanced SEO setup"], "excluded": [] }
     }
   },
   "seoPricing": {
     "label": "SEO Services",
     "title": "Search Engine Optimization",
-    "annualPlansTitle": "Annual Plans",
     "common": {
       "getStarted": "Get Started",
       "viewDetails": "View Details"
     },
-    "monthlyPlans": {
-      "local": { "name": "SEO Local", "tier": "Local", "features": ["15 local keywords", "Google Business optimization", "Google Business posts", "1 optimized photo/month", "On-site optimization", "Monthly SEO report"] },
-      "boost": { "name": "SEO Boost", "tier": "Boost", "features": ["20-25 targeted keywords", "Advanced GB optimization", "1 SEO article/month", "Technical fixes", "Competitive analysis", "Detailed monthly report", "15 min follow-up call"] },
-      "pro": { "name": "SEO Pro", "tier": "Pro", "features": ["Quarterly SEO audit", "Up to 40 keywords", "2 SEO articles/month", "Continuous optimization", "2-3 backlinks/month", "Conversion tracking", "Monthly strategy meeting"] }
-    },
-    "annualPlans": {
-      "local": { "name": "Local Annual Plan", "tier": "Annual Local", "features": ["12-month local SEO package", "15 local keywords tracked", "Initial G. Business optimization", "12 G. Business posts (1/month)", "Continuous technical optimization", "4 quarterly reports", "1 complete year-end audit", "1 annual strategy call"] },
-      "national": { "name": "National Annual Plan", "tier": "Annual National", "features": ["National visibility (US/EU...)", "30-40 national keywords", "12 SEO articles/year (1/month)", "Regular netlinking", "Year-round technical optimization", "4 quarterly reports", "2 complete SEO audits", "2 strategic sessions (start & mid-year)"] }
+    "plans": {
+      "audit": {
+        "name": "SEO Review & Boost",
+        "price": "300€",
+        "period": "one-time",
+        "features": [
+          "Complete site health check",
+          "Keyword optimization",
+          "Technical fixes",
+          "Google Maps visibility check",
+          "Performance report",
+          "Strategic action plan"
+        ]
+      },
+      "monthly": {
+        "name": "Monthly SEO",
+        "price": "50€",
+        "period": "per month",
+        "features": [
+          "Google Business monitoring",
+          "Regular site updates",
+          "Keyword tracking",
+          "Monthly health check",
+          "Security monitoring",
+          "Priority support"
+        ]
+      }
     }
   },
   "testimonials": {
@@ -298,40 +316,40 @@
     "title": "Client Success Stories",
     "items": [
       {
-        "quote": "We wanted something visually strong without being flashy. The site is premium, clean, and very well structured. Our brand finally looks as high-end online as it is in reality.",
-        "name": "Sarah M.",
+        "quote": "Our digital presence finally matches the elegance of our establishment. The booking flow is seamless and our customers love the new experience.",
+        "name": "Jean-Pierre L.",
+        "role": "General Manager",
+        "company": "Villa88"
+      },
+      {
+        "quote": "The team understood perfectly our technical requirements. Our research tools are now accessible through a modern and highly performant interface.",
+        "name": "Prof. Miller",
+        "role": "Lead Researcher",
+        "company": "Teclis Scientific"
+      },
+      {
+        "quote": "Sales increased significantly after the launch. The mobile shopping experience is light years ahead of what we had before. A true partner for our growth.",
+        "name": "Lucie B.",
         "role": "Founder",
-        "company": "Luxury Mobility Company"
+        "company": "Kalissea Shop"
       },
       {
-        "quote": "What impressed us most is the clarity. Complex technology explained simply. The site helped us appear credible immediately to investors.",
-        "name": "James P.",
-        "role": "Product Director",
-        "company": "Tech Startup"
+        "quote": "A clean, appetizing website that perfectly captures the atmosphere of our restaurant. Reservations have never been easier for our guests.",
+        "name": "Chef Antoine",
+        "role": "Executive Chef",
+        "company": "L'Atelier Parisien"
       },
       {
-        "quote": "We were looking for something very clean, very high-end. The site is elegant, fast, and most importantly, it generates qualified leads.",
-        "name": "Michael R.",
-        "role": "Director",
-        "company": "Prestige Real Estate Agency"
+        "quote": "Finally a website that brings me real calls. People find me easily on Google and the contact form works perfectly. Very professional service.",
+        "name": "Alain L.",
+        "role": "Owner",
+        "company": "AL Plomberie"
       },
       {
-        "quote": "The work on user experience is remarkable. The site tells a story, creates desire, and perfectly reflects our universe.",
-        "name": "Emily L.",
-        "role": "Marketing Manager",
-        "company": "Hotel Establishment"
-      },
-      {
-        "quote": "What I appreciated is the holistic vision. Not just a site or marketing, but a real business reflection.",
-        "name": "David K.",
-        "role": "Entrepreneur",
-        "company": "International Project"
-      },
-      {
-        "quote": "Our industry demands trust. The site design and content tone helped us appear credible, professional, and premium at the same time.",
-        "name": "Dr. Anna C.",
-        "role": "Clinical Director",
-        "company": "Wellness & Longevity Brand"
+        "quote": "Communicating our sustainable values was a challenge. They created a visual story that resonates with our audience while maintaining high performance.",
+        "name": "Elena S.",
+        "role": "Creative Director",
+        "company": "Terrathread"
       }
     ]
   },
@@ -344,13 +362,9 @@
       "viewDetails": "View Details"
     },
     "plans": {
-      "basic": { "tier": "Essential", "name": "Basic Care", "price": "$39", "img": "Basic", "period": "/mo", "features": ["Security updates", "Regular backups", "Minor bug fixes", "Uptime monitoring"] },
-      "business": { "tier": "Popular", "name": "Business Care", "price": "$59", "img": "Business", "period": "/mo", "features": ["Everything in Basic", "Content updates (text/images)", "Priority support", "Basic optimization"] },
-      "premium": { "tier": "Ultimate", "name": "Premium Care", "price": "$99", "img": "Premium", "period": "/mo", "features": ["Full site management", "Reasonable modifications", "SEO monitoring", "Priority WhatsApp support"] }
-    },
-    "additional": {
-      "unlimited": { "tier": "Unlimited", "name": "WebCare Unlimited", "description": "Complete site management, on demand.", "price": "$119", "period": "/mo", "features": ["Unlimited modifications (reasonable)", "Absolute priority on all requests", "SEO monitoring", "Continuous adjustments"], "note": "" },
-      "hosting": { "tier": "Hosting", "name": "Hosting & Security", "description": "Essential infrastructure for your site.", "price": "$89", "period": "/year", "features": ["Domain name (1 year)", "Secure hosting (1 year)", "SSL certificate (https)", "Anti-bot protection", "Basic monitoring"], "note": "Content updates managed via WebCare plans" }
+      "securityAudit": { "tier": "Security", "name": "Security Audit", "price": "$49", "img": "Security", "period": "/mo", "features": ["Security updates", "Regular backups", "Vulnerability scanning", "Security patches", "Malware protection"] },
+      "modifications": { "tier": "Popular", "name": "Modifications", "price": "$79", "img": "Modifications", "period": "/mo", "features": ["Content updates (text/images)", "Bug fixes", "Feature enhancements", "Priority support", "Performance optimization"] },
+      "hosting": { "tier": "Hosting", "name": "Hosting", "price": "$89", "img": "Hosting", "period": "/year", "features": ["Domain name (1 year)", "Secure hosting (1 year)", "SSL certificate (https)", "Anti-bot protection", "24/7 monitoring"] }
     }
   },
   "contact": {

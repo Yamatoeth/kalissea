@@ -10,6 +10,7 @@ import {
   SPRING_CONFIG,
 } from "@/lib/animations";
 import FlipCard from "./FlipCard";
+import Image from "next/image";
 
 const Pricing = () => {
   const { t } = useTranslation();
@@ -18,14 +19,20 @@ const Pricing = () => {
     {
       key: "essential",
       popular: false,
+      image: "/images/results/terrathread.avif",
+      alt: "Terra Thread Website",
     },
     {
       key: "popular",
       popular: true,
+      image: "/images/results/kalissea.avif",
+      alt: "Kalissea Website",
     },
     {
       key: "ultimate",
       popular: false,
+      image: "/images/results/villa88.avif",
+      alt: "Villa88 Website",
     },
   ];
 
@@ -96,6 +103,16 @@ const Pricing = () => {
                       plan.popular ? "border-primary" : "border-border"
                     }`}
                   >
+                    {/* Portfolio Image */}
+                    <div className="mb-4 rounded-lg overflow-hidden h-32 w-full relative">
+                      <Image
+                        src={plan.image}
+                        alt={plan.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
                     {/* Popular Badge */}
                     {plan.popular && (
                       <motion.div
@@ -132,7 +149,7 @@ const Pricing = () => {
                       </motion.div>
 
                       <motion.p className="text-sm text-muted-foreground mb-4">
-                        50% upfront / 50% on delivery
+                        Payment after shipping
                       </motion.p>
                     </div>
 

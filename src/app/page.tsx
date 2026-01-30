@@ -1,4 +1,4 @@
-import IndexPage from "@/pages/Index";
+import MainApp from "@/components/MainApp";
 import type { Metadata }  from "next";
 
 export const metadata: Metadata = {
@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function Index() {
-  return <IndexPage />;
+  return <MainApp />;
 }
