@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
       <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="+ru5y+rFf5tU3296F8N/OQ" async></script>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
