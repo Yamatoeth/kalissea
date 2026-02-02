@@ -159,7 +159,7 @@ const Pricing = () => {
                   </div>
                 }
                 backContent={
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-xl p-6 h-full flex flex-col justify-between overflow-y-auto">
+                  <div className="bg-linear-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-xl p-6 h-full flex flex-col justify-between overflow-y-auto">
                     <div>
                       <h4 className="font-semibold text-foreground mb-3 text-sm">
                         {t("pricing.common.included")}

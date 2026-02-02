@@ -93,7 +93,7 @@ const Services = () => {
                   </a>
                 }
                 backContent={
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-xl p-6 h-full flex flex-col justify-between">
+                  <div className="bg-linear-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-xl p-6 h-full flex flex-col justify-between">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-4">
                         {t(`services.items.${key}.title`)}

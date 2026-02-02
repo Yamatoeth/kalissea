@@ -11,6 +11,7 @@ import mieng from "../assets/mieng.png";
 import alplomberie from "../assets/alplomberie.png";
 import hairsalon from "../assets/hairsalon.png";
 import viced from "../assets/viced.png";
+import music from "../assets/music.png";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
@@ -109,6 +110,13 @@ const Portfolio = () => {
       link: "https://viced.vercel.app/",
       depth: 1,
     },
+    {
+      title : "BlueInstruments",
+      categoryKey : "business",
+      image : music,
+      link : "https://blue-instruments.vercel.app",
+      depth : 2
+    }
   ];
 
   return (
