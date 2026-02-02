@@ -1,14 +1,16 @@
 "use client";
 import Image from "next/image";
 import atelierParisien from "../assets/atelierparisien.avif";
-import kalissea from "../assets/kalissea.avif";
 import teclis from "../assets/teclis.avif";
 import terrathread from "../assets/terrathread.avif";
 import glc from "../assets/glc.avif";
 import villa88 from "../assets/villa88.avif";
 import burkett from "../assets/burkett.avif";
-import coupal from "../assets/coupal.avif";
-import mamamouchou from "../assets/mamamouchou.avif";
+import kitchen from "../assets/kitchen.png";
+import mieng from "../assets/mieng.png";
+import alplomberie from "../assets/alplomberie.png";
+import hairsalon from "../assets/hairsalon.png";
+import viced from "../assets/viced.png";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
@@ -41,7 +43,7 @@ const Portfolio = () => {
       title: "GLC",
       categoryKey: "company",
       image: glc,
-      link: "#",
+      link: "https://yamatoeth.github.io/GlcSolutions/",
       depth: 2,
     },
     {
@@ -51,46 +53,60 @@ const Portfolio = () => {
       link: "https://terraandthread.vercel.app/",
       depth: 1,
     },
+    // {
+    //   title: "Kalissea",
+    //   categoryKey: "onlineshop",
+    //   image: kalissea,
+    //   link: "https://kalissea.com/",
+    //   depth: 0,
+    // },
     {
-      title: "Kalissea",
-      categoryKey: "onlineshop",
-      image: kalissea,
-      link: "https://kalissea.com/",
-      depth: 0,
-    },
-    {
-      title: "Teclis",
+      title: "Teclis Scientific",
       categoryKey: "business",
       image: teclis,
       link: "https://teclis-scientific.vercel.app/",
       depth: 2,
     },
     {
-      title: "Viced",
+      title: "Burkett",
       categoryKey: "business",
       image: burkett,
-      link: "https://viced.vercel.app/",
+      link: "https://yamatoeth.github.io/Burkett-Co/",
       depth: 1,
     },
     {
       title: "Vi-Nha Kitchen",
       categoryKey: "restaurant",
-      image: coupal,
+      image: kitchen,
       link: "https://vi-nha-kitchen.vercel.app/",
       depth: 0,
     },
     {
       title: "Mieng Restaurant",
       categoryKey: "restaurant",
-      image: mamamouchou,
+      image: mieng,
       link: "https://mieng-restaurant.vercel.app/",
       depth: 2,
     },
     {
       title: "AL Plomberie",
       categoryKey: "business",
-      image: coupal,
+      image: alplomberie,
       link: "https://al-plomberie.vercel.app/",
+      depth: 1,
+    },
+    {
+      title: "Salon de Coiffure",
+      categoryKey: "business",
+      image: hairsalon,
+      link: "https://hairsalon-website.vercel.app/",
+      depth: 2,
+    },
+    {
+      title: "Viced",
+      categoryKey: "business",
+      image: viced,
+      link: "https://viced.vercel.app/",
       depth: 1,
     },
   ];
