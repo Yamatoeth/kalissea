@@ -121,6 +121,19 @@ export default function RootLayout({
             />
           </a>
 
+          <a
+            href="https://findly.tools/kalissea?utm_source=kalissea"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "block", width: "150px", margin: "20px auto 40px" }}
+          >
+            <img
+              src="https://findly.tools/badges/findly-tools-badge-light.svg"
+              alt="Featured on findly.tools"
+              width={150}
+            />
+          </a>
+
           <WhatsAppFloat />
         </Providers>
       </body>
