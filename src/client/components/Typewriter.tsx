@@ -54,7 +54,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
 
   return (
     <motion.div
-      className={className}
+      className={`${className} flex flex-wrap justify-center`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"

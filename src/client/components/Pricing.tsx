@@ -19,20 +19,20 @@ const Pricing = () => {
     {
       key: "essential",
       popular: false,
-      image: "/images/results/terrathread.avif",
-      alt: "Terra Thread Website",
+      image: "/images/results/alplomberie.png",
+      alt: "Website for a Plumbing Company",
     },
     {
       key: "popular",
       popular: true,
-      image: "/images/results/kalissea.avif",
-      alt: "Kalissea Website",
+      image: "/images/results/viced.png",
+      alt: "High Quality Ui/Ux for a Weed Business Website",
     },
     {
       key: "ultimate",
       popular: false,
-      image: "/images/results/villa88.avif",
-      alt: "Villa88 Website",
+      image: "/images/results/mamamouchou.avif",
+      alt: "Shopify Website",
     },
   ];
 

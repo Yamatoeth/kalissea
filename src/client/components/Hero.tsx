@@ -53,7 +53,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
         style={{ y: textY, opacity }}
       >
         <motion.div
-          className="container mx-auto max-w-4xl text-center"
+          className="container mx-auto max-w-6xl text-center"
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
@@ -75,15 +75,15 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
             whileInView="visible"
             viewport={whileInViewConfig}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
               <Typewriter
                 text={t("hero.titlePrefix")}
-                className="block"
+                className="block text-center"
                 delay={0.1}
                 speed={25}
               />
               <motion.div
-                className="text-primary mt-2"
+                className="text-primary mt-2 text-center"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
@@ -94,7 +94,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
               >
                 <Typewriter
                   text={t("hero.titleHighlight")}
-                  className="block"
+                  className="block text-center"
                   delay={(t("hero.titlePrefix").length * 0.025) + 0.3}
                   speed={25}
                 />
