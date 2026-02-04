@@ -3,6 +3,7 @@ import Providers from "./providers"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import Image from "next/image";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -127,12 +128,15 @@ export default function RootLayout({
             rel="noopener noreferrer"
             style={{ display: "block", width: "150px", margin: "20px auto 40px" }}
           >
-            <img
+            <Image
               src="https://findly.tools/badges/findly-tools-badge-light.svg"
               alt="Featured on findly.tools"
               width={150}
+              height={50}
+              unoptimized
             />
           </a>
+          <script src="https://trustviews.io/script.js" data-token="187a8715-d78c-4c85-bef5-f5ab5c0461e1"></script>
 
           <WhatsAppFloat />
         </Providers>

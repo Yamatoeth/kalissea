@@ -27,6 +27,16 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'submithunt.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'findly.tools',
+      },
+    ],
   },
   
   // Production optimizations
