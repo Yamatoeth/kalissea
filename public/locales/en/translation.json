@@ -6,33 +6,92 @@
     "testimonials": "Testimonials",
     "contact": "Contact",
     "automationFlow": "AutomationFlow",
-    "getQuote": "Get a Quote"
+    "getQuote": "Activate my lead machine"
   },
   "hero": {
-    "label": "Digital Agency",
-    "titlePrefix": "We build websites that ",
-    "titleHighlight": "convert",
-    "description": "Web development, SEO, branding, and automation. Clear pricing. No surprises. Results that matter.",
-    "startProject": "Start a Project",
-    "viewPricing": "View Pricing",
+    "label": "For tradesmen who want jobs, not cold calling",
+    "titlePrefix": "Fill your order book ",
+    "titleHighlight": "automatically",
+    "description": "Stop wasting time chasing clients. Receive qualified quote requests directly on your phone while you're on the job. All for €400, no subscription.",
+    "startProject": "Activate my lead machine",
+    "viewPricing": "How does it work?",
     "stats": {
-      "projects": "Projects Delivered",
-      "satisfaction": "Client Satisfaction",
-      "delivery": "Average Delivery",
-      "support": "Support Available"
+      "projects": "Tradesmen helped",
+      "satisfaction": "Satisfaction rate",
+      "delivery": "To get visible",
+      "support": "Support available"
     }
   },
+  "problem": {
+    "label": "The problem",
+    "title": "You're a tradesman, not a salesperson",
+    "subtitle": "You excel at your craft. But finding clients is another job entirely — a job you don't have the time or desire to do.",
+    "withoutUs": "Without a lead system",
+    "withUs": "With Kalissea",
+    "problems": [
+      "You spend evenings cold calling instead of resting",
+      "Slow periods stress you financially",
+      "Word of mouth alone isn't enough to fill your schedule",
+      "You lose clients because they can't find you on Google",
+      "You pay platforms that force you to compete on price"
+    ],
+    "solutions": [
+      "Your phone rings with qualified quote requests",
+      "Your calendar is booked 2-3 weeks in advance",
+      "Clients find you directly on Google and Google Maps",
+      "You choose your projects instead of taking whatever comes",
+      "You're seen as THE professional in your area"
+    ],
+    "ctaText": "All of this for €400 all-inclusive. No subscription. No surprises.",
+    "cta": "I want to fill my order book"
+  },
+  "results": {
+    "label": "Client Results",
+    "title": "What our tradesmen achieve",
+    "subtitle": "Here are the average results from the plumbers, electricians, and painters we work with.",
+    "before": "Before",
+    "after": "After",
+    "stats": {
+      "calls": {
+        "label": "Prospect calls",
+        "before": "2-3 / week",
+        "after": "8-12 / week"
+      },
+      "bookings": {
+        "label": "Schedule filled",
+        "before": "1 week ahead",
+        "after": "3-4 weeks ahead"
+      },
+      "prospecting": {
+        "label": "Prospecting time",
+        "before": "10h / week",
+        "after": "0h / week"
+      },
+      "revenue": {
+        "label": "Revenue",
+        "before": "Variable",
+        "after": "+40% on average"
+      }
+    },
+    "testimonial": {
+      "quote": "Before, I spent my Sundays distributing flyers. Now my phone rings on its own. In 3 months, I had to hire an apprentice to keep up with demand.",
+      "name": "Marc D.",
+      "role": "Plumber-heating specialist in Marseille",
+      "initials": "MD"
+    },
+    "cta": "Get the same results"
+  },
   "services": {
-    "label": "Services",
-    "title": "Our Expertise",
-    "flipHint": "Hover to flip",
+    "label": "What you get",
+    "title": "Your client generation system",
+    "flipHint": "Hover to see details",
     "items": {
-      "creation": { "title": "Website Creation", "description": "Custom websites designed to convert visitors into customers.", "price": "From €399", "details": ["Responsive design", "SEO optimized", "Fast loading", "Analytics setup"] },
-      "ecommerce": { "title": "E-Commerce", "description": "Complete online stores with payments and inventory management.", "price": "From €899", "details": ["Payment processing", "Inventory management", "Mobile optimized", "Multiple product variants", "Order notifications"] },
-      "maintenance": { "title": "Maintenance", "description": "Keep your site secure, fast, and always up-to-date.", "price": "From $99/mo", "details": ["24/7 monitoring", "Daily backups", "Security patches", "Performance tuning", "Priority support"] },
-      "seo": { "title": "SEO & Growth", "description": "Rank higher on Google. Get more organic traffic.", "price": "From $149/mo", "details": ["Keyword research", "On-page optimization", "Content strategy", "Backlink building", "Monthly reporting"] },
-      "branding": { "title": "Branding", "description": "Logo, visual identity, and brand guidelines that stand out.", "price": "Custom Quote", "details": ["Logo design", "Color palette", "Typography selection", "Brand guidelines", "Print materials"] },
-      "automation": { "title": "Automation & AI", "description": "Chatbots, workflows, and AI tools to scale your business.", "price": "Custom Quote", "details": ["Workflow automation", "AI chatbots", "CRM integration", "Data processing", "Custom solutions"] }
+      "creation": { "title": "Professional Website", "description": "A site that turns visitors into calls. Optimized so clients find you on Google.", "price": "€400 all-inclusive", "details": ["Design that builds trust", "Visible on Google and Maps", "Quote request form", "Google reviews displayed", "One-tap call on mobile"] },
+      "ecommerce": { "title": "Online Store", "description": "Sell your products 24/7. Secure payments and simple order management.", "price": "From €899", "details": ["Stripe/PayPal payments", "Automatic stock management", "Order notifications", "Mobile optimized", "Sales dashboard"] },
+      "maintenance": { "title": "Peace of Mind", "description": "We handle everything so your site stays fast, secure, and performing.", "price": "From €49/month", "details": ["Security updates", "Daily backups", "24/7 monitoring", "Bug fixes", "Priority support"] },
+      "seo": { "title": "Local Visibility", "description": "Show up first when people search for a tradesman in your area.", "price": "From €149/month", "details": ["Google Maps ranking", "Local keywords optimized", "Google Business profile", "Monthly reports", "Content strategy"] },
+      "branding": { "title": "Professional Image", "description": "Logo, business cards, and visual identity that set you apart from competitors.", "price": "Custom quote", "details": ["Logo creation", "Complete brand guidelines", "Business cards", "Print materials", "Vehicle graphics"] },
+      "automation": { "title": "Auto-Responses", "description": "Never lose clients. Respond automatically even when you're on the job.", "price": "Included", "details": ["Auto acknowledgment", "Quote reminders", "Automated follow-up", "WhatsApp integration", "SMS notifications"] }
     },
     "details": {
       "benefitsTitle": "Why Choose Us?",
@@ -41,35 +100,65 @@
       "featuresTitle": "Key Features",
       "featuresDescription": "Everything you need for a high-performance website.",
       "creation": {
-        "heroTitle": "A Professional Website that Works for You",
-        "heroDescription": "More than just a site\u2014I build a complete digital tool that helps you get found, build trust, and serve your customers better.",
-        "longDescription": "Having a website is about more than just being online; it's about being visible where your customers are looking. I specialize in creating fast, beautiful websites that act as your 24/7 shop front. I handle everything from making you appear on Google and Google Maps to integrating your customer reviews, ensuring your business looks as professional as the services you provide.",
+        "heroTitle": "Complete Professional Website - €400 All-Inclusive",
+        "heroDescription": "A high-performance website with custom design, logo creation, professional typography, complete SEO optimization, and Google Business Profile integration. Everything you need to dominate your local market.",
+        "longDescription": "For only €400, get much more than a simple website. I create your complete digital presence: modern and fast website, professional logo creation if needed, harmonious typography selection, advanced SEO optimization with local keywords, Google Maps integration, Google Business Profile enhancement, and much more.\n\nEvery element is designed to maximize your local visibility and convert your visitors into customers. From graphic design to technical optimization, I take care of EVERYTHING so you can focus on your business while your site works for you 24/7.\n\nWhether you're a craftsman, merchant, restaurant, freelancer, or service business, this complete package positions you above your competitors on Google and Google Maps in your geographic area.",
         "benefits": [
-          { "title": "Found Locally", "description": "Be visible on Google and Google Maps right where your customers search." },
-          { "title": "Trusted Image", "description": "Showcase your real Google reviews and a premium design that builds confidence." },
-          { "title": "Always Open", "description": "Your business info, services, and contact details are available 24/7." }
+          { "title": "Complete Professional Design", "description": "Modern and responsive interface with complete visual identity: custom logo, coherent color palette, and carefully selected typography to reflect your professionalism." },
+          { "title": "Maximum Local Visibility", "description": "Complete SEO optimization with local keywords, Schema.org data structuring, Google Maps integration, and Google Business Profile enhancement to appear at the top of results." },
+          { "title": "Reassuring Presence", "description": "Your Google client reviews displayed attractively, clear contact information, professional presentation of your services and prices to inspire immediate confidence." },
+          { "title": "Technical Performance", "description": "Ultra-fast site optimized for mobile and desktop, secure SSL certificate, compliance with modern web standards for optimal SEO." },
+          { "title": "Advanced System Available", "description": "Option to add client authentication system and/or online booking system according to your specific needs." },
+          { "title": "Optimized Google Business", "description": "I take care of improving and optimizing your Google Business Profile: professional photos, relevant categories, updated hours, and direct link to your site." }
         ],
         "features": [
-          { "title": "Google Maps Ready", "description": "Appear on the map so local customers can find your location easily." },
-          { "title": "Review Integration", "description": "Display your best client feedback directly on your site to prove your quality." },
-          { "title": "Fast & Beautiful", "description": "A site that loads instantly and looks great, reflecting your professionalism." },
-          { "title": "Found on Search", "description": "Setup to help your business climb Google's results in your area." },
-          { "title": "Hassle-Free Sync", "description": "I manage the connection between your site, your domain, and your business profile." },
-          { "title": "Clear Info", "description": "Your services and contact details are organized to be found in seconds." }
+          { "title": "Complete Responsive Website", "description": "Modern design adapted to all screens (mobile, tablet, desktop) with intuitive navigation and optimal user experience." },
+          { "title": "Professional Logo Creation", "description": "If you don't have a logo, I create a unique visual identity that perfectly represents your business and sets you apart from the competition." },
+          { "title": "Typography & Brand Guidelines", "description": "Selection of professional fonts, color palette definition, and creation of visual consistency throughout the site." },
+          { "title": "Complete Local SEO", "description": "Research and integration of relevant local keywords, title and meta tag optimization, Schema.org LocalBusiness markup, XML sitemap, and Google Search Console submission." },
+          { "title": "Google Maps Integration", "description": "Interactive map with your precise location, easy directions for your clients, and service area display." },
+          { "title": "Optimized Google Business Profile", "description": "Complete verification and optimization of your listing: primary and secondary categories, SEO-optimized description, relevant attributes, photo management, and link to your new site." },
+          { "title": "Google Reviews Display", "description": "Customer review widget synchronized with your Google Business account to display your best ratings and strengthen your credibility." },
+          { "title": "Essential Pages", "description": "Impactful homepage, detailed Services page with your offerings and prices, About page to humanize your business, Contact page with functional form." },
+          { "title": "Optimized Contact Form", "description": "Secure form with validation, instant email notifications, and possible integration with your CRM or WhatsApp Business." },
+          { "title": "SEO-Optimized FAQ Section", "description": "Structured Q&A page to improve your SEO and answer your prospects' questions before they even contact you." },
+          { "title": "Visible Practical Information", "description": "Opening hours, clickable phone number (direct call from mobile), email, address, social media links clearly displayed." },
+          { "title": "Authentication System (Option)", "description": "Secure client area with login/registration, profile management, for your services requiring private access." },
+          { "title": "Booking System (Option)", "description": "Integrated online booking calendar, availability management, automatic email confirmations for restaurants, salons, consultants, etc." },
+          { "title": "Speed Optimization", "description": "Compressed and optimized images, minified code, smart caching for ultra-fast loading times (Google PageSpeed score >90)." },
+          { "title": "SSL Certificate & Security", "description": "Secure HTTPS included to protect your visitors' data and improve your Google ranking." },
+          { "title": "All-Browser Compatible", "description": "Works perfectly on Chrome, Firefox, Safari, Edge, and all modern browsers." },
+          { "title": "Training & Documentation", "description": "Complete guide to manage your content, video tutorial if needed, and WhatsApp support available after delivery." },
+          { "title": "Analytics & Tracking", "description": "Google Analytics 4 installation to track your visitors, traffic sources, and conversions." },
+          { "title": "Complete Ownership", "description": "You are 100% owner of your site, your domain name, and all your content. No forced subscription." }
         ],
         "faq": [
-          { "question": "What do I need to provide?", "answer": "Just your basic info and photos. If you're missing some, I can help you find professional images that match your craft." },
-          { "question": "Will I show up on Google?", "answer": "Yes, I perform the necessary steps so that your business correctly appears on search results and Google Maps." },
-          { "question": "Can I show my client reviews?", "answer": "Absolutely. I can integrate your Google reviews so new visitors can see the quality of your work immediately." },
-          { "question": "What if my info changes?", "answer": "I'm always a WhatsApp message away to help you update your hours, phone number, or services." }
+          { "question": "What exactly is included in the €400?", "answer": "EVERYTHING listed above: complete responsive website, logo creation (if needed), typography selection, complete local SEO optimization, Google Maps integration, Google Business Profile optimization, client review display, contact form, first year hosting, first year domain name, SSL certificate, and training. Authentication and booking systems are available as options with additional cost depending on complexity." },
+          { "question": "How many pages are included for €400?", "answer": "The standard package includes 5 essential pages: Home, Services/Offerings, About, Contact, and FAQ. If you need additional pages, we can add them with a reasonable supplement (typically €50-80 per additional page)." },
+          { "question": "I don't have a logo, is it really included?", "answer": "Yes! If you don't have a logo yet, I create a professional visual identity adapted to your industry. You'll receive 2-3 design proposals and we'll refine the one you prefer until you're completely satisfied." },
+          { "question": "How does SEO optimization work?", "answer": "I do thorough keyword research for your sector and geographic area (city, region). I then optimize each page with these keywords: titles, descriptions, tags, structured content. I also add Schema.org markup for LocalBusiness, create an XML sitemap, and submit your site to Google Search Console. Result: you appear in relevant local searches." },
+          { "question": "In which geographic area can I be visible?", "answer": "Your visibility depends on your service area. I can optimize for a specific city (e.g., 'plumber Paris 15'), multiple cities (e.g., 'restaurant Lyon Villeurbanne'), or an entire region (e.g., 'landscaper Île-de-France'). The more targeted your area, the better your positioning." },
+          { "question": "How do you improve my Google Business Profile?", "answer": "I optimize your existing listing or create it if necessary: I choose the right categories (primary + secondary), write an SEO-optimized description with keywords, add all relevant attributes to your business, structure your services with prices if applicable, add quality photos, and link your website. All this improves your visibility on Google Maps and in the Knowledge Panel." },
+          { "question": "Will my Google reviews really be displayed on my site?", "answer": "Yes, I integrate a widget that displays your Google reviews in real-time on your homepage. This immediately strengthens visitor trust and improves your conversion rate. It's like having your social proof directly on your site." },
+          { "question": "What's the online booking system?", "answer": "If your activity requires appointments (restaurant, hair salon, doctor, coach, etc.), I can integrate an online booking calendar. Your clients choose their slot, receive automatic email confirmation, and you manage your availability from a simple interface. It's an additional option as it requires more development." },
+          { "question": "What's the authentication system for?", "answer": "If you offer services requiring a private client area (training, subscriptions, private documents, personalized tracking), I can create a secure registration/login system. Your clients create an account, log in, and access their personalized content. It's also an option with additional cost." },
+          { "question": "How long to receive my site?", "answer": "Allow 7 to 14 business days depending on complexity and availability of your content (texts, photos). If you provide everything quickly, I can deliver in 7 days. If we need to create a logo and optimize a lot of content, it may take 14 days." },
+          { "question": "What do I need to provide to start?", "answer": "Very simple: basic information (name, address, phone, email, hours), description of your services/products, texts to present your company, quality photos if you have them (otherwise I can help you find or create visuals), and your logo if you have one. I guide you step by step with a detailed questionnaire." },
+          { "question": "After delivery, do you abandon me?", "answer": "Never! You have 30 days of free support after delivery for any questions or small adjustments. After that, I remain available on WhatsApp for occasional changes (typically €30-50/hour for minor changes). You can also subscribe to a monthly maintenance plan (from €49/month) for regular updates." },
+          { "question": "Do I really own my site 100%?", "answer": "Absolutely. You own your domain name, your hosting, and all your site files. I give you all access and you're free to go to another provider at any time. No tricks, no forced subscription. It's YOUR site." },
+          { "question": "Why €400 when others offer cheaper?", "answer": "Because I include EVERYTHING: custom design (not generic template), logo if needed, real SEO optimization (not just installing a plugin), Google Business Profile integration and optimization, personalized training, and clean, fast code. Others offer cheaper but with basic templates, no real SEO, and no support. You pay for a result that generates clients, not just a pretty site." },
+          { "question": "Can I see examples of sites you've created?", "answer": "Yes of course! Check out my portfolio on the homepage or contact me directly on WhatsApp to see projects similar to your business. I'll be happy to show you concrete achievements." },
+          { "question": "What if I want additional features?", "answer": "No problem! The €400 package is a solid foundation. If you want to add features like booking system, authentication, an e-commerce store, or a blog with CMS, we can create a custom quote. I'm flexible and adapt to your needs and budget." },
+          { "question": "How does payment work?", "answer": "Simple and secure: €200 deposit at project start to secure my availability and begin work, then €200 at final delivery once you're satisfied. Payment by bank transfer or PayPal according to your preference." },
+          { "question": "I'm not in France, do you work internationally?", "answer": "Yes, I work with clients throughout the francophone world (France, Belgium, Switzerland, Canada, French-speaking Africa, etc.). Local SEO optimization adapts to your country and language. The principles are the same everywhere." }
         ],
         "seo": {
-          "title": "Professional Website Creation | Google Maps & Reviews Included",
-          "description": "Get a professional website that works. Google visibility, reviews integration, and 24/7 customer access. Start growing today.",
-          "keywords": ["google maps visibility", "website with reviews", "local business website", "professional web design"]
+          "title": "Complete Website Creation €400 | Logo, SEO & Google Business",
+          "description": "Complete professional website for €400: modern design, logo creation, local SEO optimization, Google Maps, enhanced Google Business Profile. Craftsmen, shops, services. Free quote.",
+          "keywords": ["website creation 400 euros", "complete cheap website", "website with logo included", "google business profile optimization", "craftsman website", "local business website", "professional showcase site", "local seo optimized website", "responsive website with booking", "transparent pricing web agency"]
         },
-        "ctaTitle": "Ready to be found by more customers?",
-        "ctaDescription": "Let's build the tool that will make your business visible and trusted online."
+        "ctaTitle": "Ready to Dominate Your Local Market?",
+        "ctaDescription": "For €400, get everything you need to be found, build trust, and convert your visitors into customers. Contact me on WhatsApp to start today."
       },
       "ecommerce": {
         "heroTitle": "Sell more, everywhere, all the time",
@@ -224,24 +313,24 @@
     }
   },
   "features": {
-    "label": "What You Get",
-    "title": "Everything Included",
+    "label": "All included in €400",
+    "title": "Your turnkey lead machine",
     "categories": {
-      "design": { "title": "Design & Development", "features": ["Custom UI/UX design", "Mobile-first responsive layout", "Fast loading speeds", "Cross-browser compatibility", "Accessibility standards"] },
-      "setup": { "title": "Technical Setup", "features": ["SSL security certificate", "Domain configuration", "Professional hosting", "Analytics integration", "Performance optimization"] },
-      "seo": { "title": "SEO Foundation", "features": ["Meta tags optimization", "Sitemap generation", "Schema markup", "Google indexing", "Page speed optimization"] },
-      "support": { "title": "Support & Delivery", "features": ["Clear project timeline", "Regular progress updates", "30-day post-launch support", "Training documentation", "Source files included"] }
+      "design": { "title": "Pro Site & Design", "features": ["Trust-building design", "Mobile/tablet ready", "Ultra-fast loading", "Optimized photos", "Your logo integrated"] },
+      "setup": { "title": "Google Visibility", "features": ["Google Maps optimization", "Google Business profile", "Your trade keywords", "Client reviews displayed", "Complete local listing"] },
+      "seo": { "title": "Client Generation", "features": ["Contact form", "One-tap calling", "Direct WhatsApp link", "Hours and pricing", "Clear service area"] },
+      "support": { "title": "Support", "features": ["7-14 day delivery", "Usage training", "30-day WhatsApp support", "Revisions included", "Full site ownership"] }
     }
   },
   "process": {
-    "label": "How We Work",
-    "title": "Our Process",
+    "label": "How it works",
+    "title": "In 4 steps, your phone rings",
     "steps": {
-      "brief": { "title": "Brief", "description": "Tell us about your project, goals, and requirements." },
-      "design": { "title": "Design", "description": "We create mockups and designs for your approval." },
-      "development": { "title": "Development", "description": "We build your website with clean, optimized code." },
-      "delivery": { "title": "Delivery", "description": "Launch your site with full training and documentation." },
-      "followup": { "title": "Follow-up", "description": "30 days of support and ongoing maintenance options." }
+      "brief": { "title": "Chat", "description": "10 min on WhatsApp to understand your trade and service area." },
+      "design": { "title": "Creation", "description": "I create your site, your logo if needed, and optimize your Google presence." },
+      "development": { "title": "Approval", "description": "You approve the result. We adjust until it's perfect." },
+      "delivery": { "title": "Launch", "description": "Your site goes live. You start receiving calls." },
+      "followup": { "title": "Support", "description": "30 days of support. I stay available on WhatsApp." }
     }
   },
   "portfolio": {
@@ -257,22 +346,22 @@
     }
   },
   "pricing": {
-    "label": "Pricing",
-    "title": "Transparent Pricing",
-    "paymentTerms": "Payment terms: 50% at order — 50% on delivery",
-    "flipHint": "Hover to flip",
+    "label": "Investment",
+    "title": "Clear pricing. Real results.",
+    "paymentTerms": "€200 to start — €200 on delivery. No subscription. No surprises.",
+    "flipHint": "Hover to see details",
     "flipBack": "Hover to flip back",
     "common": {
-      "popular": "POPULAR",
-      "included": "Included:",
-      "notIncluded": "Not included:",
-      "delivery": "Delivery: {{days}}",
-      "getStarted": "Get Started"
+      "popular": "MOST POPULAR",
+      "included": "Everything included:",
+      "notIncluded": "Optional:",
+      "delivery": "Delivered in {{days}}",
+      "getStarted": "Activate my lead machine"
     },
     "plans": {
-      "essential": { "name": "Landing Page", "price": "399€", "features": ["Premium homepage design", "Services & About sections", "Contact form integration", "Social media links", "Fully responsive design", "Basic SEO setup"], "excluded": ["E-commerce features", "Advanced SEO"] },
-      "popular": { "name": "On Demand Business Site", "price": "Custom Quote", "features": ["Up to 5 custom pages", "Animations advanced", "Basic SEO optimization", "Google Maps integration", "Business profile links", "Fully responsive design"], "excluded": ["Online payments"] },
-      "ultimate": { "name": "E-Commerce Store", "price": "from 899€", "features": ["Complete online store", "Product management", "Stripe/PayPal payments", "Inventory management", "Order notifications", "Sales dashboard", "Fully responsive design", "Advanced SEO setup"], "excluded": [] }
+      "essential": { "name": "Tradesman Site", "price": "€400", "features": ["Complete professional website", "Visible on Google and Maps", "Logo created if needed", "Quote request form", "One-tap call on mobile", "Google reviews displayed", "Usage training"], "excluded": ["Online booking", "Client portal"] },
+      "popular": { "name": "Site + Booking", "price": "€600", "features": ["Everything in Tradesman Site", "Online booking system", "Availability calendar", "Automatic confirmations", "Email/SMS reminders", "Perfect for restaurants, salons..."], "excluded": [] },
+      "ultimate": { "name": "Online Store", "price": "From €899", "features": ["Sell products 24/7", "Stripe/PayPal payments", "Stock management", "Order notifications", "Sales dashboard", "Shipping & returns handled", "Full training included"], "excluded": [] }
     }
   },
   "seoPricing": {
@@ -312,44 +401,44 @@
     }
   },
   "testimonials": {
-    "label": "Testimonials",
-    "title": "Client Success Stories",
+    "label": "They trusted us",
+    "title": "Tradesmen like you, real results",
     "items": [
       {
-        "quote": "Our digital presence finally matches the elegance of our establishment. The booking flow is seamless and our customers love the new experience.",
-        "name": "Jean-Pierre L.",
-        "role": "General Manager",
-        "company": "Villa88"
-      },
-      {
-        "quote": "The team understood perfectly our technical requirements. Our research tools are now accessible through a modern and highly performant interface.",
-        "name": "Prof. Miller",
-        "role": "Lead Researcher",
-        "company": "Teclis Scientific"
-      },
-      {
-        "quote": "Sales increased significantly after the launch. The mobile shopping experience is light years ahead of what we had before. A true partner for our growth.",
-        "name": "Lucie B.",
-        "role": "Founder",
-        "company": "Kalissea Shop"
-      },
-      {
-        "quote": "A clean, appetizing website that perfectly captures the atmosphere of our restaurant. Reservations have never been easier for our guests.",
-        "name": "Chef Antoine",
-        "role": "Executive Chef",
-        "company": "L'Atelier Parisien"
-      },
-      {
-        "quote": "Finally a website that brings me real calls. People find me easily on Google and the contact form works perfectly. Very professional service.",
+        "quote": "I was getting 2-3 calls a week. Now I get 10. I had to turn down jobs last month!",
         "name": "Alain L.",
-        "role": "Owner",
-        "company": "AL Plomberie"
+        "role": "Plumber",
+        "company": "AL Plomberie - Paris 15"
       },
       {
-        "quote": "Communicating our sustainable values was a challenge. They created a visual story that resonates with our audience while maintaining high performance.",
-        "name": "Elena S.",
-        "role": "Creative Director",
-        "company": "Terrathread"
+        "quote": "Before, I stressed at the end of every month. Now my schedule is full 3 weeks ahead. And for €400... it's a steal.",
+        "name": "Thomas R.",
+        "role": "Electrician",
+        "company": "TR Électricité - Lyon"
+      },
+      {
+        "quote": "Clients find me on Google Maps and call directly. No more door-to-door.",
+        "name": "Philippe M.",
+        "role": "Painter",
+        "company": "PM Peinture - Marseille"
+      },
+      {
+        "quote": "I was skeptical at first. 3 months later, I hired an apprentice to keep up with demand. The site pays for itself in a week of work.",
+        "name": "Marc D.",
+        "role": "Plumber-heating specialist",
+        "company": "Chauffage MD - Bordeaux"
+      },
+      {
+        "quote": "My son made me a free website. Nobody found it. With Kalissea, I'm on Google's first page in 2 months.",
+        "name": "Jean-Pierre B.",
+        "role": "Mason",
+        "company": "JPB Maçonnerie - Toulouse"
+      },
+      {
+        "quote": "The best part? I choose my clients now. No more jobs across town or bad payers.",
+        "name": "Sophie V.",
+        "role": "Interior designer",
+        "company": "SV Décoration - Nantes"
       }
     ]
   },
@@ -368,12 +457,12 @@
     }
   },
   "contact": {
-    "label": "Contact",
-    "title": "Ready to Start Your Project?",
-    "description": "Chat with us directly on WhatsApp for a quick response and custom quote.",
-    "whatsappButton": "Contact via WhatsApp",
+    "label": "Take action",
+    "title": "Ready to fill your order book?",
+    "description": "Let's talk about your business. In 10 minutes, I'll tell you exactly how other tradesmen like you multiplied their calls. No commitment.",
+    "whatsappButton": "Activate my lead machine",
     "preferEmail": "Prefer email?",
-    "ariaWhatsapp": "Contact on WhatsApp"
+    "ariaWhatsapp": "Contact us on WhatsApp"
   },
   "footer": {
     "rights": "© {{year}} Kalissea. All rights reserved."

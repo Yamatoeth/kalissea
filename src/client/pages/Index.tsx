@@ -2,6 +2,8 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Header from "@/components/Header";
 import HeroWithBackground from "@/components/HeroWithBackground";
+import Problem from "@/components/Problem";
+import Results from "@/components/Results";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 
@@ -51,6 +53,12 @@ const Index = () => {
       <main>
         {/* Hero section avec background 3D */}
         <HeroWithBackground />
+        
+        {/* Problem/Solution section - CRO focused */}
+        <Problem />
+        
+        {/* Results/Before-After section - CRO focused */}
+        <Results />
         
         {/* Sections critiques chargées normalement */}
         <Services />

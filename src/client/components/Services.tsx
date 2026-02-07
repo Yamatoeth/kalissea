@@ -120,9 +120,6 @@ const Services = () => {
                         })()}
                       </ul>
                     </div>
-                    <p className="text-xs text-muted-foreground text-center mt-4">
-                      {t("services.flipHint")}
-                    </p>
                   </div>
                 }
                 className="w-full h-full"
