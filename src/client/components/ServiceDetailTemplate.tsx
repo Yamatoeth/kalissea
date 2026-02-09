@@ -101,12 +101,12 @@ const ServiceDetailTemplate = ({
         {/* Sticky Back Button */}
         <Link
           href="/#services"
-          className="fixed top-24 left-6 z-40 flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm font-medium group px-3 py-1.5 bg-background/60 backdrop-blur-md rounded-full border border-border/40 shadow-sm"
+          className="fixed top-20 left-4 md:top-24 md:left-6 z-40 flex items-center gap-1 md:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm font-medium group px-2 md:px-3 py-1 md:py-1.5 bg-background/60 backdrop-blur-md rounded-full border border-border/40 shadow-sm"
         >
-          <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors bg-background">
-            <ArrowLeft className="w-4 h-4" />
+          <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors bg-background">
+            <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
           </div>
-          <span className="pr-2">{backLabel}</span>
+          <span className="pr-1 md:pr-2">{backLabel}</span>
         </Link>
 
 
@@ -116,14 +116,14 @@ const ServiceDetailTemplate = ({
             <div className="section-label justify-center mb-6">
               {title}
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               {heroTitle}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               {heroDescription}
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <Link href="/#contact">
+            <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
+              <Link href="/#contact" className="justify-center">
                 {startProjectLabel}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -298,15 +298,15 @@ const ServiceDetailTemplate = ({
 
         {/* CTA Section */}
         <section className="px-6 py-20 text-center">
-          <div className="container mx-auto max-w-4xl p-12 bg-primary/10 rounded-xl border border-primary/20">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <div className="container mx-auto max-w-4xl p-6 md:p-12 bg-primary/10 rounded-xl border border-primary/20">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
               {ctaTitle}
             </h2>
-            <p className="text-lg text-muted-foreground mb-10">
+            <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-10">
               {ctaDescription}
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <Link href="/#contact">
+            <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
+              <Link href="/#contact" className="justify-center">
                 {startProjectLabel}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

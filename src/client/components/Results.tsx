@@ -64,7 +64,7 @@ const Results = () => {
         </motion.div>
 
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+          className="text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -74,7 +74,7 @@ const Results = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg text-muted-foreground mb-12 max-w-2xl"
+          className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl text-balance"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,7 +140,7 @@ const Results = () => {
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1">
-              <blockquote className="text-xl md:text-2xl font-medium text-foreground mb-6 leading-relaxed">
+              <blockquote className="text-lg md:text-2xl font-medium text-foreground mb-6 leading-relaxed">
                 "{t("results.testimonial.quote")}"
               </blockquote>
               <div className="flex items-center gap-4">

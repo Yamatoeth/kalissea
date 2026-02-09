@@ -52,15 +52,15 @@ const Contact = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <div className="section-label justify-center mb-4">{t('contact.label')}</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
             {t('contact.title')}
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto text-balance">
             {t('contact.description')}
           </p>
         </div>
 
-        <div className="bg-card border border-border rounded-xl p-12 text-center">
+        <div className="bg-card border border-border rounded-xl p-6 md:p-12 text-center">
           <div className="flex flex-col items-center gap-6">
              <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-2">
                 <svg 

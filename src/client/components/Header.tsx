@@ -134,7 +134,7 @@ const Header = () => {
             </motion.a>
           ))}
           <motion.div
-            className="flex items-center justify-between mt-2 gap-2"
+            className="flex items-center justify-center mt-2 gap-4"
             variants={fadeInUpChildVariants}
           >
             <LanguageSwitcher />
@@ -143,9 +143,8 @@ const Header = () => {
               initial="rest"
               whileHover="hover"
               whileTap="tap"
-              className="flex-1"
             >
-              <Button variant="hero" size="default" className="flex-1 cursor-pointer" asChild>
+              <Button variant="hero" size="default" className="cursor-pointer" asChild>
                 <a href="/#contact">{t('header.getQuote')}</a>
               </Button>
             </motion.div>

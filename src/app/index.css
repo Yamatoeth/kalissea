@@ -112,6 +112,14 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  /* Prevent words from being cut in the middle on mobile */
+  h1, h2, h3, h4, h5, h6, p, span, a, li, blockquote {
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
 }
 
 @utility text-gradient {
@@ -121,17 +129,21 @@
   color: transparent;
 }
 
+@utility text-balance {
+  text-wrap: balance;
+}
+
 @utility card-hover {
   @apply transition-colors duration-200 hover:border-primary/50;
   box-shadow: var(--shadow-card);
 }
 
 @utility section-label {
-  @apply text-primary text-sm font-semibold tracking-wider uppercase flex items-center gap-3;
+  @apply text-primary text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center gap-2 sm:gap-3;
 
   &::before {
     content: '';
-    @apply w-8 h-px bg-primary;
+    @apply w-6 sm:w-8 h-px bg-primary shrink-0;
   }
 }
 

@@ -61,7 +61,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
         >
           {/* Section Label */}
           <motion.div
-            className="section-label justify-center mb-6"
+            className="section-label justify-center mb-6 mt-10 text-balance"
             variants={fadeInUpChildVariants}
           >
             {t("hero.label")}
@@ -75,7 +75,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
             whileInView="visible"
             viewport={whileInViewConfig}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight text-balance">
               <Typewriter
                 text={t("hero.titlePrefix")}
                 className="block text-center"
@@ -104,7 +104,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
 
           {/* Description */}
           <motion.p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2"
             variants={fadeInUpChildVariants}
           >
             {t("hero.description")}
@@ -112,7 +112,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full"
             variants={staggerContainerVariants}
             initial="hidden"
             whileInView="visible"
@@ -130,8 +130,8 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <Button variant="hero" size="xl" asChild className="cursor-pointer">
-                  <a href="#contact">
+                <Button variant="hero" size="lg" asChild className="cursor-pointer w-full sm:w-auto">
+                  <a href="#contact" className="justify-center">
                     {t("hero.startProject")}
                     <motion.span
                       className="ml-2 h-5 w-5"
@@ -156,8 +156,8 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <Button variant="hero-outline" size="xl" asChild className="cursor-pointer">
-                  <a href="#pricing">{t("hero.viewPricing")}</a>
+                <Button variant="hero-outline" size="lg" asChild className="cursor-pointer w-full sm:w-auto">
+                  <a href="#pricing" className="justify-center">{t("hero.viewPricing")}</a>
                 </Button>
               </motion.div>
             </motion.div>
@@ -185,10 +185,10 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
                   repeatType: "loop",
                 }}
               >
-                <motion.div className="text-2xl md:text-3xl font-bold text-primary mb-1">
+                <motion.div className="text-xl md:text-3xl font-bold text-primary mb-1">
                   {stat.value}
                 </motion.div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>

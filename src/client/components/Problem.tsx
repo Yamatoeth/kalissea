@@ -29,10 +29,10 @@ const Problem = () => {
           <motion.div className="section-label justify-center mb-4">
             {t("problem.label")}
           </motion.div>
-          <motion.h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <motion.h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
             {t("problem.title")}
           </motion.h2>
-          <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <motion.p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto text-balance">
             {t("problem.subtitle")}
           </motion.p>
         </motion.div>
@@ -116,19 +116,19 @@ const Problem = () => {
 
         {/* CTA */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-12 flex flex-col items-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={whileInViewConfig}
         >
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-base md:text-lg text-muted-foreground mb-6">
             {t("problem.ctaText")}
           </p>
           <Button variant="hero" size="lg" asChild className="cursor-pointer">
             <a href="#contact">
               {t("problem.cta")}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
             </a>
           </Button>
         </motion.div>
