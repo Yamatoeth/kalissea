@@ -19,13 +19,13 @@ const Pricing = () => {
     {
       key: "essential",
       popular: false,
-      image: "/images/results/alplomberie.png",
+      image: "/images/results/alplomberie.avif",
       alt: "Website for a Plumbing Company",
     },
     {
       key: "popular",
       popular: true,
-      image: "/images/results/viced.png",
+      image: "/images/results/viced.avif",
       alt: "High Quality Ui/Ux for a Weed Business Website",
     },
     {

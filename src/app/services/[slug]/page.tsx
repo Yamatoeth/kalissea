@@ -10,42 +10,42 @@ const RESULTS_MAP: Record<string, { type: "image" | "video"; url: string; captio
   'website-creation': [
     {
       type: "image",
-      url: "/images/results/website-creation.png",
+      url: "/images/results/website-creation.avif",
       caption: "Des sites web qui marquent les esprits"
     }
   ],
   'e-commerce': [
     {
       type: "image",
-      url: "/images/results/e-commerce.png",
+      url: "/images/results/e-commerce.avif",
       caption: "Vendez plus avec une boutique optimisée"
     }
   ],
   'maintenance': [
     {
       type: "image",
-      url: "/images/results/maintenance.png",
+      url: "/images/results/maintenance.avif",
       caption: "Sécurité et performance garanties"
     }
   ],
   'seo-growth': [
     {
       type: "image",
-      url: "/images/results/seo-growth.png",
+      url: "/images/results/seo-growth.avif",
       caption: "Une croissance visible et durable"
     }
   ],
   'branding': [
     {
       type: "image",
-      url: "/images/results/branding.png",
+      url: "/images/results/branding.avif",
       caption: "Une identité qui vous ressemble"
     }
   ],
   'automation-ai': [
     {
       type: "image",
-      url: "/images/results/automation-ai.png",
+      url: "/images/results/automation-ai.avif",
       caption: "L'intelligence artificielle au service de votre temps"
     }
   ]
@@ -99,9 +99,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: serviceUrl,
+      siteName: 'Kalissea',
       type: 'website',
       locale: 'fr_CA',
-      countryName: 'Canada',
       images: [
         {
           url: ogImageUrl,
@@ -118,6 +118,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [ogImageUrl],
       creator: '@kalissea',
+      site: '@kalissea',
     },
   };
 }
@@ -133,6 +134,25 @@ export default async function ServicePage({ params }: Props) {
   if (!serviceData) {
     notFound();
   }
+
+  // All services for internal linking
+  const allServices = [
+    { key: "creation", path: "/services/website-creation" },
+    { key: "ecommerce", path: "/services/e-commerce" },
+    { key: "maintenance", path: "/services/maintenance" },
+    { key: "seo", path: "/services/seo-growth" },
+    { key: "branding", path: "/services/branding" },
+    { key: "automation", path: "/services/automation-ai" },
+  ];
+
+  // Get related services (all except current one)
+  const relatedServices = allServices
+    .filter(s => s.key !== serviceData.key)
+    .map(s => ({
+      key: s.key,
+      title: dict.services?.items?.[s.key]?.title || s.key,
+      path: s.path,
+    }));
 
   // Determine results (images) to show
   // In the future this should come from the CMS/JSON as well
@@ -262,6 +282,8 @@ export default async function ServicePage({ params }: Props) {
         results={results}
         faqTitle={dict.services.details.faqTitle}
         faq={serviceData.faq}
+        relatedServicesTitle={dict.services.details.relatedServicesTitle || "Découvrez nos autres services"}
+        relatedServices={relatedServices}
         ctaTitle={serviceData.ctaTitle}
         ctaDescription={serviceData.ctaDescription}
         backLabel={dict.header.services}

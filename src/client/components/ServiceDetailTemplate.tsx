@@ -35,6 +35,12 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface RelatedService {
+  key: string;
+  title: string;
+  path: string;
+}
+
 export interface ServiceDetailTemplateProps {
   // Content Props
   title: string; 
@@ -54,6 +60,10 @@ export interface ServiceDetailTemplateProps {
   features?: Feature[];
   faqTitle?: string;
   faq?: FAQItem[];
+  
+  // Related services for internal linking
+  relatedServicesTitle?: string;
+  relatedServices?: RelatedService[];
 
   // UI Labels
   backLabel: string;
@@ -76,6 +86,8 @@ const ServiceDetailTemplate = ({
   results,
   faqTitle,
   faq,
+  relatedServicesTitle,
+  relatedServices,
   ctaTitle,
   ctaDescription,
   backLabel,
@@ -256,6 +268,33 @@ const ServiceDetailTemplate = ({
         )}
 
         {children}
+
+        {/* Related Services Section for Internal Linking */}
+        {relatedServices && relatedServices.length > 0 && (
+          <section className="px-6 py-20 bg-muted/30">
+            <div className="container mx-auto max-w-6xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+                {relatedServicesTitle || "Nos autres services"}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {relatedServices.map((service) => (
+                  <Link
+                    key={service.key}
+                    href={service.path}
+                    className="p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-colors group"
+                  >
+                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <span className="text-sm text-primary mt-2 inline-flex items-center gap-1">
+                      En savoir plus <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="px-6 py-20 text-center">

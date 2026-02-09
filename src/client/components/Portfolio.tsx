@@ -6,12 +6,12 @@ import terrathread from "../assets/terrathread.avif";
 import glc from "../assets/glc.avif";
 import villa88 from "../assets/villa88.avif";
 import burkett from "../assets/burkett.avif";
-import kitchen from "../assets/kitchen.png";
-import mieng from "../assets/mieng.png";
-import alplomberie from "../assets/alplomberie.png";
-import hairsalon from "../assets/hairsalon.png";
-import viced from "../assets/viced.png";
-import music from "../assets/music.png";
+import kitchen from "../assets/kitchen.avif";
+import mieng from "../assets/mieng.avif";
+import alplomberie from "../assets/alplomberie.avif";
+import hairsalon from "../assets/hairsalon.avif";
+import viced from "../assets/viced.avif";
+import music from "../assets/music.avif";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {

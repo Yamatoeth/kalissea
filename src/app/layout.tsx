@@ -3,7 +3,7 @@ import Providers from "./providers"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
-import Image from "next/image";
+import type { Metadata } from "next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -19,6 +19,24 @@ const spaceGrotesk = Space_Grotesk({
   preload: true,
 });
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://kalissea.com"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+  },
+  other: {
+    "theme-color": "#000000",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,48 +46,10 @@ export default function RootLayout({
     <html lang="fr" className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="+ru5y+rFf5tU3296F8N/OQ" async></script>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
 
         {/* Préconnexion aux domaines externes */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
-        <title>Kalissea – Agence web spécialisée en développement, SEO et automatisation</title>
-
-        <meta
-          name="description"
-          content="Kalissea est une agence web spécialisée en développement de sites performants, SEO technique et automatisation. Solutions claires, mesurables et durables."
-        />
-
-        <meta name="theme-color" content="#000000" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-        <link rel="canonical" href="https://kalissea.com/" />
-
-        <meta property="og:title" content="Kalissea – Agence web & SEO technique" />
-        <meta
-          property="og:description"
-          content="Agence web spécialisée en développement, SEO technique et automatisation. Performance, clarté, résultats."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kalissea.com/" />
-        <meta property="og:image" content="https://kalissea.com/og/kalissea-og.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Kalissea - Agence web & SEO" />
-        <meta property="og:locale" content="fr_CA" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kalissea – Agence web & SEO technique" />
-        <meta
-          name="twitter:description"
-          content="Développement web, SEO technique et automatisation orientés performance."
-        />
-        <meta name="twitter:image" content="https://kalissea.com/og/kalissea-og.png" />
-        <meta name="twitter:creator" content="@kalissea" />
         
         {/* Schema.org Organization - Load eagerly for better SEO */}
         <Script
