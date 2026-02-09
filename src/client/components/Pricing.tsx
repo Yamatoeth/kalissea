@@ -24,7 +24,7 @@ const Pricing = () => {
     },
     {
       key: "popular",
-      popular: true,
+      popular: false,
       image: "/images/results/viced.avif",
       alt: "High Quality Ui/Ux for a Weed Business Website",
     },

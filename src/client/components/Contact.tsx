@@ -75,7 +75,7 @@ const Contact = () => {
             <Button 
                 variant="hero" 
                 size="lg" 
-                className="w-full sm:w-auto min-w-[200px] bg-[#25D366] hover:bg-[#128C7E] text-white border-none"
+                className="w-full sm:w-auto min-w-50 bg-[#25D366] hover:bg-[#128C7E] text-white border-none"
                 asChild
             >
               <a 

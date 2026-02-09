@@ -40,7 +40,7 @@ const Results = () => {
   ];
 
   return (
-    <section id="results" className="py-24 px-6 bg-card/50 relative overflow-hidden">
+    <section id="results" className="py-1 px-6 bg-card/50 relative overflow-hidden">
       {/* Background decorations */}
       <motion.div
         className="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"
@@ -160,7 +160,7 @@ const Results = () => {
               </div>
             </div>
 
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Button variant="hero" size="lg" asChild className="cursor-pointer">
                 <a href="#contact">
                   {t("results.cta")}

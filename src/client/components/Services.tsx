@@ -23,7 +23,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pb-20 px-6">
+    <section id="services" className="pb-20 py-10 px-6">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           className="section-label mb-4"
