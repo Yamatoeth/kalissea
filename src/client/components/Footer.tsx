@@ -78,7 +78,7 @@ const Footer = () => {
             />
           </a>
           <a href="https://submithunt.com" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
-            
+            {/* No badge image provided */}
           </a>
           <a href="https://findly.tools/kalissea?utm_source=kalissea" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
             <img
@@ -86,6 +86,14 @@ const Footer = () => {
               alt="Featured on findly.tools"
               width={150}
               height={50}
+            />
+          </a>
+          <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
+            <img
+              src="https://twelve.tools/badge0-dark.svg"
+              alt="Featured on Twelve Tools"
+              width={200}
+              height={54}
             />
           </a>
         </div>
