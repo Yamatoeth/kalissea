@@ -66,6 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     // Return animated version by default
     if (animated && !asChild) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { onDrag, onDragStart, onDragEnd, ...safeProps } = props as any;
       return (
         <motion.button

@@ -39,6 +39,23 @@ const nextConfig = {
     ],
   },
   
+  // Add HTTP to HTTPS and www to non-www redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.kalissea.com',
+          },
+        ],
+        destination: 'https://kalissea.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
+  
   // Production optimizations
   ...(process.env.NODE_ENV === 'production' && {
     productionBrowserSourceMaps: false,

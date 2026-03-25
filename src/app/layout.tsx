@@ -4,6 +4,8 @@ import WhatsAppFloat from "@/components/WhatsAppFloat"
 import { DM_Sans, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { getDictionary } from "@lib/i18n-server";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -37,13 +39,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const lang = (cookieStore.get("i18next")?.value as "fr" | "en") || "fr";
+  const dict = await getDictionary(lang);
+
+  const orgDescription = dict.metadata?.description || "Agence web spécialisée en développement, SEO technique et automatisation";
+
   return (
-    <html lang="fr" className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
+    <html lang={lang} className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="+ru5y+rFf5tU3296F8N/OQ" async></script>
 
@@ -63,7 +71,7 @@ export default function RootLayout({
               "name": "Kalissea",
               "url": "https://kalissea.com",
               "logo": "https://kalissea.com/logo.png",
-              "description": "Agence web spécialisée en développement, SEO technique et automatisation",
+              "description": orgDescription,
               "foundingDate": "2020",
               "areaServed": {
                 "@type": "Country",
