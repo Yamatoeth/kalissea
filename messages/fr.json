@@ -1,25 +1,26 @@
 {
   "header": {
-    "services": "Services",
-    "pricing": "Tarifs",
-    "portfolio": "Portfolio",
-    "testimonials": "Témoignages",
+    "work": "Réalisations",
+    "capabilities": "Savoir-faire",
+    "approach": "Approche",
+    "about": "À propos",
     "contact": "Contact",
-    "automationFlow": "AutomationFlow",
-    "getQuote": "Activer ma machine à clients"
+    "startProject": "Parler d'un projet"
   },
   "hero": {
-    "label": "Pour les artisans qui veulent des chantiers, pas du démarchage",
-    "titlePrefix": "Remplissez votre carnet de commandes ",
-    "titleHighlight": "automatiquement",
-    "description": "Fini le temps perdu à chercher des clients. Recevez des demandes de devis qualifiées directement sur votre téléphone, pendant que vous êtes sur chantier. Le tout pour 400€, sans abonnement.",
-    "startProject": "Activer ma machine à clients",
-    "viewPricing": "Comment ça marche ?",
+    "label": "Studio digital indépendant pour petites entreprises et indépendants",
+    "titlePrefix": "Sites web, e-commerce et outils digitaux ",
+    "titleHighlight": "pensés avec soin",
+    "description": "Je conçois et développe des expériences digitales soignées pour les petites entreprises, marques locales et indépendants, du site vitrine performant aux workflows sur mesure qui soutiennent de vrais besoins métier.",
+    "startProject": "Parler d'un projet",
+    "viewPricing": "Voir une sélection de projets",
+    "panelLabel": "En bref",
+    "panelText": "Une approche plus proche d'un studio que d'un catalogue de prestations: moins de bruit, plus de structure, et une exécution soignée du design jusqu'au front-end.",
     "stats": {
-      "projects": "Artisans accompagnés",
-      "satisfaction": "Taux de satisfaction",
-      "delivery": "Pour être visible",
-      "support": "Support disponible"
+      "projects": "Projets sélectionnés",
+      "sectors": "Secteurs explorés",
+      "responsive": "Responsive par défaut",
+      "systems": "Outils sur mesure possibles"
     }
   },
   "problem": {
@@ -82,80 +83,70 @@
     "cta": "Obtenir les mêmes résultats"
   },
   "services": {
-    "label": "Ce que vous obtenez",
-    "title": "Votre système de génération de clients",
+    "label": "Savoir-faire",
+    "title": "Des capacités claires, pensées pour des besoins réels",
+    "intro": "Je préfère montrer des capacités bien définies plutôt qu'empiler des offres génériques. La plupart des projets commencent par un site, puis s'étendent seulement si le besoin le justifie.",
+    "viewService": "En savoir plus",
     "flipHint": "Survolez pour voir les détails",
     "items": {
       "creation": {
-        "title": "Site Web Professionnel",
-        "description": "Un site qui transforme les visiteurs en appels. Optimisé pour que vos clients vous trouvent sur Google.",
-        "price": "400€ tout compris",
+        "title": "Sites web",
+        "description": "Landing pages, sites vitrines et expériences web conçues pour être claires, rapides et crédibles.",
+        "meta": "Présentation & conversion",
         "details": [
-          "Design qui inspire confiance",
-          "Visible sur Google et Maps",
-          "Formulaire de demande de devis",
-          "Avis clients affichés",
-          "Appel en un clic sur mobile"
+          "Landing pages et sites vitrines",
+          "Front-end responsive soigné",
+          "Pages orientées clarté et conversion",
+          "Expérience cohérente sur mobile et desktop",
+          "Base solide pour évoluer avec l'activité"
         ]
       },
       "ecommerce": {
-        "title": "Boutique en Ligne",
-        "description": "Vendez vos produits 24h/24. Paiements sécurisés et gestion simple des commandes.",
-        "price": "À partir de 899€",
+        "title": "E-commerce",
+        "description": "Des boutiques simples, lisibles et orientées achat pour les petites marques et commerces.",
+        "meta": "Catalogue & parcours d'achat",
         "details": [
-          "Paiements Stripe/PayPal",
-          "Gestion automatique des stocks",
-          "Notifications de commande",
-          "Optimisé mobile",
-          "Tableau de bord ventes"
-        ]
-      },
-      "maintenance": {
-        "title": "Tranquillité d'Esprit",
-        "description": "On s'occupe de tout pour que votre site reste rapide, sécurisé et performant.",
-        "price": "À partir de 49€/mois",
-        "details": [
-          "Mises à jour sécurité",
-          "Sauvegardes quotidiennes",
-          "Surveillance 24/7",
-          "Corrections de bugs",
-          "Support prioritaire"
+          "Boutiques e-commerce pour petites structures",
+          "Pages produit et collections",
+          "Paiements et checkout",
+          "Organisation du catalogue",
+          "Conception pensée pour inspirer confiance"
         ]
       },
       "seo": {
-        "title": "Visibilité Locale",
-        "description": "Apparaissez en premier quand les gens cherchent un artisan dans votre zone.",
-        "price": "À partir de 149€/mois",
+        "title": "SEO & optimisation",
+        "description": "Des fondations techniques propres pour aider un site à être mieux compris, plus rapide et plus visible.",
+        "meta": "Performance & lisibilité",
         "details": [
-          "Positionnement Google Maps",
-          "Mots-clés locaux optimisés",
-          "Profil Google Business",
-          "Rapports mensuels",
-          "Stratégie de contenu"
+          "SEO technique de base",
+          "Structure on-page",
+          "Performance et vitesse",
+          "Analytics et suivi",
+          "Améliorations orientées usage et recherche"
         ]
       },
       "branding": {
-        "title": "Image Professionnelle",
-        "description": "Logo, cartes de visite et identité visuelle qui vous démarquent de la concurrence.",
-        "price": "Devis personnalisé",
+        "title": "Direction visuelle",
+        "description": "Une présence digitale gagne en force quand design, contenu et structure parlent le même langage.",
+        "meta": "Cohérence & présentation",
         "details": [
-          "Création de logo",
-          "Charte graphique complète",
-          "Cartes de visite",
-          "Supports imprimés",
-          "Déclinaisons véhicule"
+          "Hiérarchie visuelle",
+          "Choix typographiques",
+          "Direction d'interface",
+          "Cohérence entre marque et produit",
+          "Présence plus nette et plus professionnelle"
         ]
       },
       "automation": {
-        "title": "Réponses Automatiques",
-        "description": "Ne perdez plus de clients. Répondez automatiquement même quand vous êtes sur chantier.",
-        "price": "Inclus",
+        "title": "Outils & automatisations",
+        "description": "Quand un projet dépasse le site web, je peux aussi concevoir des workflows et interfaces utiles au quotidien.",
+        "meta": "Sur mesure selon le besoin",
         "details": [
-          "Accusé réception auto",
-          "Rappel de devis",
-          "Suivi client automatisé",
-          "Intégration WhatsApp",
-          "Notifications SMS"
+          "Automatisations métier",
+          "Systèmes de réservation",
+          "Portails ou espaces clients",
+          "Dashboards et suivis internes",
+          "Interfaces de type CRM adaptées au contexte"
         ]
       }
     },
@@ -776,41 +767,117 @@
     }
   },
   "process": {
-    "label": "Comment ça marche",
-    "title": "En 4 étapes, votre téléphone sonne",
+    "label": "Approche",
+    "title": "Une manière de travailler simple, directe et soignée",
     "steps": {
       "brief": {
-        "title": "Échange",
-        "description": "10 min sur WhatsApp pour comprendre votre métier et votre zone d'intervention."
+        "title": "Comprendre",
+        "description": "Clarifier le contexte, le niveau d'ambition et ce que le projet doit réellement apporter."
       },
       "design": {
-        "title": "Création",
-        "description": "Je crée votre site, votre logo si besoin, et j'optimise votre présence Google."
+        "title": "Concevoir",
+        "description": "Organiser le contenu, la structure et la direction visuelle avant d'entrer dans le détail."
       },
-      "development": {
-        "title": "Validation",
-        "description": "Vous validez le résultat. On ajuste jusqu'à ce que ce soit parfait."
+      "build": {
+        "title": "Construire",
+        "description": "Développer une interface propre, responsive et maintenable, sans complexité inutile."
       },
-      "delivery": {
-        "title": "Lancement",
-        "description": "Votre site est en ligne. Vous commencez à recevoir des appels."
-      },
-      "followup": {
-        "title": "Suivi",
-        "description": "30 jours de support. Je reste disponible sur WhatsApp."
+      "refine": {
+        "title": "Affiner",
+        "description": "Polir les détails, les performances et l'expérience pour livrer quelque chose de solide."
       }
     }
   },
+  "about": {
+    "label": "À propos",
+    "title": "Une approche studio, avec exécution directe",
+    "quote": "Concevoir quelque chose de crédible, clair et bien exécuté compte souvent plus que d'ajouter toujours plus de fonctionnalités.",
+    "paragraphs": {
+      "first": "Kalissea est mon studio digital indépendant. Je travaille avec des petites entreprises, des marques locales et des indépendants qui ont besoin de plus qu'un template, et de moins qu'un processus d'agence trop lourd.",
+      "second": "Je privilégie la clarté, la qualité visuelle, la performance et l'utilité. Certains projets restent des sites vitrines ou e-commerce. D'autres évoluent vers des automatisations, des réservations, des dashboards ou des outils internes plus spécifiques. L'objectif reste le même : construire quelque chose de professionnel, cohérent et réellement utile."
+    },
+    "panelTitle": "Là où j'apporte le plus de valeur",
+    "highlights": [
+      "Un lien naturel entre design et développement",
+      "Des interfaces propres, lisibles et bien exécutées",
+      "Une attention réelle à la structure, à la performance et aux détails",
+      "La capacité à aller du site vitrine à des outils plus sur mesure si le projet l'exige"
+    ]
+  },
   "portfolio": {
-    "label": "Portfolio",
-    "title": "Projets Sélectionnés",
-    "categories": {
-      "restaurant": "Restaurant",
-      "hotel": "Hôtel",
-      "company": "Entreprise",
-      "personal": "Personnel",
-      "onlineshop": "Boutique en ligne",
-      "business": "Business / Entreprise"
+    "label": "Réalisations",
+    "title": "Une sélection de projets qui reflète ma manière de travailler",
+    "description": "Je préfère montrer quelques projets bien choisis, capables de faire sentir la clarté, la direction et le niveau d'exécution, plutôt qu'aligner une galerie trop large.",
+    "labels": {
+      "challenge": "Contexte",
+      "scope": "Intervention"
+    },
+    "featured": {
+      "label": "Cas mis en avant",
+      "title": "Deux projets plus révélateurs de mon approche",
+      "description": "Ils montrent mieux comment je peux intervenir à la fois sur la clarté d'un sujet sérieux et sur la construction d'une expérience digitale plus ambitieuse.",
+      "labels": {
+        "context": "Contexte",
+        "approach": "Approche",
+        "value": "Valeur apportée"
+      },
+      "projects": {
+        "teclis": {
+          "context": "Teclis Scientific demandait une présentation plus nette d'une activité technique et B2B, avec un besoin clair de rassurer, structurer et rendre l'information plus lisible.",
+          "approach": "J'ai travaillé la hiérarchie de contenu, le ton visuel, la structure des sections et la lisibilité globale pour transformer un sujet dense en interface plus professionnelle et plus accessible.",
+          "value": "Le projet montre ma capacité à clarifier une offre technique, à concevoir une présence sérieuse sans la rendre froide, et à traiter un site comme un outil de crédibilité business."
+        },
+        "upArena": {
+          "context": "UpArena avait besoin d'un univers plus identifiable et d'une présence plus produit que simple landing page, avec un mélange de positionnement, d'énergie visuelle et de structure d'information.",
+          "approach": "Le travail s'est concentré sur une identité d'interface plus marquée, une narration plus claire du concept, et une expérience plus immersive capable de rendre l'idée plus tangible au premier regard.",
+          "value": "Ce projet met en avant une facette plus produit de mon travail: construire une expérience digitale plus ambitieuse, avec plus de personnalité, plus de rythme et une meilleure perception de valeur."
+        }
+      }
+    },
+    "liveLabel": "Voir le projet",
+    "projects": {
+      "upArena": {
+        "title": "UpArena",
+        "category": "Produit digital / streaming & prediction",
+        "summary": "Une présence plus produit et plus immersive pour rendre le concept plus lisible, plus distinctif et plus engageant.",
+        "challenge": "Donner au projet une identité digitale plus forte, capable de faire comprendre rapidement l'univers, l'énergie et la proposition de valeur.",
+        "scope": ["Direction d'interface", "Structuration produit", "Expérience front-end"]
+      },
+      "villa88": {
+        "title": "Villa88",
+        "category": "Hospitalité / hébergement",
+        "summary": "Une expérience plus immersive pour mieux transmettre le lieu, l'ambiance et le niveau de gamme.",
+        "challenge": "Rendre l'offre d'hébergement plus désirable avec une présentation plus claire, plus visuelle et plus cohérente.",
+        "scope": ["Site vitrine", "Mise en avant visuelle", "Expérience mobile"]
+      },
+      "glc": {
+        "title": "GLC",
+        "category": "Entreprise / site corporate",
+        "summary": "Un site plus structuré pour améliorer la lisibilité de l'offre et renforcer la crédibilité de l'entreprise.",
+        "challenge": "Transformer une présence plus générique en une interface plus claire, plus sérieuse et mieux organisée.",
+        "scope": ["Structure de pages", "Présentation des services", "Front-end"]
+      },
+      "terrathread": {
+        "title": "Terrathread",
+        "category": "Marque / projet indépendant",
+        "summary": "Un univers plus cohérent, plus doux et plus intentionnel pour servir une identité de marque sensible.",
+        "challenge": "Donner une vraie personnalité digitale au projet sans tomber dans quelque chose de surchargé.",
+        "scope": ["Direction créative", "Identité d'interface", "Landing page"]
+      },
+      "teclis": {
+        "title": "Teclis Scientific",
+        "category": "Scientifique / B2B",
+        "summary": "Une présentation plus claire et plus sérieuse d'une activité technique, avec une meilleure organisation de l'information.",
+        "challenge": "Faire ressentir le sérieux du domaine tout en gardant une lecture simple et accessible.",
+        "scope": ["Clarification du contenu", "UI professionnelle", "Architecture d'information"]
+      },
+      "alplomberie": {
+        "title": "AL Plomberie",
+        "category": "Business local / artisan",
+        "summary": "Un site local conçu pour inspirer confiance rapidement et simplifier la prise de contact sur mobile.",
+        "challenge": "Construire une présence plus crédible qu'un simple site basique, avec un accent clair sur la confiance et l'accès au contact.",
+        "scope": ["Site local", "Optimisation mobile", "Parcours de contact"]
+      }
     }
   },
   "pricing": {
@@ -824,7 +891,7 @@
       "popular": "LE PLUS DEMANDÉ",
       "included": "Tout est inclus :",
       "notIncluded": "En option :",
-      "delivery": "Livré en {{days}}",
+      "delivery": "Livré en {days}",
       "getStarted": "Activer ma machine à clients"
     },
     "plans": {
@@ -1006,18 +1073,94 @@
     }
   },
   "contact": {
-    "label": "Passez à l'action",
-    "title": "Prêt à remplir votre carnet de commandes ?",
-    "description": "Discutons ensemble de votre activité. En 10 minutes, je vous dis exactement comment d'autres artisans comme vous ont multiplié leurs appels. Sans engagement.",
-    "whatsappButton": "Activer ma machine à clients",
-    "preferEmail": "Vous préférez envoyer un email ?",
-    "ariaWhatsapp": "Contactez-nous sur WhatsApp"
+    "label": "Contact",
+    "title": "Parlons de ce que vous voulez construire",
+    "description": "Décrivez-moi votre besoin, même s'il n'est pas encore totalement cadré. Je pourrai vous dire rapidement si je suis la bonne personne pour le concevoir, le développer ou le faire évoluer.",
+    "ariaWhatsapp": "Démarrer une conversation sur WhatsApp",
+    "form": {
+      "title": "Quelques repères sur le projet",
+      "description": "Quelques informations suffisent pour poser le contexte et voir comment je peux vous aider.",
+      "name": {
+        "label": "Nom",
+        "placeholder": "Votre nom"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "vous@entreprise.com"
+      },
+      "company": {
+        "label": "Entreprise ou activité",
+        "placeholder": "Nom de votre activité"
+      },
+      "projectType": {
+        "label": "Type de projet",
+        "placeholder": "Choisissez une catégorie",
+        "options": [
+          { "value": "website", "label": "Site vitrine" },
+          { "value": "landing", "label": "Landing page" },
+          { "value": "ecommerce", "label": "E-commerce" },
+          { "value": "seo", "label": "SEO / optimisation" },
+          { "value": "automation", "label": "Automatisation / workflow" },
+          { "value": "custom-tool", "label": "Outil métier / dashboard" },
+          { "value": "other", "label": "Autre besoin" }
+        ]
+      },
+      "budget": {
+        "label": "Budget indicatif",
+        "placeholder": "Optionnel",
+        "options": [
+          { "value": "under-1000", "label": "Moins de 1 000 €" },
+          { "value": "1000-2500", "label": "1 000 € – 2 500 €" },
+          { "value": "2500-5000", "label": "2 500 € – 5 000 €" },
+          { "value": "5000-plus", "label": "5 000 € et plus" },
+          { "value": "not-sure", "label": "Je ne sais pas encore" }
+        ]
+      },
+      "timeline": {
+        "label": "Délai souhaité",
+        "placeholder": "Optionnel",
+        "options": [
+          { "value": "asap", "label": "Dès que possible" },
+          { "value": "2-4-weeks", "label": "Sous 2 à 4 semaines" },
+          { "value": "1-2-months", "label": "Sous 1 à 2 mois" },
+          { "value": "flexible", "label": "Flexible" }
+        ]
+      },
+      "message": {
+        "label": "Votre besoin",
+        "placeholder": "Contexte, objectifs, ce qu'il faut créer ou améliorer, contraintes éventuelles..."
+      },
+      "note": "Je réponds en général sous 24 à 48 heures ouvrées.",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi en cours...",
+      "successTitle": "Demande envoyée",
+      "successDescription": "Merci, je reviens vers vous rapidement.",
+      "errorTitle": "Envoi impossible",
+      "errorDescription": "Un problème est survenu. Vous pouvez aussi m'écrire directement par email."
+    },
+    "sidebar": {
+      "title": "Ce qui m'aide à bien répondre",
+      "description": "Pas besoin d'un brief parfait. Quelques repères suffisent pour démarrer la discussion proprement.",
+      "checklist": [
+        "Ce que vous avez déjà en place aujourd'hui",
+        "Ce que vous voulez améliorer ou débloquer",
+        "Le type de rendu attendu: site, boutique, automatisation, outil interne...",
+        "Une contrainte de délai, de budget ou de contenu si elle existe"
+      ]
+    },
+    "alternatives": {
+      "title": "Vous préférez un échange plus direct ?",
+      "description": "Vous pouvez aussi me contacter ici.",
+      "whatsapp": "Écrire sur WhatsApp"
+    }
   },
   "footer": {
-    "rights": "© {{year}} Kalissea. Tous droits réservés."
+    "description": "Studio digital indépendant pour sites web, e-commerce et outils sur mesure.",
+    "navigation": "Navigation",
+    "rights": "© {year} Kalissea. Tous droits réservés."
   },
   "metadata": {
-    "title": "Kalissea – Agence web spécialisée en développement, SEO et automatisation",
-    "description": "Kalissea est une agence web spécialisée en développement de sites performants, SEO technique et automatisation. Solutions claires, mesurables et durables."
+    "title": "Kalissea – Studio digital indépendant pour sites web, e-commerce et outils sur mesure",
+    "description": "Kalissea est un studio digital indépendant qui conçoit des sites web, expériences e-commerce et outils numériques sur mesure pour petites entreprises et indépendants."
   }
 }

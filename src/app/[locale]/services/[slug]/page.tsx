@@ -79,7 +79,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const serviceUrlFr = `${baseUrl}/services/${slug}`;
   const serviceUrlEn = `${baseUrl}/en/services/${slug}`;
   const serviceUrl = locale === "fr" ? serviceUrlFr : serviceUrlEn;
-  const ogImageUrl = `${baseUrl}/og/${slug}.png`;
+  const ogImageUrl = RESULTS_MAP[slug]?.[0]?.url
+    ? `${baseUrl}${RESULTS_MAP[slug][0].url}`
+    : `${baseUrl}/kalissealogo.png`;
 
   const title = serviceData.seo?.title || `${serviceData.title} | Kalissea`;
   const description =
@@ -108,10 +110,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: ogImageUrl,
-          width: 1200,
-          height: 630,
+          width: 1024,
+          height: 1024,
           alt: serviceData.title,
-          type: "image/png",
         },
       ],
     },
@@ -120,8 +121,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       images: [ogImageUrl],
-      creator: "@kalissea",
-      site: "@kalissea",
     },
   };
 }
@@ -228,7 +227,7 @@ export default async function ServicePage({ params }: Props) {
             "@type": "LocalBusiness",
             name: "Kalissea",
             description:
-              "Agence web spécialisée en développement, SEO et automatisation",
+              "Studio digital indépendant pour sites web, e-commerce et outils numériques sur mesure",
             url: "https://kalissea.com",
             service: {
               "@type": "Service",
@@ -266,7 +265,7 @@ export default async function ServicePage({ params }: Props) {
         relatedServices={relatedServices}
         ctaTitle={serviceData.ctaTitle}
         ctaDescription={serviceData.ctaDescription}
-        backLabel={dict.header.services}
+        backLabel={dict.header.capabilities}
         startProjectLabel={dict.hero.startProject}
       />
     </>

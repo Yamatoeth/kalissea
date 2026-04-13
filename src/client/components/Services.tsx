@@ -1,14 +1,10 @@
 "use client";
-import { Globe, ShoppingBag, Wrench, Search, Palette, Bot, ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+
+import { ArrowRight, Bot, Globe, LayoutTemplate, Search, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  staggerContainerVariants,
-  fadeInUpChildVariants,
-  cardHoverVariants,
-  whileInViewConfig,
-} from "@/lib/animations";
-import FlipCard from "./FlipCard";
+import { useTranslations } from "next-intl";
+
+import { fadeInUpChildVariants, staggerContainerVariants, whileInViewConfig } from "@/lib/animations";
 
 const Services = () => {
   const t = useTranslations();
@@ -16,114 +12,77 @@ const Services = () => {
   const servicesList = [
     { key: "creation", icon: Globe, path: "/services/website-creation" },
     { key: "ecommerce", icon: ShoppingBag, path: "/services/e-commerce" },
-    { key: "maintenance", icon: Wrench, path: "/services/maintenance" },
     { key: "seo", icon: Search, path: "/services/seo-growth" },
-    { key: "branding", icon: Palette, path: "/services/branding" },
     { key: "automation", icon: Bot, path: "/services/automation-ai" },
+    { key: "branding", icon: LayoutTemplate, path: "/services/branding" },
   ];
 
   return (
-    <section id="services" className="pb-20 py-10 px-6">
+    <section id="services" className="px-6 py-24">
       <div className="container mx-auto max-w-6xl">
         <motion.div
-          className="section-label mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={whileInViewConfig}
-        >
-          {t("services.label")}
-        </motion.div>
-
-        <motion.h2
-          className="text-2xl md:text-4xl font-bold text-foreground mb-12 text-balance"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={whileInViewConfig}
-        >
-          {t("services.title")}
-        </motion.h2>
-
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={staggerContainerVariants}
+          className="grid gap-10 border-t border-white/8 pt-12 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]"
           initial="hidden"
           whileInView="visible"
           viewport={whileInViewConfig}
+          variants={staggerContainerVariants}
         >
-          {servicesList.map(({ key, icon: Icon, path }, index) => (
-            <motion.div
-              key={key}
-              variants={fadeInUpChildVariants}
-              className="h-80"
-            >
-              <FlipCard
-                frontContent={
-                  <a href={path} className="block h-full">
-                    <div className="bg-card border border-border rounded-xl p-6 h-full flex flex-col justify-between group hover:border-primary/50 transition-colors">
-                      <div>
-                        <motion.div
-                          className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4"
-                          whileHover={{
-                            backgroundColor: "var(--color-primary-10)",
-                            scale: 1.1,
-                          }}
-                          transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                        >
-                          <Icon className="w-6 h-6 text-primary" />
-                        </motion.div>
+          <motion.div variants={fadeInUpChildVariants}>
+            <div className="section-label mb-4">{t("services.label")}</div>
+            <h2 className="text-3xl font-semibold text-foreground text-balance md:text-4xl">{t("services.title")}</h2>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
+              {t("services.intro")}
+            </p>
+          </motion.div>
 
-                        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                          {t(`services.items.${key}.title`)}
-                        </h3>
+          <motion.div className="grid gap-5 md:grid-cols-2" variants={staggerContainerVariants}>
+            {servicesList.map(({ key, icon: Icon, path }, index) => {
+              const details = t.raw(`services.items.${key}.details`) as string[];
 
-                        <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-                          {t(`services.items.${key}.description`)}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center justify-between mt-auto pt-4">
-                        <p className="text-primary font-semibold">
-                          {t(`services.items.${key}.price`)}
-                        </p>
-                        <ArrowRight className="w-4 h-4 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
-                      </div>
+              return (
+                <motion.a
+                  key={key}
+                  href={path}
+                  className={`group flex min-h-[320px] flex-col rounded-[1.5rem] border border-white/8 bg-card/70 p-6 transition-colors duration-200 hover:border-primary/35 hover:bg-card ${
+                    index === 0 ? "md:col-span-2" : ""
+                  }`}
+                  variants={fadeInUpChildVariants}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                      <Icon className="h-6 w-6" />
                     </div>
-                  </a>
-                }
-                backContent={
-                  <div className="bg-linear-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-xl p-6 h-full flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-4">
-                        {t(`services.items.${key}.title`)}
-                      </h3>
-                      <ul className="space-y-2">
-                        {(() => {
-                          const details = t.raw(`services.items.${key}.details`) as string[] | string;
-                          const detailsList = Array.isArray(details)
-                            ? details
-                            : typeof details === "string"
-                              ? details.split("|").map((d: string) => d.trim())
-                              : [];
-                          return detailsList.map((detail: string, idx: number) => (
-                            <li
-                              key={idx}
-                              className="text-sm text-foreground flex items-start gap-2"
-                            >
-                              <span className="text-primary font-bold mt-0.5">•</span>
-                              <span>{detail}</span>
-                            </li>
-                          ));
-                        })()}
-                      </ul>
-                    </div>
+                    <span className="rounded-full border border-primary/20 bg-primary/8 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary/90">
+                      {t(`services.items.${key}.meta`)}
+                    </span>
                   </div>
-                }
-                className="w-full h-full"
-              />
-            </motion.div>
-          ))}
+
+                  <div className="mt-8">
+                    <h3 className="text-2xl font-semibold text-foreground">{t(`services.items.${key}.title`)}</h3>
+                    <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                      {t(`services.items.${key}.description`)}
+                    </p>
+                  </div>
+
+                  <ul className="mt-8 space-y-3">
+                    {details.slice(0, 4).map((detail) => (
+                      <li key={detail} className="flex items-start gap-3 text-sm text-foreground/88">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-auto pt-8 text-sm font-medium text-primary">
+                    <span className="inline-flex items-center gap-2 transition-transform duration-200 group-hover:translate-x-1">
+                      {t("services.viewService")}
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </motion.a>
+              );
+            })}
+          </motion.div>
         </motion.div>
       </div>
     </section>

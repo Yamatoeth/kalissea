@@ -1,17 +1,11 @@
 "use client";
 import Image from "next/image";
-import atelierParisien from "../assets/atelierparisien.avif";
 import teclis from "../assets/teclis.avif";
 import terrathread from "../assets/terrathread.avif";
 import glc from "../assets/glc.avif";
 import villa88 from "../assets/villa88.avif";
-import burkett from "../assets/burkett.avif";
-import kitchen from "../assets/kitchen.avif";
-import mieng from "../assets/mieng.avif";
 import alplomberie from "../assets/alplomberie.avif";
-import hairsalon from "../assets/hairsalon.avif";
-import viced from "../assets/viced.avif";
-import music from "../assets/music.avif";
+import upArena from "../assets/project-wf.avif";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
@@ -27,96 +21,54 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Atelier Parisien",
-      categoryKey: "restaurant",
-      image: atelierParisien,
-      link: "https://latelier-parisien.vercel.app/",
+      key: "upArena",
+      image: upArena,
+      link: "https://www.uparena.io/",
       depth: 0,
     },
     {
-      title: "Villa88",
-      categoryKey: "hotel",
+      key: "villa88",
       image: villa88,
       link: "https://villa88.vercel.app/",
       depth: 1,
     },
     {
-      title: "GLC",
-      categoryKey: "company",
+      key: "glc",
       image: glc,
       link: "https://yamatoeth.github.io/GlcSolutions/",
       depth: 2,
     },
     {
-      title: "Terrathread",
-      categoryKey: "personal",
+      key: "terrathread",
       image: terrathread,
       link: "https://terraandthread.vercel.app/",
       depth: 1,
     },
-    // {
-    //   title: "Kalissea",
-    //   categoryKey: "onlineshop",
-    //   image: kalissea,
-    //   link: "https://kalissea.com/",
-    //   depth: 0,
-    // },
     {
-      title: "Teclis Scientific",
-      categoryKey: "business",
+      key: "teclis",
       image: teclis,
       link: "https://teclis-scientific.vercel.app/",
       depth: 2,
     },
     {
-      title: "Burkett",
-      categoryKey: "business",
-      image: burkett,
-      link: "https://yamatoeth.github.io/Burkett-Co/",
-      depth: 1,
-    },
-    {
-      title: "Vi-Nha Kitchen",
-      categoryKey: "restaurant",
-      image: kitchen,
-      link: "https://vi-nha-kitchen.vercel.app/",
-      depth: 0,
-    },
-    {
-      title: "Mieng Restaurant",
-      categoryKey: "restaurant",
-      image: mieng,
-      link: "https://mieng-restaurant.vercel.app/",
-      depth: 2,
-    },
-    {
-      title: "AL Plomberie",
-      categoryKey: "business",
+      key: "alplomberie",
       image: alplomberie,
       link: "https://al-plomberie.vercel.app/",
       depth: 1,
     },
+  ];
+
+  const featuredCaseStudies = [
     {
-      title: "Salon de Coiffure",
-      categoryKey: "business",
-      image: hairsalon,
-      link: "https://hairsalon-website.vercel.app/",
-      depth: 2,
+      key: "teclis",
+      image: teclis,
+      link: "https://teclis-scientific.vercel.app/",
     },
     {
-      title: "Viced",
-      categoryKey: "business",
-      image: viced,
-      link: "https://viced.vercel.app/",
-      depth: 1,
+      key: "upArena",
+      image: upArena,
+      link: "https://www.uparena.io/",
     },
-    {
-      title : "BlueInstruments",
-      categoryKey : "business",
-      image : music,
-      link : "https://blue-instruments.vercel.app",
-      depth : 2
-    }
   ];
 
   return (
@@ -156,6 +108,16 @@ const Portfolio = () => {
           {t("portfolio.title")}
         </motion.h2>
 
+        <motion.p
+          className="max-w-3xl text-base md:text-lg text-muted-foreground mb-12 text-balance"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={whileInViewConfig}
+        >
+          {t("portfolio.description")}
+        </motion.p>
+
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={staggerContainerVariants}
@@ -165,7 +127,7 @@ const Portfolio = () => {
         >
           {projects.map((project, index) => (
             <ParallaxSection
-              key={index}
+              key={project.key}
               speed="slow"
               direction={index % 2 === 0 ? "up" : "down"}
             >
@@ -202,7 +164,7 @@ const Portfolio = () => {
                 >
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={t(`portfolio.projects.${project.key}.title`)}
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -220,7 +182,7 @@ const Portfolio = () => {
 
               {/* Content layer with depth stagger */}
               <motion.div
-                className="p-4 relative z-20"
+                className="p-5 relative z-20"
                 initial={{ y: 10, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{
@@ -233,15 +195,148 @@ const Portfolio = () => {
                   className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors"
                   whileHover={{ x: 4 }}
                 >
-                  {project.title}
+                  {t(`portfolio.projects.${project.key}.title`)}
                 </motion.h3>
-                <motion.p className="text-sm text-muted-foreground">
-                  {t(`portfolio.categories.${project.categoryKey}`)}
+                <motion.p className="text-sm text-primary mb-3">
+                  {t(`portfolio.projects.${project.key}.category`)}
                 </motion.p>
+                <motion.p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                  {t(`portfolio.projects.${project.key}.summary`)}
+                </motion.p>
+
+                <div className="space-y-3 mb-5">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-1">
+                      {t("portfolio.labels.challenge")}
+                    </p>
+                    <p className="text-sm text-foreground/85 leading-relaxed">
+                      {t(`portfolio.projects.${project.key}.challenge`)}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                      {t("portfolio.labels.scope")}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {(t.raw(`portfolio.projects.${project.key}.scope`) as string[]).map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-primary/20 bg-primary/8 px-3 py-1 text-xs text-foreground/90"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  {t("portfolio.liveLabel")}
+                  <span aria-hidden="true">↗</span>
+                </a>
               </motion.div>
               </motion.div>
             </ParallaxSection>
           ))}
+        </motion.div>
+
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={whileInViewConfig}
+        >
+          <div className="mb-8">
+            <p className="section-label mb-4">{t("portfolio.featured.label")}</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              {t("portfolio.featured.title")}
+            </h3>
+            <p className="max-w-3xl text-muted-foreground text-balance">
+              {t("portfolio.featured.description")}
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {featuredCaseStudies.map((project, index) => (
+              <motion.article
+                key={project.key}
+                className="overflow-hidden rounded-2xl border border-border bg-card"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
+                viewport={whileInViewConfig}
+              >
+                <div className="relative aspect-16/10 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={t(`portfolio.projects.${project.key}.title`)}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/25 to-transparent" />
+                </div>
+
+                <div className="p-6 md:p-8">
+                  <p className="text-sm text-primary mb-2">
+                    {t(`portfolio.projects.${project.key}.category`)}
+                  </p>
+                  <h4 className="text-2xl font-semibold text-foreground">
+                    {t(`portfolio.projects.${project.key}.title`)}
+                  </h4>
+                  <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {t(`portfolio.projects.${project.key}.summary`)}
+                  </p>
+
+                  <div className="mt-8 space-y-6">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                        {t("portfolio.featured.labels.context")}
+                      </p>
+                      <p className="text-sm text-foreground/85 leading-relaxed">
+                        {t(`portfolio.featured.projects.${project.key}.context`)}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                        {t("portfolio.featured.labels.approach")}
+                      </p>
+                      <p className="text-sm text-foreground/85 leading-relaxed">
+                        {t(`portfolio.featured.projects.${project.key}.approach`)}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                        {t("portfolio.featured.labels.value")}
+                      </p>
+                      <p className="text-sm text-foreground/85 leading-relaxed">
+                        {t(`portfolio.featured.projects.${project.key}.value`)}
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {t("portfolio.liveLabel")}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

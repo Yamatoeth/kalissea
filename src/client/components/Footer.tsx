@@ -9,7 +9,6 @@ const Footer = () => {
   const serviceLinks = [
     { key: "creation", path: "/services/website-creation" },
     { key: "ecommerce", path: "/services/e-commerce" },
-    { key: "maintenance", path: "/services/maintenance" },
     { key: "seo", path: "/services/seo-growth" },
     { key: "branding", path: "/services/branding" },
     { key: "automation", path: "/services/automation-ai" },
@@ -32,13 +31,13 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm text-muted-foreground mt-2 text-center md:text-left">
-              Agence web spécialisée en développement, SEO et automatisation.
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Services Links */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">{t('header.services')}</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t("header.capabilities")}</h3>
             <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
               {serviceLinks.map(({ key, path }) => (
                 <Link key={key} href={path} className="hover:text-primary transition-colors">
@@ -50,13 +49,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Navigation</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t("footer.navigation")}</h3>
             <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <Link href="/#services" className="hover:text-primary transition-colors">{t('header.services')}</Link>
-              <Link href="/#pricing" className="hover:text-primary transition-colors">{t('header.pricing')}</Link>
-              <Link href="/#portfolio" className="hover:text-primary transition-colors">{t('header.portfolio')}</Link>
-              <Link href="/#testimonials" className="hover:text-primary transition-colors">{t('header.testimonials')}</Link>
-              <Link href="/#contact" className="hover:text-primary transition-colors">{t('header.contact')}</Link>
+              <Link href="/#portfolio" className="hover:text-primary transition-colors">{t("header.work")}</Link>
+              <Link href="/#services" className="hover:text-primary transition-colors">{t("header.capabilities")}</Link>
+              <Link href="/#process" className="hover:text-primary transition-colors">{t("header.approach")}</Link>
+              <Link href="/#about" className="hover:text-primary transition-colors">{t("header.about")}</Link>
+              <Link href="/#contact" className="hover:text-primary transition-colors">{t("header.contact")}</Link>
             </nav>
           </div>
         </div>
@@ -67,33 +66,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Backlink Badges */}
-        <div className="flex flex-row items-center justify-center gap-6 mt-6 pt-6 border-t border-border">
-          <a href="https://wired.business" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
-            <img 
-              src="https://wired.business/badge0-white.svg" 
-              alt="Featured on Wired Business" 
-              width={150} 
-              height={45}
-            />
-          </a>
-          <a href="https://findly.tools/kalissea?utm_source=kalissea" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
-            <img
-              src="https://findly.tools/badges/findly-tools-badge-light.svg"
-              alt="Featured on findly.tools"
-              width={150}
-              height={50}
-            />
-          </a>
-          <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
-            <img
-              src="https://twelve.tools/badge0-dark.svg"
-              alt="Featured on Twelve Tools"
-              width={200}
-              height={54}
-            />
-          </a>
-        </div>
       </div>
     </footer>
   );

@@ -1,198 +1,90 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import { ArrowRight } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useMemo } from "react";
-import SplitText from "./SplitText";
-import Typewriter from "./Typewriter";
-import {
-  staggerContainerVariants,
-  fadeInUpChildVariants,
-  magneticButtonVariants,
-  SPRING_CONFIG,
-  SCROLL_PARALLAX_OFFSET,
-  whileInViewConfig,
-} from "@/lib/animations";
+import { motion } from "framer-motion";
+
+import { Button } from "@/components/ui/button";
+import { fadeInUpChildVariants, staggerContainerVariants, whileInViewConfig } from "@/lib/animations";
 
 const Hero = ({ t }: { t: (key: string) => string }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end center"],
-  });
-
-  // Parallax effects for depth
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0px", "50px"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.5]);
-
-  const stats = useMemo(
-    () => [
-      { value: "50+", label: t("hero.stats.projects") },
-      { value: "100%", label: t("hero.stats.satisfaction") },
-      { value: "5 days", label: t("hero.stats.delivery") },
-      { value: "24/7", label: t("hero.stats.support") },
-    ],
-    [t]
-  );
+  const stats = [
+    { value: "12+", label: t("hero.stats.projects") },
+    { value: "5", label: t("hero.stats.sectors") },
+    { value: "100%", label: t("hero.stats.responsive") },
+    { value: "Custom", label: t("hero.stats.systems") },
+  ];
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen pt-16 pb-20 px-6 overflow-hidden"
-    >
-      {/* Animated Background Layer */}
-      <motion.div
-        className="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent pointer-events-none"
-        style={{ y: bgY }}
-      />
+    <section className="relative overflow-hidden px-6 pb-20 pt-28 md:pb-24 md:pt-36">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(232,182,65,0.16),transparent_40%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_24%)]" />
+      <div className="pointer-events-none absolute inset-x-6 top-10 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent" />
 
-      {/* Foreground content */}
       <motion.div
-        className="relative z-10 flex items-center justify-center min-h-screen"
-        style={{ y: textY, opacity }}
+        className="container mx-auto max-w-6xl"
+        variants={staggerContainerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={whileInViewConfig}
       >
-        <motion.div
-          className="container mx-auto max-w-6xl text-center"
-          variants={staggerContainerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={whileInViewConfig}
-        >
-          {/* Section Label */}
-          <motion.div
-            className="section-label justify-center mb-6 mt-10 text-balance"
-            variants={fadeInUpChildVariants}
-          >
-            {t("hero.label")}
-          </motion.div>
-
-          {/* Main Headline with Split Text */}
-          <motion.div
-            className="mb-6"
-            variants={fadeInUpChildVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={whileInViewConfig}
-          >
-            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-foreground leading-tight [hyphens:none]">
-              <Typewriter
-                text={t("hero.titlePrefix")}
-                className="block text-center"
-                delay={0.1}
-                speed={25}
-              />
-              <motion.div
-                className="text-primary mt-2 text-center whitespace-nowrap"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  delay: (t("hero.titlePrefix").length * 0.025) + 0.2,
-                  duration: 0.5,
-                }}
-                viewport={whileInViewConfig}
-              >
-                <Typewriter
-                  text={t("hero.titleHighlight")}
-                  className="block text-center"
-                  delay={(t("hero.titlePrefix").length * 0.025) + 0.3}
-                  speed={25}
-                />
-              </motion.div>
-            </h1>
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2"
-            variants={fadeInUpChildVariants}
-          >
-            {t("hero.description")}
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full"
-            variants={staggerContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={whileInViewConfig}
-          >
-            <motion.div
-              variants={fadeInUpChildVariants}
-              whileHover="hover"
-              whileTap="tap"
-              initial="rest"
-            >
-              <motion.div
-                variants={magneticButtonVariants}
-                initial="rest"
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <Button variant="hero" size="lg" asChild className="cursor-pointer w-full sm:w-auto">
-                  <a href="#contact" className="justify-center">
-                    {t("hero.startProject")}
-                    <motion.span
-                      className="ml-2 h-5 w-5"
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <ArrowRight className="h-5 w-5" />
-                    </motion.span>
-                  </a>
-                </Button>
-              </motion.div>
+        <div className="grid items-end gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
+          <div>
+            <motion.div className="section-label mb-6 text-balance" variants={fadeInUpChildVariants}>
+              {t("hero.label")}
             </motion.div>
-            <motion.div
-              variants={fadeInUpChildVariants}
-              whileHover="hover"
-              whileTap="tap"
-              initial="rest"
-            >
-              <motion.div
-                variants={magneticButtonVariants}
-                initial="rest"
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <Button variant="hero-outline" size="lg" asChild className="cursor-pointer w-full sm:w-auto">
-                  <a href="#pricing" className="justify-center">{t("hero.viewPricing")}</a>
-                </Button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
 
-          {/* Statistics with Staggered Animation */}
-          <motion.div
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-            variants={staggerContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={whileInViewConfig}
+            <motion.h1
+              className="max-w-4xl text-4xl font-semibold leading-[0.98] text-foreground text-balance sm:text-5xl md:text-6xl lg:text-7xl"
+              variants={fadeInUpChildVariants}
+            >
+              <span className="block">{t("hero.titlePrefix").trim()}</span>
+              <span className="mt-3 block font-serif text-primary">{t("hero.titleHighlight")}</span>
+            </motion.h1>
+
+            <motion.p
+              className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              variants={fadeInUpChildVariants}
+            >
+              {t("hero.description")}
+            </motion.p>
+
+            <motion.div
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+              variants={fadeInUpChildVariants}
+            >
+              <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
+                <a href="#contact" className="justify-center">
+                  {t("hero.startProject")}
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+
+              <Button variant="hero-outline" size="lg" asChild className="w-full sm:w-auto">
+                <a href="#portfolio" className="justify-center">
+                  {t("hero.viewPricing")}
+                </a>
+              </Button>
+            </motion.div>
+          </div>
+
+          <motion.aside
+            className="relative overflow-hidden rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-8"
+            variants={fadeInUpChildVariants}
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUpChildVariants}
-                whileInView={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  delay: index * 0.1,
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-              >
-                <motion.div className="text-xl md:text-3xl font-bold text-primary mb-1">
-                  {stat.value}
-                </motion.div>
-                <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+            <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/35 to-transparent" />
+
+            <p className="text-[11px] uppercase tracking-[0.24em] text-primary/80">{t("hero.panelLabel")}</p>
+            <p className="mt-4 text-lg leading-relaxed text-foreground">{t("hero.panelText")}</p>
+
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              {stats.map((stat) => (
+                <div key={stat.label} className="rounded-2xl border border-white/6 bg-black/20 p-4">
+                  <div className="text-2xl font-semibold text-foreground">{stat.value}</div>
+                  <div className="mt-2 text-xs leading-relaxed text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </motion.aside>
+        </div>
       </motion.div>
     </section>
   );

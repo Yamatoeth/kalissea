@@ -1,25 +1,26 @@
 {
   "header": {
-    "services": "Services",
-    "pricing": "Pricing",
-    "portfolio": "Portfolio",
-    "testimonials": "Testimonials",
+    "work": "Work",
+    "capabilities": "Capabilities",
+    "approach": "Approach",
+    "about": "About",
     "contact": "Contact",
-    "automationFlow": "AutomationFlow",
-    "getQuote": "Activate my lead machine"
+    "startProject": "Start a project"
   },
   "hero": {
-    "label": "For tradesmen who want jobs, not cold calling",
-    "titlePrefix": "Fill your order book ",
-    "titleHighlight": "automatically",
-    "description": "Stop wasting time chasing clients. Receive qualified quote requests directly on your phone while you're on the job. All for €400, no subscription.",
-    "startProject": "Activate my lead machine",
-    "viewPricing": "How does it work?",
+    "label": "Independent digital studio for small businesses and independent brands",
+    "titlePrefix": "Websites, e-commerce, and digital tools ",
+    "titleHighlight": "designed with care",
+    "description": "I design and build polished digital experiences for small businesses, local brands, and solopreneurs, from high-quality websites to tailored workflows that support real business needs.",
+    "startProject": "Start a project",
+    "viewPricing": "View selected projects",
+    "panelLabel": "At a glance",
+    "panelText": "A quieter, more studio-like approach than a stack of services: less noise, stronger structure, and careful execution from visual direction down to front-end detail.",
     "stats": {
-      "projects": "Tradesmen helped",
-      "satisfaction": "Satisfaction rate",
-      "delivery": "To get visible",
-      "support": "Support available"
+      "projects": "Selected projects",
+      "sectors": "Sectors explored",
+      "responsive": "Responsive by default",
+      "systems": "Custom systems possible"
     }
   },
   "problem": {
@@ -82,80 +83,70 @@
     "cta": "Get the same results"
   },
   "services": {
-    "label": "What you get",
-    "title": "Your client generation system",
+    "label": "Capabilities",
+    "title": "Clear capabilities, shaped around real business needs",
+    "intro": "I would rather show well-defined capabilities than stack generic offers. Most projects start with a website, then expand only when the business actually needs more.",
+    "viewService": "Learn more",
     "flipHint": "Hover to see details",
     "items": {
       "creation": {
-        "title": "Professional Website",
-        "description": "A site that turns visitors into calls. Optimized so clients find you on Google.",
-        "price": "€400 all-inclusive",
+        "title": "Websites",
+        "description": "Landing pages, showcase websites, and polished web experiences built to feel clear, fast, and credible.",
+        "meta": "Presentation & conversion",
         "details": [
-          "Design that builds trust",
-          "Visible on Google and Maps",
-          "Quote request form",
-          "Google reviews displayed",
-          "One-tap call on mobile"
+          "Landing pages and showcase websites",
+          "Careful responsive front-end work",
+          "Pages designed for clarity and conversion",
+          "Consistent experience across mobile and desktop",
+          "A strong foundation for future growth"
         ]
       },
       "ecommerce": {
-        "title": "Online Store",
-        "description": "Sell your products 24/7. Secure payments and simple order management.",
-        "price": "From €899",
+        "title": "E-commerce",
+        "description": "Simple, trustworthy stores for small brands and businesses that need a clearer buying experience.",
+        "meta": "Catalog & buying flow",
         "details": [
-          "Stripe/PayPal payments",
-          "Automatic stock management",
-          "Order notifications",
-          "Mobile optimized",
-          "Sales dashboard"
-        ]
-      },
-      "maintenance": {
-        "title": "Peace of Mind",
-        "description": "We handle everything so your site stays fast, secure, and performing.",
-        "price": "From €49/month",
-        "details": [
-          "Security updates",
-          "Daily backups",
-          "24/7 monitoring",
-          "Bug fixes",
-          "Priority support"
+          "Small e-commerce stores",
+          "Product and collection pages",
+          "Payments and checkout",
+          "Catalog structure",
+          "Design choices that support trust and purchase"
         ]
       },
       "seo": {
-        "title": "Local Visibility",
-        "description": "Show up first when people search for a tradesman in your area.",
-        "price": "From €149/month",
+        "title": "SEO & optimization",
+        "description": "Clean technical foundations to help a site be faster, easier to understand, and easier to find.",
+        "meta": "Performance & clarity",
         "details": [
-          "Google Maps ranking",
-          "Local keywords optimized",
-          "Google Business profile",
-          "Monthly reports",
-          "Content strategy"
+          "Technical SEO foundations",
+          "On-page structure",
+          "Performance improvements",
+          "Analytics and tracking",
+          "Practical improvements for users and search"
         ]
       },
       "branding": {
-        "title": "Professional Image",
-        "description": "Logo, business cards, and visual identity that set you apart from competitors.",
-        "price": "Custom quote",
+        "title": "Visual direction",
+        "description": "Digital work becomes stronger when interface, tone, and structure all move in the same direction.",
+        "meta": "Consistency & presentation",
         "details": [
-          "Logo creation",
-          "Complete brand guidelines",
-          "Business cards",
-          "Print materials",
-          "Vehicle graphics"
+          "Visual hierarchy",
+          "Typography choices",
+          "Interface direction",
+          "Stronger alignment between brand and product",
+          "Sharper, more professional presentation"
         ]
       },
       "automation": {
-        "title": "Auto-Responses",
-        "description": "Never lose clients. Respond automatically even when you're on the job.",
-        "price": "Included",
+        "title": "Tools & automation",
+        "description": "When a project goes beyond a website, I can also build workflows and interfaces that support day-to-day operations.",
+        "meta": "Tailored to the project",
         "details": [
-          "Auto acknowledgment",
-          "Quote reminders",
-          "Automated follow-up",
-          "WhatsApp integration",
-          "SMS notifications"
+          "Business automations",
+          "Booking systems",
+          "Client areas or portals",
+          "Dashboards and internal tracking",
+          "CRM-style interfaces adapted to specific needs"
         ]
       }
     },
@@ -776,41 +767,117 @@
     }
   },
   "process": {
-    "label": "How it works",
-    "title": "In 4 steps, your phone rings",
+    "label": "Approach",
+    "title": "A simple, direct, and thoughtful way of working",
     "steps": {
       "brief": {
-        "title": "Chat",
-        "description": "10 min on WhatsApp to understand your trade and service area."
+        "title": "Understand",
+        "description": "Clarify the context, ambition, and what the project actually needs to achieve."
       },
       "design": {
-        "title": "Creation",
-        "description": "I create your site, your logo if needed, and optimize your Google presence."
+        "title": "Design",
+        "description": "Shape the structure, content, and visual direction before getting lost in details."
       },
-      "development": {
-        "title": "Approval",
-        "description": "You approve the result. We adjust until it's perfect."
+      "build": {
+        "title": "Build",
+        "description": "Develop something responsive, maintainable, and intentionally executed."
       },
-      "delivery": {
-        "title": "Launch",
-        "description": "Your site goes live. You start receiving calls."
-      },
-      "followup": {
-        "title": "Support",
-        "description": "30 days of support. I stay available on WhatsApp."
+      "refine": {
+        "title": "Refine",
+        "description": "Polish the details, performance, and overall experience so the result feels solid."
       }
     }
   },
+  "about": {
+    "label": "About",
+    "title": "A studio mindset, with hands-on execution",
+    "quote": "Designing something credible, clear, and well executed is often more valuable than adding feature after feature.",
+    "paragraphs": {
+      "first": "Kalissea is my independent digital studio. I work with small businesses, local brands, and solopreneurs who need more than a template and less than a bloated agency process.",
+      "second": "I care about clarity, visual quality, performance, and usefulness. Some projects stay within websites or e-commerce. Others grow into automations, booking flows, dashboards, or more tailored internal tools. The goal stays the same: build something professional, coherent, and genuinely useful."
+    },
+    "panelTitle": "Where I tend to bring the most value",
+    "highlights": [
+      "A strong bridge between design and development",
+      "Interfaces that feel clean, readable, and carefully executed",
+      "Real attention to structure, performance, and detail",
+      "The ability to extend from a website into more tailored tools when a project needs it"
+    ]
+  },
   "portfolio": {
-    "label": "Portfolio",
-    "title": "Selected Projects",
-    "categories": {
-      "restaurant": "Restaurant",
-      "hotel": "Hotel",
-      "company": "Company",
-      "personal": "Personal",
-      "onlineshop": "Online Shop",
-      "business": "Business / Corporate"
+    "label": "Selected work",
+    "title": "A selection of projects that reflects how I work",
+    "description": "I would rather show a few well-chosen projects that communicate clarity, direction, and execution than fill the page with a gallery that says less.",
+    "labels": {
+      "challenge": "Context",
+      "scope": "Scope"
+    },
+    "featured": {
+      "label": "Featured cases",
+      "title": "Two projects that say more about my approach",
+      "description": "They do a better job of showing how I can work both on serious business clarity and on more ambitious product-facing digital experiences.",
+      "labels": {
+        "context": "Context",
+        "approach": "Approach",
+        "value": "Value delivered"
+      },
+      "projects": {
+        "teclis": {
+          "context": "Teclis Scientific needed a clearer and more credible presentation of a technical B2B activity, with a strong need to reassure visitors and make the information easier to navigate.",
+          "approach": "I focused on content hierarchy, visual tone, section structure, and overall readability to turn a dense subject into a more professional and accessible interface.",
+          "value": "The project shows my ability to clarify a technical offer, shape a serious digital presence without making it feel cold, and treat a website as a business credibility tool."
+        },
+        "upArena": {
+          "context": "UpArena needed a more identifiable product universe and a stronger product-facing presence than a simple landing page, with a mix of positioning, visual energy, and structured information.",
+          "approach": "The work focused on sharper interface direction, clearer concept storytelling, and a more immersive experience able to make the idea feel tangible at first glance.",
+          "value": "This project highlights a more product-oriented side of my work: building a more ambitious digital experience with stronger personality, better rhythm, and clearer value perception."
+        }
+      }
+    },
+    "liveLabel": "View project",
+    "projects": {
+      "upArena": {
+        "title": "UpArena",
+        "category": "Digital product / streaming & prediction",
+        "summary": "A more product-oriented and immersive presence built to make the concept clearer, more distinctive, and more engaging.",
+        "challenge": "Give the project a stronger digital identity that communicates the universe, energy, and value proposition more quickly.",
+        "scope": ["Interface direction", "Product structure", "Front-end experience"]
+      },
+      "villa88": {
+        "title": "Villa88",
+        "category": "Hospitality / accommodation",
+        "summary": "A more immersive hospitality experience designed to better communicate place, mood, and positioning.",
+        "challenge": "Make the accommodation offer feel more desirable through clearer structure and stronger visual presentation.",
+        "scope": ["Showcase website", "Visual emphasis", "Mobile experience"]
+      },
+      "glc": {
+        "title": "GLC",
+        "category": "Company / corporate website",
+        "summary": "A more structured company site designed to make the offer clearer and the business feel more credible.",
+        "challenge": "Turn a more generic presence into something clearer, more serious, and easier to understand.",
+        "scope": ["Page structure", "Service presentation", "Front-end development"]
+      },
+      "terrathread": {
+        "title": "Terrathread",
+        "category": "Brand / independent project",
+        "summary": "A softer, more cohesive digital universe shaped around brand sensitivity and overall tone.",
+        "challenge": "Give the project a stronger digital identity without making it feel over-designed.",
+        "scope": ["Creative direction", "Interface identity", "Landing page"]
+      },
+      "teclis": {
+        "title": "Teclis Scientific",
+        "category": "Scientific / B2B",
+        "summary": "A cleaner and more serious presentation of a technical activity, with stronger information organization.",
+        "challenge": "Communicate technical credibility while keeping the interface readable and approachable.",
+        "scope": ["Content clarification", "Professional UI", "Information architecture"]
+      },
+      "alplomberie": {
+        "title": "AL Plomberie",
+        "category": "Local business / trades",
+        "summary": "A local business site built to create trust quickly and make contact simpler, especially on mobile.",
+        "challenge": "Create something more credible than a basic brochure site, with a stronger emphasis on trust and contact flow.",
+        "scope": ["Local business website", "Mobile optimization", "Contact journey"]
+      }
     }
   },
   "pricing": {
@@ -824,7 +891,7 @@
       "popular": "MOST POPULAR",
       "included": "Everything included:",
       "notIncluded": "Optional:",
-      "delivery": "Delivered in {{days}}",
+      "delivery": "Delivered in {days}",
       "getStarted": "Activate my lead machine"
     },
     "plans": {
@@ -1006,18 +1073,94 @@
     }
   },
   "contact": {
-    "label": "Take action",
-    "title": "Ready to fill your order book?",
-    "description": "Let's talk about your business. In 10 minutes, I'll tell you exactly how other tradesmen like you multiplied their calls. No commitment.",
-    "whatsappButton": "Activate my lead machine",
-    "preferEmail": "Prefer email?",
-    "ariaWhatsapp": "Contact us on WhatsApp"
+    "label": "Contact",
+    "title": "Let’s talk about what you want to build",
+    "description": "Tell me what you need, even if the project is not fully defined yet. I can quickly let you know whether I am the right person to design it, build it, or help it evolve.",
+    "ariaWhatsapp": "Start a conversation on WhatsApp",
+    "form": {
+      "title": "A few useful details about the project",
+      "description": "A few useful details are enough to set the context and see how I can help.",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "company": {
+        "label": "Company or business",
+        "placeholder": "Your business name"
+      },
+      "projectType": {
+        "label": "Project type",
+        "placeholder": "Choose a category",
+        "options": [
+          { "value": "website", "label": "Business website" },
+          { "value": "landing", "label": "Landing page" },
+          { "value": "ecommerce", "label": "E-commerce" },
+          { "value": "seo", "label": "SEO / optimization" },
+          { "value": "automation", "label": "Automation / workflow" },
+          { "value": "custom-tool", "label": "Internal tool / dashboard" },
+          { "value": "other", "label": "Other" }
+        ]
+      },
+      "budget": {
+        "label": "Estimated budget",
+        "placeholder": "Optional",
+        "options": [
+          { "value": "under-1000", "label": "Under €1,000" },
+          { "value": "1000-2500", "label": "€1,000 – €2,500" },
+          { "value": "2500-5000", "label": "€2,500 – €5,000" },
+          { "value": "5000-plus", "label": "€5,000 and above" },
+          { "value": "not-sure", "label": "Not sure yet" }
+        ]
+      },
+      "timeline": {
+        "label": "Expected timeline",
+        "placeholder": "Optional",
+        "options": [
+          { "value": "asap", "label": "As soon as possible" },
+          { "value": "2-4-weeks", "label": "Within 2 to 4 weeks" },
+          { "value": "1-2-months", "label": "Within 1 to 2 months" },
+          { "value": "flexible", "label": "Flexible" }
+        ]
+      },
+      "message": {
+        "label": "What do you need?",
+        "placeholder": "Context, goals, what needs to be built or improved, and any useful constraints..."
+      },
+      "note": "I usually reply within 24 to 48 business hours.",
+      "submit": "Send inquiry",
+      "submitting": "Sending...",
+      "successTitle": "Inquiry sent",
+      "successDescription": "Thank you, I will get back to you soon.",
+      "errorTitle": "Unable to send inquiry",
+      "errorDescription": "Something went wrong. You can also reach me directly by email."
+    },
+    "sidebar": {
+      "title": "What helps me respond clearly",
+      "description": "You do not need a perfect brief. A few useful signals are enough to start the conversation properly.",
+      "checklist": [
+        "What you already have in place today",
+        "What you want to improve, launch, or unblock",
+        "The kind of outcome you expect: site, store, automation, internal tool...",
+        "Any time, budget, or content constraint if one already exists"
+      ]
+    },
+    "alternatives": {
+      "title": "Prefer a more direct conversation?",
+      "description": "You can also reach me here.",
+      "whatsapp": "Message me on WhatsApp"
+    }
   },
   "footer": {
-    "rights": "© {{year}} Kalissea. All rights reserved."
+    "description": "Independent digital studio for websites, e-commerce, and tailored digital tools.",
+    "navigation": "Navigation",
+    "rights": "© {year} Kalissea. All rights reserved."
   },
   "metadata": {
-    "title": "Kalissea – Web agency specializing in development, SEO and automation",
-    "description": "Kalissea is a web agency specializing in high-performance website development, technical SEO and automation. Clear, measurable and lasting solutions."
+    "title": "Kalissea – Independent digital studio for websites, e-commerce and tailored tools",
+    "description": "Kalissea is an independent digital studio designing websites, e-commerce experiences, and tailored digital tools for small businesses and independent brands."
   }
 }

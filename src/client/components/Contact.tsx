@@ -1,182 +1,290 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+
+import { useState } from "react";
+import { ArrowRight, CheckCircle2, Loader2, Mail, MessageCircleMore } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+
+type InquiryFormData = {
+  name: string;
+  company: string;
+  email: string;
+  projectType: string;
+  budget: string;
+  timeline: string;
+  message: string;
+};
+
+const INITIAL_FORM_DATA: InquiryFormData = {
+  name: "",
+  company: "",
+  email: "",
+  projectType: "",
+  budget: "",
+  timeline: "",
+  message: "",
+};
 
 const Contact = () => {
   const t = useTranslations();
-  // const { toast } = useToast();
-  // const [isSubmitting, setIsSubmitting] = useState(false);
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   company: "",
-  //   message: "",
-  // });
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<InquiryFormData>(INITIAL_FORM_DATA);
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
+  const projectTypes = t.raw("contact.form.projectType.options") as { value: string; label: string }[];
+  const budgetOptions = t.raw("contact.form.budget.options") as { value: string; label: string }[];
+  const timelineOptions = t.raw("contact.form.timeline.options") as { value: string; label: string }[];
+  const checklist = t.raw("contact.sidebar.checklist") as string[];
 
-  //   try {
-  //     const response = await fetch("https://formspree.io/f/maqwarar", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
+  const updateField = <K extends keyof InquiryFormData>(field: K, value: InquiryFormData[K]) => {
+    setFormData((current) => ({ ...current, [field]: value }));
+  };
 
-  //     if (response.ok) {
-  //       toast({
-  //         title: "Message sent!",
-  //         description: "We'll get back to you within 24 hours.",
-  //       });
-  //       setFormData({ name: "", email: "", company: "", message: "" });
-  //     } else {
-  //       throw new Error("Failed to send message");
-  //     }
-  //   } catch (error) {
-  //     toast({
-  //       title: "Error",
-  //       description: "Something went wrong. Please try again later.",
-  //       variant: "destructive",
-  //     });
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/maqwarar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: `Kalissea inquiry - ${formData.projectType || "General project"}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send project inquiry");
+      }
+
+      toast({
+        title: t("contact.form.successTitle"),
+        description: t("contact.form.successDescription"),
+      });
+      setFormData(INITIAL_FORM_DATA);
+    } catch {
+      toast({
+        title: t("contact.form.errorTitle"),
+        description: t("contact.form.errorDescription"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-card/50">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <div className="section-label justify-center mb-4">{t('contact.label')}</div>
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            {t('contact.title')}
-          </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto text-balance">
-            {t('contact.description')}
+    <section id="contact" className="bg-card/50 px-6 py-24">
+      <div className="container mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <div className="section-label mb-4 justify-center">{t("contact.label")}</div>
+          <h2 className="mb-4 text-2xl font-bold text-foreground text-balance md:text-4xl">{t("contact.title")}</h2>
+          <p className="mx-auto max-w-2xl text-sm text-muted-foreground text-balance md:text-base">
+            {t("contact.description")}
           </p>
         </div>
 
-        <div className="bg-card border border-border rounded-xl p-6 md:p-12 text-center">
-          <div className="flex flex-col items-center gap-6">
-             <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-2">
-                <svg 
-                  viewBox="0 0 24 24" 
-                  className="w-8 h-8 text-green-500 fill-current"
-                  fill="currentColor"
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.85fr)]">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-foreground">{t("contact.form.title")}</h3>
+              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t("contact.form.description")}</p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="contact-name">{t("contact.form.name.label")}</Label>
+                  <Input
+                    id="contact-name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={(event) => updateField("name", event.target.value)}
+                    placeholder={t("contact.form.name.placeholder")}
+                    disabled={isSubmitting}
+                    className="border-border bg-background"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="contact-email">{t("contact.form.email.label")}</Label>
+                  <Input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(event) => updateField("email", event.target.value)}
+                    placeholder={t("contact.form.email.placeholder")}
+                    disabled={isSubmitting}
+                    className="border-border bg-background"
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="contact-company">{t("contact.form.company.label")}</Label>
+                  <Input
+                    id="contact-company"
+                    name="company"
+                    value={formData.company}
+                    onChange={(event) => updateField("company", event.target.value)}
+                    placeholder={t("contact.form.company.placeholder")}
+                    disabled={isSubmitting}
+                    className="border-border bg-background"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="contact-project-type">{t("contact.form.projectType.label")}</Label>
+                  <select
+                    id="contact-project-type"
+                    name="projectType"
+                    required
+                    value={formData.projectType}
+                    onChange={(event) => updateField("projectType", event.target.value)}
+                    disabled={isSubmitting}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value="">{t("contact.form.projectType.placeholder")}</option>
+                    {projectTypes.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="contact-budget">{t("contact.form.budget.label")}</Label>
+                  <select
+                    id="contact-budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={(event) => updateField("budget", event.target.value)}
+                    disabled={isSubmitting}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value="">{t("contact.form.budget.placeholder")}</option>
+                    {budgetOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="contact-timeline">{t("contact.form.timeline.label")}</Label>
+                  <select
+                    id="contact-timeline"
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={(event) => updateField("timeline", event.target.value)}
+                    disabled={isSubmitting}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value="">{t("contact.form.timeline.placeholder")}</option>
+                    {timelineOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="contact-message">{t("contact.form.message.label")}</Label>
+                <Textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                  rows={7}
+                  value={formData.message}
+                  onChange={(event) => updateField("message", event.target.value)}
+                  placeholder={t("contact.form.message.placeholder")}
+                  disabled={isSubmitting}
+                  className="resize-none border-border bg-background"
+                />
+              </div>
+
+              <div className="flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-muted-foreground">{t("contact.form.note")}</p>
+                <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      {t("contact.form.submitting")}
+                    </>
+                  ) : (
+                    <>
+                      {t("contact.form.submit")}
+                      <ArrowRight className="h-5 w-5" />
+                    </>
+                  )}
+                </Button>
+              </div>
+            </form>
+          </div>
+
+          <aside className="flex flex-col gap-6">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <CheckCircle2 className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground">{t("contact.sidebar.title")}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t("contact.sidebar.description")}</p>
+
+              <ul className="mt-6 space-y-3">
+                {checklist.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-foreground">{t("contact.alternatives.title")}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t("contact.alternatives.description")}</p>
+
+              <div className="mt-6 space-y-3">
+                <a
+                  href="mailto:contact@kalissea.com"
+                  className="flex items-center gap-3 rounded-xl border border-border px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/50 hover:bg-muted/40"
                 >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-             </div>
-            
-            <Button 
-                variant="hero" 
-                size="lg" 
-                className="w-full sm:w-auto min-w-50 bg-[#25D366] hover:bg-[#128C7E] text-white border-none"
-                asChild
-            >
-              <a 
-                href="https://wa.me/+33695925556" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                {t('contact.whatsappButton')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+                  <Mail className="h-4 w-4 text-primary" />
+                  <span>contact@kalissea.com</span>
+                </a>
 
-             <p className="text-sm text-muted-foreground mt-4">
-              {t('contact.preferEmail')} <a href="mailto:contact@kalissea.com" className="text-primary hover:underline">contact@kalissea.com</a>
-            </p>
-          </div>
-
-          {/* Commented out form UI
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Name *</label>
-                <Input
-                  required
-                  name="name"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="bg-muted border-border focus:border-primary"
-                  disabled={isSubmitting}
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Email *</label>
-                <Input
-                  required
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="bg-muted border-border focus:border-primary"
-                  disabled={isSubmitting}
-                />
+                <a
+                  href="https://wa.me/+33695925556"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t("contact.ariaWhatsapp")}
+                  className="flex items-center gap-3 rounded-xl border border-border px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/50 hover:bg-muted/40"
+                >
+                  <MessageCircleMore className="h-4 w-4 text-primary" />
+                  <span>{t("contact.alternatives.whatsapp")}</span>
+                </a>
               </div>
             </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Company</label>
-              <Input
-                name="company"
-                placeholder="Your company name"
-                value={formData.company}
-                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="bg-muted border-border focus:border-primary"
-                disabled={isSubmitting}
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Project Details *</label>
-              <Textarea
-                required
-                name="message"
-                placeholder="Tell us about your project..."
-                rows={5}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="bg-muted border-border focus:border-primary resize-none"
-                disabled={isSubmitting}
-              />
-            </div>
-
-            <Button 
-              type="submit" 
-              variant="hero" 
-              size="lg" 
-              className="w-full"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                <>
-                  Send Message
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </>
-              )}
-            </Button>
-          </form>
-
-          <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-primary" />
-              <span>hello@kalissea.com</span>
-            </div>
-          </div>
-          */}
+          </aside>
         </div>
       </div>
     </section>

@@ -8,7 +8,6 @@ import Image from "next/image"
 import { motion } from "framer-motion";
 import {
   magneticButtonVariants,
-  backdropBlurVariants,
   staggerContainerFastVariants,
   fadeInUpChildVariants,
 } from "@/lib/animations";
@@ -22,12 +21,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: "/#services", label: t('header.services') },
-    { href: "/#pricing", label: t('header.pricing') },
-    { href: "/#portfolio", label: t('header.portfolio') },
-    { href: "/#testimonials", label: t('header.testimonials') },
+    { href: "/#portfolio", label: t('header.work') },
+    { href: "/#services", label: t('header.capabilities') },
+    { href: "/#process", label: t('header.approach') },
+    { href: "/#about", label: t('header.about') },
     { href: "/#contact", label: t('header.contact') },
-    { href: "https://automation.kalissea.com", label: t('header.automationFlow'), external: true },
   ];
 
   return (
@@ -69,8 +67,6 @@ const Header = () => {
               key={link.href}
               href={link.href}
               className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium relative"
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
               whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -98,7 +94,7 @@ const Header = () => {
             whileTap="tap"
           >
             <Button variant="hero" size="default" asChild className="cursor-pointer">
-              <a href="/#contact">{t('header.getQuote')}</a>
+              <a href="/#contact">{t('header.startProject')}</a>
             </Button>
           </motion.div>
         </div>
@@ -126,8 +122,6 @@ const Header = () => {
               href={link.href}
               className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
               onClick={() => handleMenuToggle()}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
               variants={fadeInUpChildVariants}
             >
               {link.label}
@@ -145,7 +139,7 @@ const Header = () => {
               whileTap="tap"
             >
               <Button variant="hero" size="default" className="cursor-pointer" asChild>
-                <a href="/#contact">{t('header.getQuote')}</a>
+                <a href="/#contact">{t('header.startProject')}</a>
               </Button>
             </motion.div>
           </motion.div>

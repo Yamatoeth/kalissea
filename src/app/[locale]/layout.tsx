@@ -59,9 +59,9 @@ export default async function LocaleLayout({ children, params }: Props) {
               "@type": "Organization",
               name: "Kalissea",
               url: "https://kalissea.com",
-              logo: "https://kalissea.com/logo.png",
+              logo: "https://kalissea.com/kalissealogo.png",
               description:
-                "Agence web spécialisée en développement, SEO et automatisation",
+                "Studio digital indépendant pour sites web, e-commerce et outils numériques sur mesure",
               foundingDate: "2020",
               areaServed: { "@type": "Country", name: "FR" },
               sameAs: [
