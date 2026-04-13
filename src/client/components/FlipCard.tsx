@@ -26,6 +26,7 @@ const FlipCard: React.FC<FlipCardProps> = ({
     <div
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      onTouchStart={() => setIsFlipped((v) => !v)}
       className={`w-full h-full perspective ${className}`}
       style={{ perspective: "1000px" }}
     >

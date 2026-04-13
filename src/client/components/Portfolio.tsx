@@ -12,7 +12,7 @@ import alplomberie from "../assets/alplomberie.avif";
 import hairsalon from "../assets/hairsalon.avif";
 import viced from "../assets/viced.avif";
 import music from "../assets/music.avif";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -23,7 +23,7 @@ import {
 import ParallaxSection from "./ParallaxSection";
 
 const Portfolio = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const projects = [
     {

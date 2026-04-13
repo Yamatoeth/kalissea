@@ -1,7 +1,7 @@
 "use client";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -13,7 +13,7 @@ import FlipCard from "./FlipCard";
 import Image from "next/image";
 
 const Pricing = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const pricingPlans = [
     {
@@ -24,7 +24,7 @@ const Pricing = () => {
     },
     {
       key: "popular",
-      popular: false,
+      popular: true,
       image: "/images/results/viced.avif",
       alt: "High Quality Ui/Ux for a Weed Business Website",
     },
@@ -149,7 +149,7 @@ const Pricing = () => {
                       </motion.div>
 
                       <motion.p className="text-sm text-muted-foreground mb-4">
-                        Payment after shipping
+                        {t("pricing.paymentAfterDelivery")}
                       </motion.p>
                     </div>
 
@@ -166,9 +166,7 @@ const Pricing = () => {
                       </h4>
                       <ul className="space-y-2 mb-6">
                         {(
-                          t(`pricing.plans.${plan.key}.features`, {
-                            returnObjects: true,
-                          }) as string[]
+                          t.raw(`pricing.plans.${plan.key}.features`) as string[]
                         ).map((feature, idx) => (
                           <li key={idx} className="text-sm text-foreground flex items-start gap-2">
                             <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -179,9 +177,7 @@ const Pricing = () => {
 
                       {/* Excluded Features */}
                       {(
-                        t(`pricing.plans.${plan.key}.excluded`, {
-                          returnObjects: true,
-                        }) as string[]
+                        t.raw(`pricing.plans.${plan.key}.excluded`) as unknown as string[]
                       ).length > 0 && (
                         <div>
                           <h4 className="font-semibold text-foreground mb-2 text-sm opacity-70">
@@ -189,9 +185,7 @@ const Pricing = () => {
                           </h4>
                           <ul className="space-y-1 mb-4">
                             {(
-                              t(`pricing.plans.${plan.key}.excluded`, {
-                                returnObjects: true,
-                              }) as string[]
+                              t.raw(`pricing.plans.${plan.key}.excluded`) as string[]
                             ).map((item, idx) => (
                               <li
                                 key={idx}

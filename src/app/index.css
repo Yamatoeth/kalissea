@@ -114,11 +114,19 @@
   }
 
   /* Prevent words from being cut in the middle on mobile */
-  h1, h2, h3, h4, h5, h6, p, span, a, li, blockquote {
+  h2, h3, h4, h5, h6, p, span, a, li, blockquote {
     word-break: normal;
     overflow-wrap: break-word;
     hyphens: auto;
     -webkit-hyphens: auto;
+  }
+
+  /* Never hyphenate headings */
+  h1 {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 }
 

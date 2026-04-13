@@ -1,6 +1,6 @@
 "use client";
 import { Check } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -10,7 +10,7 @@ import {
 } from "@/lib/animations";
 
 const Features = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const categoryKeys = ["design", "setup", "seo", "support"];
 
   const containerVariants = {
@@ -147,9 +147,7 @@ const Features = () => {
               {/* Features List with orchestrated stagger */}
               <motion.ul className="space-y-3">
                 {(
-                  t(`features.categories.${key}.features`, {
-                    returnObjects: true,
-                  }) as string[]
+                  t.raw(`features.categories.${key}.features`) as string[]
                 ).map((feature, featureIdx) => (
                   <motion.li
                     key={featureIdx}

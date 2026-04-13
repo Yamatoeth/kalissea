@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 // Charger IsometricCube avec plus basse priorité
 const DynamicIsometricCube = dynamic(
@@ -16,7 +16,7 @@ const DynamicIsometricCube = dynamic(
 );
 
 const HeroWithBackground = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   
   return (
     <div className="relative min-h-screen">

@@ -1,10 +1,10 @@
 "use client";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 const SEOPricing = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const planKeys = ["audit", "monthly"];
 
@@ -49,7 +49,7 @@ const SEOPricing = () => {
               </div>
 
               <div className="space-y-4 mb-8">
-                {(t(`seoPricing.plans.${key}.features`, { returnObjects: true }) as string[]).map((feature, idx) => (
+                {(t.raw(`seoPricing.plans.${key}.features`) as string[]).map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-base text-muted-foreground">{feature}</span>

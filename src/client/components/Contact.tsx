@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   // const { toast } = useToast();
   // const [isSubmitting, setIsSubmitting] = useState(false);
   // const [formData, setFormData] = useState({

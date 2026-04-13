@@ -19,7 +19,7 @@ export function LenisProvider({ children }: LenisProviderProps) {
       lerp: 0.1,
       duration: 1.5,
       smoothWheel: true,
-      touchMultiplier: 30,
+      touchMultiplier: 2,
     });
 
     const raf = (time: number) => {

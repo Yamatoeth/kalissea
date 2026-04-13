@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -10,7 +10,7 @@ import { TrendingUp, Clock, Phone, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Results = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const beforeAfterStats = [
     {
@@ -40,7 +40,7 @@ const Results = () => {
   ];
 
   return (
-    <section id="results" className="py-1 px-6 bg-card/50 relative overflow-hidden">
+    <section id="results" className="py-20 px-6 bg-card/50 relative overflow-hidden">
       {/* Background decorations */}
       <motion.div
         className="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"

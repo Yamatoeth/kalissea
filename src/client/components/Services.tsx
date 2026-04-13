@@ -1,6 +1,6 @@
 "use client";
 import { Globe, ShoppingBag, Wrench, Search, Palette, Bot, ArrowRight } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -11,7 +11,7 @@ import {
 import FlipCard from "./FlipCard";
 
 const Services = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const servicesList = [
     { key: "creation", icon: Globe, path: "/services/website-creation" },
@@ -100,9 +100,7 @@ const Services = () => {
                       </h3>
                       <ul className="space-y-2">
                         {(() => {
-                          const details = t(`services.items.${key}.details`, {
-                            returnObjects: true,
-                          }) as string[] | string;
+                          const details = t.raw(`services.items.${key}.details`) as string[] | string;
                           const detailsList = Array.isArray(details)
                             ? details
                             : typeof details === "string"

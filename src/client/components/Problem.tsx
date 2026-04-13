@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -10,10 +10,10 @@ import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Problem = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
-  const problems = t("problem.problems", { returnObjects: true }) as string[];
-  const solutions = t("problem.solutions", { returnObjects: true }) as string[];
+  const problems = t.raw("problem.problems") as string[];
+  const solutions = t.raw("problem.solutions") as string[];
 
   return (
     <section id="problem" className="py-24 px-6 relative overflow-hidden">

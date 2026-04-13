@@ -204,19 +204,6 @@ const ServiceDetailTemplate = ({
           </div>
         </section>
 
-        {/* Long Description Section - SEO Content */}
-        {longDescription && (
-           <section className="px-6 py-20 bg-background">
-             <div className="container mx-auto max-w-3xl">
-               <div className="prose prose-lg dark:prose-invert mx-auto">
-                 <div className="whitespace-pre-line text-muted-foreground leading-relaxed">
-                   {longDescription}
-                 </div>
-               </div>
-             </div>
-           </section>
-        )}
-
         {/* Features Grid Section */}
         {features && features.length > 0 && (
           <section className="px-6 py-20 bg-muted/30">

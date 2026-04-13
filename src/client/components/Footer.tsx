@@ -1,10 +1,10 @@
 "use client";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const serviceLinks = [
     { key: "creation", path: "/services/website-creation" },
@@ -76,9 +76,6 @@ const Footer = () => {
               width={150} 
               height={45}
             />
-          </a>
-          <a href="https://submithunt.com" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
-            {/* No badge image provided */}
           </a>
           <a href="https://findly.tools/kalissea?utm_source=kalissea" target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0">
             <img

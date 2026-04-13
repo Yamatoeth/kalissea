@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Optimiser le bundle
@@ -25,15 +29,11 @@ const nextConfig = {
   
   // Optimiser les images
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', 'image/webp'] as ('image/avif' | 'image/webp')[],
     minimumCacheTTL: 60,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'submithunt.com',
-      },
-      {
-        protocol: 'https',
+        protocol: 'https' as const,
         hostname: 'findly.tools',
       },
     ],
@@ -46,7 +46,7 @@ const nextConfig = {
         source: '/:path*',
         has: [
           {
-            type: 'host',
+            type: 'host' as const,
             value: 'www.kalissea.com',
           },
         ],
@@ -62,4 +62,4 @@ const nextConfig = {
   }),
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

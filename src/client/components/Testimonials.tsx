@@ -1,6 +1,6 @@
 "use client";
 import { Star } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -17,11 +17,9 @@ type Testimonial = {
 };
 
 const Testimonials = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
-  const testimonials = t("testimonials.items", {
-    returnObjects: true,
-  }) as Testimonial[];
+  const testimonials = t.raw("testimonials.items") as Testimonial[];
 
   return (
     <section id="testimonials" className="py-24 px-6 bg-card/50 relative overflow-hidden">

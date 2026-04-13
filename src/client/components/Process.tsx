@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import { motion, Variants } from "framer-motion";
 import {
   staggerContainerVariants,
@@ -9,7 +9,7 @@ import {
 } from "@/lib/animations";
 
 const Process = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const stepKeys = ["brief", "design", "development", "delivery", "followup"];
 
   const stepCircleVariants: Variants = {

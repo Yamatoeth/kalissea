@@ -1,5 +1,4 @@
-import NotFoundPage from "@/pages/NotFound";
-
+// Handled per-locale in app/[locale]/not-found.tsx
 export default function NotFound() {
-  return <NotFoundPage />;
+  return null;
 }

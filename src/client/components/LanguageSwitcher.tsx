@@ -1,25 +1,38 @@
 "use client";
-import { useTranslation } from 'react-i18next';
+import { useLocale } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import Cookies from 'js-cookie';
 
 const LanguageSwitcher = () => {
-    const { i18n } = useTranslation();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
-    const toggleLanguage = () => {
-        const newLang = i18n.resolvedLanguage === 'en' ? 'fr' : 'en';
-        i18n.changeLanguage(newLang);
-        // Set cookie for server-side compatibility
-        Cookies.set('i18next', newLang, { expires: 365, path: '/' });
-        // Refresh to ensure server components re-render with new locale
-        window.location.reload();
-    };
+  const toggleLanguage = () => {
+    const newLocale = locale === "en" ? "fr" : "en";
 
-    return (
-        <Button variant="ghost" size="sm" onClick={toggleLanguage} className="font-medium text-muted-foreground hover:text-foreground">
-            {i18n.resolvedLanguage === 'en' ? 'EN' : 'FR'}
-        </Button>
-    );
+    // With localePrefix: "as-needed", fr has no prefix and en has /en prefix
+    if (newLocale === "fr") {
+      // Remove /en prefix
+      const newPath = pathname.replace(/^\/en(\/|$)/, "/") || "/";
+      router.push(newPath);
+    } else {
+      // Add /en prefix
+      const newPath = "/en" + (pathname.startsWith("/") ? pathname : "/" + pathname);
+      router.push(newPath);
+    }
+  };
+
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={toggleLanguage}
+      className="font-medium text-muted-foreground hover:text-foreground"
+    >
+      {locale === "en" ? "EN" : "FR"}
+    </Button>
+  );
 };
 
 export default LanguageSwitcher;

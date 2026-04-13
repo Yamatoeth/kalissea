@@ -1,86 +1,89 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import { getAllServiceSlugs, getServiceData, getDictionary } from "@lib/i18n-server";
 import ServiceDetailTemplate from "@/components/ServiceDetailTemplate";
 import Script from "next/script";
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "../../../../i18n/routing";
 
-  // Mapping specific result images for services
-const RESULTS_MAP: Record<string, { type: "image" | "video"; url: string; caption: string }[]> = {
-  'website-creation': [
+// Mapping specific result images for services
+const RESULTS_MAP: Record<
+  string,
+  { type: "image" | "video"; url: string; caption: string }[]
+> = {
+  "website-creation": [
     {
       type: "image",
       url: "/images/results/website-creation.avif",
-      caption: "Des sites web qui marquent les esprits"
-    }
+      caption: "Des sites web qui marquent les esprits",
+    },
   ],
-  'e-commerce': [
+  "e-commerce": [
     {
       type: "image",
       url: "/images/results/e-commerce.avif",
-      caption: "Vendez plus avec une boutique optimisée"
-    }
+      caption: "Vendez plus avec une boutique optimisée",
+    },
   ],
-  'maintenance': [
+  maintenance: [
     {
       type: "image",
       url: "/images/results/maintenance.avif",
-      caption: "Sécurité et performance garanties"
-    }
+      caption: "Sécurité et performance garanties",
+    },
   ],
-  'seo-growth': [
+  "seo-growth": [
     {
       type: "image",
       url: "/images/results/seo-growth.avif",
-      caption: "Une croissance visible et durable"
-    }
+      caption: "Une croissance visible et durable",
+    },
   ],
-  'branding': [
+  branding: [
     {
       type: "image",
       url: "/images/results/branding.avif",
-      caption: "Une identité qui vous ressemble"
-    }
+      caption: "Une identité qui vous ressemble",
+    },
   ],
-  'automation-ai': [
+  "automation-ai": [
     {
       type: "image",
       url: "/images/results/automation-ai.avif",
-      caption: "L'intelligence artificielle au service de votre temps"
-    }
-  ]
+      caption: "L'intelligence artificielle au service de votre temps",
+    },
+  ],
 };
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
+  const locales = routing.locales;
   const slugs = getAllServiceSlugs();
-  return slugs.map((slug) => ({
-    slug,
-  }));
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const cookieStore = await cookies();
-  const lang = (cookieStore.get("i18next")?.value as "fr" | "en") || "fr";
-  
-  const serviceData = await getServiceData(slug, lang); 
+  const { locale, slug } = await params;
+  const serviceData = await getServiceData(slug, locale);
 
   if (!serviceData) {
-    return {
-      title: "Service not found | Kalissea",
-    };
+    return { title: "Service not found | Kalissea" };
   }
 
   const baseUrl = "https://kalissea.com";
-  const serviceUrl = `${baseUrl}/services/${slug}`;
+  const serviceUrlFr = `${baseUrl}/services/${slug}`;
+  const serviceUrlEn = `${baseUrl}/en/services/${slug}`;
+  const serviceUrl = locale === "fr" ? serviceUrlFr : serviceUrlEn;
   const ogImageUrl = `${baseUrl}/og/${slug}.png`;
 
   const title = serviceData.seo?.title || `${serviceData.title} | Kalissea`;
-  const description = serviceData.seo?.description || serviceData.heroDescription;
+  const description =
+    serviceData.seo?.description || serviceData.heroDescription;
   const keywords = serviceData.seo?.keywords || [];
 
   return {
@@ -90,52 +93,50 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: serviceUrl,
       languages: {
-        'fr': serviceUrl,
-        'en': serviceUrl,
-        'x-default': serviceUrl,
+        fr: serviceUrlFr,
+        en: serviceUrlEn,
+        "x-default": serviceUrlFr,
       },
     },
     openGraph: {
       title,
       description,
       url: serviceUrl,
-      siteName: 'Kalissea',
-      type: 'website',
-      locale: 'fr_CA',
+      siteName: "Kalissea",
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: serviceData.title,
-          type: 'image/png',
+          type: "image/png",
         },
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [ogImageUrl],
-      creator: '@kalissea',
-      site: '@kalissea',
+      creator: "@kalissea",
+      site: "@kalissea",
     },
   };
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { slug } = await params;
-  const cookieStore = await cookies();
-  const lang = (cookieStore.get("i18next")?.value as "fr" | "en") || "fr"; // Default to fr
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
 
-  const serviceData = await getServiceData(slug, lang);
-  const dict = await getDictionary(lang); 
+  const serviceData = await getServiceData(slug, locale);
+  const dict = await getDictionary(locale);
 
   if (!serviceData) {
     notFound();
   }
 
-  // All services for internal linking
   const allServices = [
     { key: "creation", path: "/services/website-creation" },
     { key: "ecommerce", path: "/services/e-commerce" },
@@ -145,39 +146,27 @@ export default async function ServicePage({ params }: Props) {
     { key: "automation", path: "/services/automation-ai" },
   ];
 
-  // Get related services (all except current one)
   const relatedServices = allServices
-    .filter(s => s.key !== serviceData.key)
-    .map(s => ({
+    .filter((s) => s.key !== serviceData.key)
+    .map((s) => ({
       key: s.key,
       title: dict.services?.items?.[s.key]?.title || s.key,
       path: s.path,
     }));
 
-  // Determine results (images) to show
-  // In the future this should come from the CMS/JSON as well
   let results = RESULTS_MAP[slug];
-  
   if (!results) {
-    // Default placeholder result
     results = [
-      {
-        type: "image",
-        url: "/placeholder.svg", 
-        caption: serviceData.heroTitle
-      }
+      { type: "image", url: "/placeholder.svg", caption: serviceData.heroTitle },
     ];
   } else {
-      // Update the caption from the translation if it was hardcoded or we want to ensure consistency
-       results = results.map(r => ({
-           ...r,
-           caption: serviceData.heroTitle // Reusing hero title as caption like in the old page
-       }));
+    results = results.map((r) => ({ ...r, caption: serviceData.heroTitle }));
   }
+
+  const baseUrl = "https://kalissea.com";
 
   return (
     <>
-      {/* Breadcrumb Schema */}
       <Script
         id={`breadcrumb-${slug}`}
         type="application/ld+json"
@@ -186,31 +175,30 @@ export default async function ServicePage({ params }: Props) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
+            itemListElement: [
               {
                 "@type": "ListItem",
-                "position": 1,
-                "name": "Accueil",
-                "item": "https://kalissea.com/"
+                position: 1,
+                name: "Accueil",
+                item: `${baseUrl}/${locale === "fr" ? "" : locale + "/"}`,
               },
               {
                 "@type": "ListItem",
-                "position": 2,
-                "name": "Services",
-                "item": "https://kalissea.com/#services"
+                position: 2,
+                name: "Services",
+                item: `${baseUrl}/${locale === "fr" ? "" : locale + "/"}#services`,
               },
               {
                 "@type": "ListItem",
-                "position": 3,
-                "name": serviceData.title,
-                "item": `https://kalissea.com/services/${slug}`
-              }
-            ]
-          })
+                position: 3,
+                name: serviceData.title,
+                item: `${baseUrl}/${locale === "fr" ? "" : locale + "/"}services/${slug}`,
+              },
+            ],
+          }),
         }}
       />
 
-      {/* FAQ Schema */}
       {serviceData.faq && serviceData.faq.length > 0 && (
         <Script
           id={`faq-${slug}`}
@@ -220,20 +208,16 @@ export default async function ServicePage({ params }: Props) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": serviceData.faq.map(item => ({
+              mainEntity: serviceData.faq.map((item) => ({
                 "@type": "Question",
-                "name": item.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": item.answer
-                }
-              }))
-            })
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }),
           }}
         />
       )}
 
-      {/* Service + LocalBusiness Schema */}
       <Script
         id={`service-${slug}`}
         type="application/ld+json"
@@ -242,29 +226,22 @@ export default async function ServicePage({ params }: Props) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Kalissea",
-            "description": "Agence web spécialisée en développement, SEO et automatisation",
-            "url": "https://kalissea.com",
-            "telephone": "",
-            "areaServed": {
-              "@type": "Country",
-              "name": "CA"
-            },
-            "service": {
+            name: "Kalissea",
+            description:
+              "Agence web spécialisée en développement, SEO et automatisation",
+            url: "https://kalissea.com",
+            service: {
               "@type": "Service",
-              "name": serviceData.title,
-              "description": serviceData.seo?.description || serviceData.heroDescription,
-              "provider": {
+              name: serviceData.title,
+              description:
+                serviceData.seo?.description || serviceData.heroDescription,
+              provider: {
                 "@type": "Organization",
-                "name": "Kalissea",
-                "url": "https://kalissea.com"
+                name: "Kalissea",
+                url: "https://kalissea.com",
               },
-              "areaServed": {
-                "@type": "Country",
-                "name": "CA"
-              }
-            }
-          })
+            },
+          }),
         }}
       />
 
@@ -282,7 +259,10 @@ export default async function ServicePage({ params }: Props) {
         results={results}
         faqTitle={dict.services.details.faqTitle}
         faq={serviceData.faq}
-        relatedServicesTitle={dict.services.details.relatedServicesTitle || "Découvrez nos autres services"}
+        relatedServicesTitle={
+          dict.services.details.relatedServicesTitle ||
+          "Découvrez nos autres services"
+        }
         relatedServices={relatedServices}
         ctaTitle={serviceData.ctaTitle}
         ctaDescription={serviceData.ctaDescription}

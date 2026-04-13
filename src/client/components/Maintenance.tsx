@@ -1,10 +1,10 @@
 "use client";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 const Maintenance = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const planKeys = ["securityAudit", "modifications", "hosting"];
 
   return (
@@ -46,7 +46,7 @@ const Maintenance = () => {
               </div>
 
               <div className="space-y-3 mb-6">
-                {(t(`maintenance.plans.${key}.features`, { returnObjects: true }) as string[]).map((feature, idx) => (
+                {(t.raw(`maintenance.plans.${key}.features`) as string[]).map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm text-muted-foreground">{feature}</span>

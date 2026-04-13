@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useCallback } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image"
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ import {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const handleMenuToggle = useCallback(() => {
     setIsMenuOpen(prev => !prev);

@@ -75,7 +75,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
             whileInView="visible"
             viewport={whileInViewConfig}
           >
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight text-balance">
+            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-foreground leading-tight [hyphens:none]">
               <Typewriter
                 text={t("hero.titlePrefix")}
                 className="block text-center"
@@ -83,7 +83,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
                 speed={25}
               />
               <motion.div
-                className="text-primary mt-2 text-center"
+                className="text-primary mt-2 text-center whitespace-nowrap"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
