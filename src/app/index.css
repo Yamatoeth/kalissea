@@ -147,11 +147,11 @@
 }
 
 @utility section-label {
-  @apply text-primary text-xs sm:text-sm font-semibold tracking-wider uppercase flex items-center gap-2 sm:gap-3;
+  @apply text-primary/85 text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase flex items-center gap-2 sm:gap-3;
 
   &::before {
     content: '';
-    @apply w-6 sm:w-8 h-px bg-primary shrink-0;
+    @apply w-6 sm:w-8 h-px bg-primary/70 shrink-0;
   }
 }
 

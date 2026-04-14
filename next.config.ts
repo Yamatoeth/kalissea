@@ -4,8 +4,6 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimiser le bundle
-  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
@@ -42,6 +40,16 @@ const nextConfig = {
   // Add HTTP to HTTPS and www to non-www redirects for SEO
   async redirects() {
     return [
+      {
+        source: '/services/automation-ai',
+        destination: '/services/custom-tools',
+        permanent: true,
+      },
+      {
+        source: '/en/services/automation-ai',
+        destination: '/en/services/custom-tools',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [

@@ -87,27 +87,25 @@
     "flipHint": "Survolez pour voir les détails",
     "items": {
       "creation": {
-        "title": "Site Web Professionnel",
-        "description": "Un site qui transforme les visiteurs en appels. Optimisé pour que vos clients vous trouvent sur Google.",
-        "price": "400€ tout compris",
+        "title": "Sites web",
+        "description": "Des sites vitrines, landing pages et sites business conçus pour être lisibles, crédibles et bien exécutés.",
+        "meta": "Clarté & présence",
         "details": [
-          "Design qui inspire confiance",
-          "Visible sur Google et Maps",
-          "Formulaire de demande de devis",
-          "Avis clients affichés",
-          "Appel en un clic sur mobile"
+          "Sites vitrines et landing pages",
+          "Hiérarchie de contenu claire",
+          "Responsive soigné",
+          "Base propre pour évoluer"
         ]
       },
       "ecommerce": {
-        "title": "Boutique en Ligne",
-        "description": "Vendez vos produits 24h/24. Paiements sécurisés et gestion simple des commandes.",
-        "price": "À partir de 899€",
+        "title": "E-commerce",
+        "description": "Des boutiques plus simples à parcourir, plus rassurantes à utiliser et mieux structurées pour vendre.",
+        "meta": "Parcours d'achat & confiance",
         "details": [
-          "Paiements Stripe/PayPal",
-          "Gestion automatique des stocks",
-          "Notifications de commande",
-          "Optimisé mobile",
-          "Tableau de bord ventes"
+          "Pages produit et collections",
+          "Checkout et paiement",
+          "Structure catalogue",
+          "Expérience d'achat fluide"
         ]
       },
       "maintenance": {
@@ -123,39 +121,36 @@
         ]
       },
       "seo": {
-        "title": "Visibilité Locale",
-        "description": "Apparaissez en premier quand les gens cherchent un artisan dans votre zone.",
-        "price": "À partir de 149€/mois",
+        "title": "SEO & optimisation",
+        "description": "Des fondations techniques et structurelles propres pour aider un site à être mieux compris, plus rapide et plus visible.",
+        "meta": "Technique & lisibilité",
         "details": [
-          "Positionnement Google Maps",
-          "Mots-clés locaux optimisés",
-          "Profil Google Business",
-          "Rapports mensuels",
-          "Stratégie de contenu"
+          "Structure on-page",
+          "Performance et vitesse",
+          "SEO technique de base",
+          "Suivi et analytics"
         ]
       },
       "branding": {
-        "title": "Image Professionnelle",
-        "description": "Logo, cartes de visite et identité visuelle qui vous démarquent de la concurrence.",
-        "price": "Devis personnalisé",
+        "title": "Direction visuelle",
+        "description": "Une présence digitale gagne en force quand interface, ton et structure avancent ensemble.",
+        "meta": "Tonalité & cohérence",
         "details": [
-          "Création de logo",
-          "Charte graphique complète",
-          "Cartes de visite",
-          "Supports imprimés",
-          "Déclinaisons véhicule"
+          "Hiérarchie visuelle",
+          "Choix typographiques",
+          "Direction d'interface",
+          "Présentation plus nette"
         ]
       },
       "automation": {
-        "title": "Réponses Automatiques",
-        "description": "Ne perdez plus de clients. Répondez automatiquement même quand vous êtes sur chantier.",
-        "price": "Inclus",
+        "title": "Outils métier & automatisations",
+        "description": "Quand un projet dépasse le site, je peux aussi concevoir des workflows, dashboards et outils internes adaptés au besoin réel.",
+        "meta": "Sur mesure",
         "details": [
-          "Accusé réception auto",
-          "Rappel de devis",
-          "Suivi client automatisé",
-          "Intégration WhatsApp",
-          "Notifications SMS"
+          "Automatisations métier",
+          "Dashboards et suivis internes",
+          "Portails ou espaces clients",
+          "Interfaces adaptées au contexte"
         ]
       }
     },
@@ -166,277 +161,126 @@
       "featuresTitle": "Fonctionnalités Incluses",
       "featuresDescription": "Tout ce dont vous avez besoin pour un site performant.",
       "creation": {
-        "heroTitle": "Site Web Professionnel Complet - 400€ Tout Compris",
-        "heroDescription": "Un site web performant avec design sur mesure, logo, typographie professionnelle, optimisation SEO complète et intégration Google Business Profile. Tout ce dont vous avez besoin pour dominer votre marché local.",
-        "longDescription": "Pour seulement 400€, obtenez bien plus qu'un simple site web. Je crée votre présence digitale complète : site web moderne et rapide, création de logo professionnel si nécessaire, sélection typographique harmonieuse, optimisation SEO poussée avec mots-clés locaux, intégration Google Maps, amélioration de votre Google Business Profile, et bien plus encore.\n\nChaque élément est pensé pour maximiser votre visibilité locale et transformer vos visiteurs en clients. De la conception graphique à l'optimisation technique, je m'occupe de TOUT pour que vous puissiez vous concentrer sur votre métier pendant que votre site travaille pour vous 24h/24.\n\nQue vous soyez artisan, commerçant, restaurant, professionnel libéral ou entreprise de services, ce package complet vous positionne au-dessus de vos concurrents sur Google et Google Maps dans votre zone géographique.",
-        "benefits": [
+        "heroTitle": "Des sites web clairs, crédibles et bien exécutés",
+        "heroDescription": "Landing pages, sites vitrines et sites business pensés pour présenter une activité avec plus de clarté, de confiance et de tenue visuelle.",
+        "longDescription": "Un bon site web ne sert pas seulement à 'être présent en ligne'. Il doit aider à comprendre rapidement votre activité, donner confiance et soutenir une vraie perception de sérieux.\n\nMon approche consiste à travailler la structure, le rythme, la hiérarchie et les détails d'exécution pour obtenir une présence plus nette, plus crédible et plus durable.",
+        "includes": [
           {
-            "title": "Design Professionnel Complet",
-            "description": "Interface moderne et responsive avec identité visuelle complète : logo personnalisé, palette de couleurs cohérente, et typographie soigneusement sélectionnée pour refléter votre professionnalisme."
+            "title": "Structure de pages",
+            "description": "Landing page, site vitrine ou site business avec une architecture claire et facile à faire évoluer."
           },
           {
-            "title": "Visibilité Locale Maximale",
-            "description": "Optimisation SEO complète avec mots-clés locaux, structuration des données Schema.org, intégration Google Maps et amélioration de votre Google Business Profile pour apparaître en tête des résultats."
+            "title": "Design responsive",
+            "description": "Une interface pensée dès le départ pour rester lisible, cohérente et agréable sur mobile comme sur desktop."
           },
           {
-            "title": "Présence Rassurante",
-            "description": "Vos avis clients Google affichés de manière attractive, informations de contact claires, présentation professionnelle de vos services et tarifs pour inspirer confiance immédiatement."
+            "title": "Parcours de contact",
+            "description": "Des appels à l'action, formulaires et points d'entrée placés avec plus d'intention, sans surcharger le site."
           },
           {
-            "title": "Performance Technique",
-            "description": "Site ultra-rapide optimisé pour mobile et desktop, certificat SSL sécurisé, conformité avec les standards web modernes pour un référencement optimal."
-          },
-          {
-            "title": "Système Avancé Disponible",
-            "description": "Possibilité d'ajouter un système d'authentification client et/ou un système de réservation en ligne selon vos besoins spécifiques."
-          },
-          {
-            "title": "Google Business Optimisé",
-            "description": "Je m'occupe d'améliorer et d'optimiser votre fiche Google Business Profile : photos professionnelles, catégories pertinentes, horaires à jour, et lien direct vers votre site."
+            "title": "Base technique propre",
+            "description": "Une implémentation front-end sérieuse, performante et suffisamment saine pour évoluer ensuite sans repartir de zéro."
           }
         ],
-        "features": [
+        "approach": [
           {
-            "title": "Site Web Responsive Complet",
-            "description": "Design moderne adapté à tous les écrans (mobile, tablette, desktop) avec navigation intuitive et expérience utilisateur optimale."
+            "title": "Clarté avant démonstration",
+            "description": "Je privilégie des pages compréhensibles, bien hiérarchisées et crédibles avant d'ajouter des effets ou de la complexité."
           },
           {
-            "title": "Création de Logo Professionnel",
-            "description": "Si vous n'avez pas de logo, je crée une identité visuelle unique qui représente parfaitement votre activité et vous démarque de la concurrence."
+            "title": "Un design qui soutient le fond",
+            "description": "Le visuel sert la perception de qualité, mais aussi la lisibilité de l'offre et la confiance globale."
           },
           {
-            "title": "Typographie et Charte Graphique",
-            "description": "Sélection de polices professionnelles, définition de la palette de couleurs et création d'une cohérence visuelle sur l'ensemble du site."
-          },
-          {
-            "title": "SEO Local Complet",
-            "description": "Recherche et intégration de mots-clés locaux pertinents, optimisation des balises title et meta, balisage Schema.org LocalBusiness, sitemap XML et soumission à Google Search Console."
-          },
-          {
-            "title": "Intégration Google Maps",
-            "description": "Carte interactive avec votre localisation précise, itinéraire facile pour vos clients, et affichage de votre zone de service."
-          },
-          {
-            "title": "Google Business Profile Optimisé",
-            "description": "Vérification et optimisation complète de votre fiche : catégories principales et secondaires, description optimisée SEO, ajout d'attributs pertinents, gestion des photos, et lien vers votre nouveau site."
-          },
-          {
-            "title": "Affichage des Avis Google",
-            "description": "Widget d'avis clients synchronisé avec votre compte Google Business pour afficher vos meilleures évaluations et renforcer votre crédibilité."
-          },
-          {
-            "title": "Pages Essentielles",
-            "description": "Page d'accueil percutante, page Services détaillée avec vos prestations et tarifs, page À Propos pour humaniser votre entreprise, page Contact avec formulaire fonctionnel."
-          },
-          {
-            "title": "Formulaire de Contact Optimisé",
-            "description": "Formulaire sécurisé avec validation, notifications par email instantanées, et intégration possible avec votre CRM ou WhatsApp Business."
-          },
-          {
-            "title": "Section FAQ Optimisée SEO",
-            "description": "Page de questions-réponses structurée pour améliorer votre référencement et répondre aux interrogations de vos prospects avant même qu'ils vous contactent."
-          },
-          {
-            "title": "Informations Pratiques Visibles",
-            "description": "Horaires d'ouverture, numéro de téléphone cliquable (appel direct depuis mobile), email, adresse, liens réseaux sociaux clairement affichés."
-          },
-          {
-            "title": "Système d'Authentification (Option)",
-            "description": "Espace client sécurisé avec connexion/inscription, gestion de profil, pour vos services nécessitant un accès privé."
-          },
-          {
-            "title": "Système de Réservation (Option)",
-            "description": "Calendrier de réservation en ligne intégré, gestion des disponibilités, confirmations automatiques par email pour restaurants, salons, consultants, etc."
-          },
-          {
-            "title": "Optimisation de la Vitesse",
-            "description": "Images compressées et optimisées, code minifié, mise en cache intelligente pour des temps de chargement ultra-rapides (score Google PageSpeed >90)."
-          },
-          {
-            "title": "Certificat SSL & Sécurité",
-            "description": "HTTPS sécurisé inclus pour protéger les données de vos visiteurs et améliorer votre référencement Google."
-          },
-          {
-            "title": "Compatible Tous Navigateurs",
-            "description": "Fonctionne parfaitement sur Chrome, Firefox, Safari, Edge et tous les navigateurs modernes."
-          },
-          {
-            "title": "Formation & Documentation",
-            "description": "Guide complet pour gérer votre contenu, tutoriel vidéo si nécessaire, et support WhatsApp disponible après livraison."
-          },
-          {
-            "title": "Analytics & Suivi",
-            "description": "Installation de Google Analytics 4 pour suivre vos visiteurs, sources de trafic et conversions."
-          },
-          {
-            "title": "Propriété Complète",
-            "description": "Vous êtes propriétaire à 100% de votre site, votre nom de domaine et tous vos contenus. Aucun abonnement forcé."
+            "title": "Une base qui peut grandir",
+            "description": "Même un site simple doit pouvoir évoluer proprement vers plus de contenu, plus de pages ou des outils complémentaires."
           }
         ],
-        "faq": [
-          {
-            "question": "Qu'est-ce qui est exactement inclus dans les 400€ ?",
-            "answer": "TOUT ce qui est listé ci-dessus : site web complet responsive, création de logo (si besoin), sélection typographique, optimisation SEO locale complète, intégration Google Maps, optimisation Google Business Profile, affichage avis clients, formulaire de contact, hébergement première année, nom de domaine première année, certificat SSL, et formation. Les systèmes d'authentification et de réservation sont disponibles en option avec supplément selon la complexité."
-          },
-          {
-            "question": "Combien de pages sont incluses pour 400€ ?",
-            "answer": "Le package standard inclut 5 pages essentielles : Accueil, Services/Prestations, À Propos, Contact, et FAQ. Si vous avez besoin de pages supplémentaires, nous pouvons les ajouter avec un supplément raisonnable (généralement 50-80€ par page additionnelle)."
-          },
-          {
-            "question": "Je n'ai pas de logo, c'est vraiment inclus ?",
-            "answer": "Oui ! Si vous n'avez pas encore de logo, je crée une identité visuelle professionnelle adaptée à votre secteur d'activité. Vous recevrez 2-3 propositions de design et nous affinerons ensemble jusqu'à votre satisfaction complète."
-          },
-          {
-            "question": "Comment fonctionne l'optimisation SEO ?",
-            "answer": "Je fais une recherche approfondie de mots-clés pour votre secteur et votre zone géographique (ville, région). J'optimise ensuite chaque page avec ces mots-clés : titres, descriptions, balises, contenu structuré. J'ajoute aussi le balisage Schema.org pour LocalBusiness, je crée un sitemap XML, et je soumets votre site à Google Search Console. Résultat : vous apparaissez dans les recherches locales pertinentes."
-          },
-          {
-            "question": "Dans quelle zone géographique puis-je être visible ?",
-            "answer": "Votre visibilité dépend de votre zone de service. Je peux optimiser pour une ville spécifique (ex: 'plombier Paris 15'), plusieurs villes (ex: 'restaurant Lyon Villeurbanne'), ou une région entière (ex: 'paysagiste Île-de-France'). Plus votre zone est ciblée, meilleur sera votre positionnement."
-          },
-          {
-            "question": "Comment améliorez-vous mon Google Business Profile ?",
-            "answer": "J'optimise votre fiche existante ou je la crée si nécessaire : je choisis les bonnes catégories (principale + secondaires), je rédige une description optimisée avec mots-clés, j'ajoute tous les attributs pertinents à votre activité, je structure vos services avec prix si applicable, j'ajoute des photos de qualité, et je lie votre site web. Tout cela améliore votre visibilité sur Google Maps et dans le Knowledge Panel."
-          },
-          {
-            "question": "Mes avis Google seront-ils vraiment affichés sur mon site ?",
-            "answer": "Oui, j'intègre un widget qui affiche vos avis Google en temps réel sur votre page d'accueil. Cela renforce immédiatement la confiance des visiteurs et améliore votre taux de conversion. C'est comme avoir votre preuve sociale directement sur votre site."
-          },
-          {
-            "question": "Le système de réservation en ligne, c'est quoi ?",
-            "answer": "Si votre activité nécessite des rendez-vous (restaurant, salon de coiffure, médecin, coach, etc.), je peux intégrer un calendrier de réservation en ligne. Vos clients choisissent leur créneau, reçoivent une confirmation automatique par email, et vous gérez vos disponibilités depuis une interface simple. C'est une option supplémentaire car ça demande plus de développement."
-          },
-          {
-            "question": "Le système d'authentification, c'est pour quoi faire ?",
-            "answer": "Si vous proposez des services qui nécessitent un espace client privé (formations, abonnements, documents privés, suivi personnalisé), je peux créer un système d'inscription/connexion sécurisé. Vos clients créent un compte, se connectent, et accèdent à leurs contenus personnels. C'est aussi une option avec supplément."
-          },
-          {
-            "question": "Combien de temps pour recevoir mon site ?",
-            "answer": "Comptez 7 à 14 jours ouvrés selon la complexité et la disponibilité de vos contenus (textes, photos). Si vous me fournissez tout rapidement, je peux livrer en 7 jours. Si on doit créer un logo et optimiser beaucoup de contenu, ça peut prendre 14 jours."
-          },
-          {
-            "question": "Que dois-je fournir pour commencer ?",
-            "answer": "Très simple : informations de base (nom, adresse, téléphone, email, horaires), description de vos services/produits, textes pour présenter votre entreprise, photos de qualité si vous en avez (sinon je peux vous aider à trouver ou créer des visuels), et votre logo si vous en avez un. Je vous guide pas à pas avec un questionnaire détaillé."
-          },
-          {
-            "question": "Et après la livraison, vous m'abandonnez ?",
-            "answer": "Jamais ! Vous avez 30 jours de support gratuit après la livraison pour toute question ou petit ajustement. Ensuite, je reste disponible sur WhatsApp pour des modifications ponctuelles (généralement 30-50€/heure pour des changements mineurs). Vous pouvez aussi souscrire à un forfait maintenance mensuel (à partir de 49€/mois) pour des mises à jour régulières."
-          },
-          {
-            "question": "Je possède vraiment mon site à 100% ?",
-            "answer": "Absolument. Vous êtes propriétaire de votre nom de domaine, de votre hébergement, et de tous les fichiers de votre site. Je vous remets tous les accès et vous êtes libre de partir chez un autre prestataire à tout moment. Pas de piège, pas d'abonnement forcé. C'est VOTRE site."
-          },
-          {
-            "question": "Pourquoi 400€ alors que d'autres proposent moins cher ?",
-            "answer": "Parce que j'inclus TOUT : design sur mesure (pas de template générique), logo si nécessaire, vraie optimisation SEO (pas juste installer un plugin), intégration et optimisation Google Business Profile, formation personnalisée, et code propre et rapide. D'autres proposent moins cher mais avec des templates basiques, sans SEO réel, et sans support. Vous payez pour un résultat qui génère des clients, pas juste un site joli."
-          },
-          {
-            "question": "Puis-je voir des exemples de sites réalisés ?",
-            "answer": "Oui bien sûr ! Consultez mon portfolio sur la page d'accueil ou contactez-moi directement sur WhatsApp pour voir des projets similaires à votre activité. Je serai ravi de vous montrer des réalisations concrètes."
-          },
-          {
-            "question": "Que se passe-t-il si je veux des fonctionnalités supplémentaires ?",
-            "answer": "Pas de problème ! Le package à 400€ est une base solide. Si vous voulez ajouter des fonctionnalités comme le système de réservation, l'authentification, une boutique e-commerce, ou un blog avec CMS, nous pouvons créer un devis personnalisé. Je suis flexible et m'adapte à vos besoins et budget."
-          },
-          {
-            "question": "Comment se passe le paiement ?",
-            "answer": "Simple et sécurisé : 200€ d'acompte au démarrage du projet pour bloquer ma disponibilité et commencer le travail, puis 200€ à la livraison finale une fois que vous êtes satisfait. Paiement par virement bancaire ou PayPal selon votre préférence."
-          },
-          {
-            "question": "Je ne suis pas en France, vous travaillez à l'international ?",
-            "answer": "Oui, je travaille avec des clients dans toute la francophonie (France, Belgique, Suisse, Canada, Afrique francophone, etc.). L'optimisation SEO locale s'adapte à votre pays et votre langue. Les principes restent les mêmes partout."
-          }
+        "fitGood": [
+          "vous avez une activité réelle mais une présence en ligne encore trop faible ou trop générique",
+          "vous avez besoin d'un site plus crédible pour présenter vos services ou votre entreprise",
+          "vous voulez une interface plus propre et plus sérieuse sans passer par une grosse agence",
+          "vous cherchez une base solide avant d'ajouter plus tard du e-commerce, du SEO ou des outils métier"
+        ],
+        "fitNot": [
+          "vous avez seulement besoin d'une page temporaire sans enjeu réel de qualité ou de perception",
+          "vous cherchez un site ultra complexe de type plateforme produit dès la première version",
+          "le besoin principal n'est pas le site lui-même mais déjà un outil interne très spécifique"
         ],
         "seo": {
-          "title": "Création Site Web 400€ Tout Compris | Logo, SEO & Google Business",
-          "description": "Site web professionnel complet pour 400€ : design moderne, création logo, optimisation SEO locale, Google Maps, Google Business Profile amélioré. Artisans, commerces, services. Devis gratuit.",
+          "title": "Création de site web | Kalissea",
+          "description": "Sites vitrines, landing pages et sites business conçus avec clarté, soin visuel et exécution front-end propre.",
           "keywords": [
-            "création site web 400 euros",
-            "site internet pas cher complet",
-            "site web avec logo inclus",
-            "optimisation google business profile",
-            "site web artisan",
-            "site internet commerce local",
-            "création site vitrine professionnel",
-            "site web optimisé seo local",
-            "site responsive avec réservation",
-            "agence web prix transparent"
+            "création site web",
+            "site vitrine",
+            "landing page",
+            "studio digital",
+            "web design"
           ]
         },
-        "ctaTitle": "Prêt à Dominer Votre Marché Local ?",
-        "ctaDescription": "Pour 400€, obtenez tout ce qu'il faut pour être trouvé, inspirer confiance et convertir vos visiteurs en clients. Contactez-moi sur WhatsApp pour démarrer dès aujourd'hui."
+        "ctaTitle": "Besoin d'un site plus solide ?",
+        "ctaDescription": "Je peux vous aider à concevoir une présence plus claire, plus crédible et plus agréable à faire évoluer."
       },
       "ecommerce": {
-        "heroTitle": "Vendez plus, partout, tout le temps",
-        "heroDescription": "Lancez votre boutique en ligne avec une technologie robuste et une expérience d'achat fluide qui fidélise vos clients.",
-        "longDescription": "Le commerce en ligne est une course de vitesse et de confiance. Une boutique e-commerce performante doit rassurer instantanément l'acheteur, charger vite et simplifier le processus de paiement à l'extrême.\n\nNous développons des solutions e-commerce complètes qui gèrent non seulement la vente, mais aussi toute la logistique digitale : gestion des stocks, expéditions, taxes automatisées et notifications clients. Que vous ayez 10 ou 10 000 produits, nos architectures scalables grandissent avec votre chiffre d'affaires, sans compromis sur la sécurité ou la vitesse.",
-        "benefits": [
+        "heroTitle": "Des boutiques simples, fiables et agréables à parcourir",
+        "heroDescription": "Pour les petites marques et commerces qui ont besoin d'une boutique plus claire, plus rassurante et plus facile à faire acheter.",
+        "longDescription": "Une boutique en ligne n'a pas besoin d'être gigantesque pour être efficace. Elle doit surtout rendre le catalogue lisible, le parcours d'achat fluide, et l'ensemble suffisamment crédible pour donner envie de commander.\n\nJe travaille surtout sur des e-commerces à taille raisonnable, avec une attention particulière à la clarté, à la confiance et à l'expérience mobile.",
+        "includes": [
           {
-            "title": "Gestion Simplifiée",
-            "description": "Une interface intuitive pour gérer vos produits, stocks et commandes sans stress."
+            "title": "Catalogue & collections",
+            "description": "Organisation des catégories, pages produit et collections pour rendre l'offre plus lisible."
           },
           {
-            "title": "Paiements Sécurisés",
-            "description": "Intégration de Stripe, PayPal et autres solutions pour des transactions en toute confiance."
+            "title": "Parcours d'achat",
+            "description": "Un chemin plus fluide entre découverte, fiche produit, panier et validation de commande."
           },
           {
-            "title": "Optimisé pour Mobile",
-            "description": "Plus de 60% des achats se font sur mobile. Votre boutique sera prête."
+            "title": "Mobile commerce",
+            "description": "Une boutique pensée pour rester simple à parcourir et rassurante à utiliser sur téléphone."
+          },
+          {
+            "title": "Base exploitable",
+            "description": "Une structure qui peut accueillir de nouveaux produits, de nouvelles pages et des ajustements sans se dégrader."
           }
         ],
-        "features": [
+        "approach": [
           {
-            "title": "Catalogue Produits",
-            "description": "Gestion illimitée de produits, variantes et catégories."
+            "title": "Simplicité utile",
+            "description": "Je cherche à retirer les frictions inutiles plutôt qu'à multiplier les artifices ou les modules."
           },
           {
-            "title": "Panier & Checkout",
-            "description": "Processus de commande optimisé pour réduire les abandons."
+            "title": "Confiance avant tout",
+            "description": "Le design, la structure et le ton doivent donner une impression de sérieux au moment où l'achat se décide."
           },
           {
-            "title": "Paiements Multiples",
-            "description": "Cartes bancaires, Apple Pay, Google Pay, PayPal."
-          },
-          {
-            "title": "Espace Client",
-            "description": "Comptes clients avec historique de commandes et suivi."
-          },
-          {
-            "title": "Codes Promo",
-            "description": "Moteur de réductions et cartes cadeaux."
-          },
-          {
-            "title": "Emails Transactionnels",
-            "description": "Confirmations de commande et d'expédition automatiques."
+            "title": "Vision petite structure",
+            "description": "Je pense ces boutiques pour des besoins réels de petites équipes, pas pour simuler un gros système e-commerce inutilement lourd."
           }
         ],
-        "faq": [
-          {
-            "question": "Quels moyens de paiement puis-je accepter ?",
-            "answer": "Nous intégrons principalement Stripe et PayPal qui permettent d'accepter Visa, Mastercard, AMEX, Apple Pay et Google Pay."
-          },
-          {
-            "question": "Y a-t-il une limite de produits ?",
-            "answer": "Non, nos solutions techniques peuvent gérer des milliers de références sans ralentissement."
-          },
-          {
-            "question": "Comment se passe la gestion des stocks ?",
-            "answer": "Le stock est décrémenté automatiquement à chaque vente. Vous pouvez définir des alertes de stock bas."
-          }
+        "fitGood": [
+          "vous vendez peu à moyennement de références et vous voulez une boutique plus nette",
+          "vous avez besoin de mieux présenter vos produits sans alourdir l'expérience",
+          "vous voulez une boutique crédible, claire et simple à maintenir",
+          "votre priorité est une meilleure qualité d'expérience avant des fonctionnalités très avancées"
+        ],
+        "fitNot": [
+          "vous avez besoin d'un énorme catalogue avec logique marketplace ou ERP complexe",
+          "vous cherchez une plateforme e-commerce enterprise dès le départ",
+          "le vrai besoin principal se situe plutôt côté acquisition ou branding, pas encore côté vente en ligne"
         ],
         "seo": {
-          "title": "Création Boutique E-Commerce | Agence E-commerce Kalissea",
-          "description": "Lancez votre boutique en ligne avec une agence experte. Paiements sécurisés, gestion de stock et design vendeur. Devis gratuit.",
+          "title": "Création boutique e-commerce | Kalissea",
+          "description": "Boutiques en ligne pensées pour des petites structures avec une expérience d'achat plus claire, plus fluide et plus crédible.",
           "keywords": [
-            "création site e-commerce",
-            "boutique en ligne",
-            "agence e-commerce",
-            "vendre en ligne",
-            "site marchand"
+            "création boutique en ligne",
+            "e-commerce",
+            "site marchand",
+            "petite boutique",
+            "web design e-commerce"
           ]
         },
-        "ctaTitle": "Lancez votre boutique dès aujourd'hui",
-        "ctaDescription": "Ne laissez pas vos concurrents prendre l'avance. Créez votre empire e-commerce maintenant."
+        "ctaTitle": "Vous voulez une boutique plus crédible ?",
+        "ctaDescription": "Je peux vous aider à concevoir une expérience d'achat plus simple, plus rassurante et plus cohérente avec votre activité."
       },
       "maintenance": {
         "heroTitle": "Votre tranquillité d'esprit, notre priorité",
@@ -511,222 +355,195 @@
         "ctaDescription": "Choisissez le plan de maintenance qui vous convient et dormez sur vos deux oreilles."
       },
       "seo": {
-        "heroTitle": "Dominez les résultats de recherche",
-        "heroDescription": "Ne soyez pas seulement présent en ligne, soyez visible par ceux qui vous cherchent. Une stratégie SEO basée sur les résultats.",
-        "longDescription": "Le plus beau site du monde ne sert à rien si personne ne le trouve. Le SEO (Search Engine Optimization) n'est pas de la magie, c'est une science de précision qui aligne votre contenu avec les intentions de recherche de vos clients.\n\nNotre approche SEO est holistique : nous travaillons la technique (vitesse, structure), le contenu (sémantique, pertinence) et l'autorité (netlinking). Nous ne visons pas seulement la première position, nous visons la position qui génère du chiffre d'affaires qualifié.",
-        "benefits": [
+        "heroTitle": "Des fondations SEO et techniques plus propres",
+        "heroDescription": "Pour les projets qui ont besoin d'être mieux structurés, plus rapides et plus faciles à comprendre, autant pour les utilisateurs que pour les moteurs de recherche.",
+        "longDescription": "Je n'aborde pas le SEO comme une promesse magique ou une course aux hacks. Le plus utile, surtout pour de petites structures, consiste souvent à remettre de l'ordre dans les fondations: structure des pages, lisibilité, balisage, vitesse, et contenu mieux organisé.\n\nC'est un travail de clarification et d'optimisation plus qu'un discours de performance spectaculaire.",
+        "includes": [
           {
-            "title": "Audit Complet",
-            "description": "Analyse technique approfondie pour identifier tous les leviers de croissance."
+            "title": "Structure on-page",
+            "description": "Titres, sections, hiérarchie de contenu et organisation des pages pour mieux guider lecture et compréhension."
           },
           {
-            "title": "Contenu Stratégique",
-            "description": "Rédaction d'articles optimisés pour attirer et engager votre audience cible."
+            "title": "Performance de base",
+            "description": "Améliorations utiles sur le poids des pages, les médias et l'expérience globale de chargement."
           },
           {
-            "title": "Backlinks de Qualité",
-            "description": "Renforcez l'autorité de votre domaine avec des liens provenant de sites de confiance."
+            "title": "Balisage & métadonnées",
+            "description": "Mise en place ou nettoyage de ce qui aide un site à être mieux compris et mieux présenté."
+          },
+          {
+            "title": "Mesure & suivi",
+            "description": "Analytics, suivi d'usage ou points de contrôle simples pour savoir ce qui s'améliore réellement."
           }
         ],
-        "features": [
+        "approach": [
           {
-            "title": "Recherche Mots-clés",
-            "description": "Identification des termes à fort potentiel transactionnel."
+            "title": "Le SEO comme extension de la clarté",
+            "description": "Je pars d'abord de la structure et de la compréhension du contenu avant de parler croissance ou positionnement."
           },
           {
-            "title": "Optimisation On-Page",
-            "description": "Titres, métas, balisage Hn et maillage interne."
+            "title": "Des optimisations réalistes",
+            "description": "Je privilégie ce qui a du sens pour le niveau du projet et pour les ressources de la structure."
           },
           {
-            "title": "SEO Technique",
-            "description": "Core Web Vitals, indexation et crawl budget."
-          },
-          {
-            "title": "Content Marketing",
-            "description": "Création de contenus riches qui positionnent votre expertise."
-          },
-          {
-            "title": "Netlinking",
-            "description": "Campagnes d'acquisition de liens thématiques."
-          },
-          {
-            "title": "Tracking & Reporting",
-            "description": "Suivi des positions et du trafic organique."
+            "title": "Pas de promesse artificielle",
+            "description": "L'objectif est de construire des bases plus propres, plus lisibles et plus durables, pas de surpromettre des résultats instantanés."
           }
         ],
-        "faq": [
-          {
-            "question": "Combien de temps avant de voir des résultats ?",
-            "answer": "Le SEO est un travail de fond. Les premiers résultats apparaissent généralement entre 3 et 6 mois, mais sont durables."
-          },
-          {
-            "question": "Garantissez-vous la 1ère position ?",
-            "answer": "Aucune agence sérieuse ne peut garantir la 1ère position car l'algorithme de Google est secret. Nous garantissons une augmentation du trafic qualifié."
-          },
-          {
-            "question": "Quelle est la différence entre SEO et Google Ads ?",
-            "answer": "Le SEO est organique et gratuit au clic (long terme). Google Ads est payant immédiatement (court terme). Les deux sont complémentaires."
-          }
+        "fitGood": [
+          "le site existe déjà mais reste mal structuré ou peu lisible",
+          "vous avez besoin d'une base SEO sérieuse avant d'aller plus loin",
+          "vous voulez améliorer la vitesse, la structure et la compréhension globale du site",
+          "vous cherchez une optimisation utile et sobre, pas un discours marketing sur la croissance miracle"
+        ],
+        "fitNot": [
+          "vous attendez une prestation de netlinking massif ou une stratégie SEO très industrielle",
+          "vous n'avez pas encore de base de site claire sur laquelle travailler",
+          "votre besoin principal se situe davantage côté branding ou produit que côté optimisation"
         ],
         "seo": {
-          "title": "Agence SEO & Référencement Naturel | Kalissea",
-          "description": "Boostez votre visibilité sur Google. Audit SEO, stratégie de contenu et netlinking pour plus de trafic et de clients.",
+          "title": "SEO & optimisation web | Kalissea",
+          "description": "Fondations SEO, structure de contenu, performance et lisibilité pour des sites plus propres et plus compréhensibles.",
           "keywords": [
-            "agence seo",
-            "consultant seo",
-            "référencement naturel",
-            "audit seo",
-            "première page google"
+            "seo technique",
+            "optimisation site web",
+            "performance web",
+            "structure contenu",
+            "référencement naturel"
           ]
         },
-        "ctaTitle": "Boostez votre trafic organique",
-        "ctaDescription": "Prenez rendez-vous pour une analyse gratuite de votre potentiel SEO."
+        "ctaTitle": "Besoin de fondations plus propres ?",
+        "ctaDescription": "Je peux vous aider à remettre de l'ordre dans la structure, la vitesse et la lisibilité de votre site."
       },
       "branding": {
-        "heroTitle": "Une identité visuelle inoubliable",
-        "heroDescription": "Plus qu'un logo, nous créons un univers qui raconte votre histoire et résonne avec vos clients idéaux.",
-        "longDescription": "Votre marque est ce que les gens disent de vous quand vous n'êtes pas dans la pièce. C'est un capital immatériel précieux qui inspire la confiance et justifie vos prix.\n\nNous construisons des identités de marque cohérentes qui traversent le temps. De la psychologie des couleurs au choix typographique, chaque décision créative est ancrée dans votre stratégie d'entreprise. Nous ne faisons pas du 'joli', nous créons du 'juste'.",
-        "benefits": [
+        "heroTitle": "Une direction visuelle plus juste, plus cohérente, plus tenue",
+        "heroDescription": "Quand l'interface, le ton et la structure parlent le même langage, la perception du projet change immédiatement.",
+        "longDescription": "Je ne traite pas la direction visuelle comme une couche décorative posée à la fin. Elle sert à cadrer une ambiance, à clarifier la hiérarchie, et à donner au projet une perception plus forte et plus cohérente.\n\nC'est souvent ce qui fait passer un site de 'fonctionnel' à 'vraiment crédible'.",
+        "includes": [
           {
-            "title": "Stratégie de Marque",
-            "description": "Définition de vos valeurs, de votre ton et de votre positionnement unique."
+            "title": "Hiérarchie visuelle",
+            "description": "Travail sur les contrastes, le rythme, la lisibilité et la mise en avant de ce qui compte vraiment."
           },
           {
-            "title": "Identité Visuelle",
-            "description": "Palette de couleurs, typographies et éléments graphiques cohérents."
+            "title": "Choix typographiques",
+            "description": "Sélection et usage des polices pour renforcer la personnalité et la tenue globale du projet."
           },
           {
-            "title": "Charte Graphique",
-            "description": "Un document complet pour assurer la cohérence de votre marque sur tous les supports."
+            "title": "Direction d'interface",
+            "description": "Couleurs, densité, détails et langage visuel cohérents à l'échelle de tout le site."
+          },
+          {
+            "title": "Alignement marque / produit",
+            "description": "Une présentation plus cohérente entre ce que fait le projet et la manière dont il apparaît à l'écran."
           }
         ],
-        "features": [
+        "approach": [
           {
-            "title": "Logo Design",
-            "description": "Création de logotype, isotype et déclinaisons."
+            "title": "Moins de décor, plus de tenue",
+            "description": "Je cherche une direction visuelle qui donne du caractère sans tomber dans le bruit ou l'effet gratuit."
           },
           {
-            "title": "Palette Couleurs",
-            "description": "Sélection de couleurs primaires et secondaires harmonieuses."
+            "title": "Le design comme structure",
+            "description": "Le visuel doit aider à comprendre, à sentir une intention, et à mieux percevoir la qualité du projet."
           },
           {
-            "title": "Typographie",
-            "description": "Choix de polices lisibles et caractéristiques."
-          },
-          {
-            "title": "Iconographie",
-            "description": "Set d'icônes personnalisé pour votre communication."
-          },
-          {
-            "title": "Brand Book",
-            "description": "Guide d'utilisation complet de votre marque."
-          },
-          {
-            "title": "Supports Print",
-            "description": "Cartes de visite, papier à en-tête, plaquettes."
+            "title": "Une cohérence sur la durée",
+            "description": "L'objectif n'est pas un effet ponctuel, mais une présence digitale qui reste juste et crédible dans le temps."
           }
         ],
-        "faq": [
-          {
-            "question": "Combien de propositions de logo faites-vous ?",
-            "answer": "Nous présentons généralement 3 directions créatives distinctes avant d'affiner celle que vous préférez."
-          },
-          {
-            "question": "Que contient la charte graphique ?",
-            "answer": "Elle contient les règles d'utilisation du logo, les codes couleurs (CMJN, RVB, Web), les polices et des exemples de mise en page."
-          },
-          {
-            "question": "Cédez-vous les droits d'auteur ?",
-            "answer": "Oui, une fois la prestation réglée, vous possédez les pleins droits d'exploitation sur votre identité visuelle."
-          }
+        "fitGood": [
+          "le projet fonctionne mais manque encore de personnalité ou de tenue",
+          "vous sentez un décalage entre votre niveau réel et l'image renvoyée en ligne",
+          "vous voulez une interface plus soignée sans partir dans un rebranding complet",
+          "vous cherchez plus de cohérence entre contenu, produit et perception visuelle"
+        ],
+        "fitNot": [
+          "vous cherchez uniquement un logo isolé sans travail sur l'interface ou la structure",
+          "la priorité du projet est purement technique ou opérationnelle à très court terme",
+          "le besoin principal concerne un outil interne sans enjeu particulier de perception visuelle"
         ],
         "seo": {
-          "title": "Agence de Branding & Identité Visuelle | Kalissea",
-          "description": "Création de logos et chartes graphiques. Donnez à votre entreprise une image de marque forte et mémorable.",
+          "title": "Direction visuelle & identité d'interface | Kalissea",
+          "description": "Direction visuelle, hiérarchie, typographie et cohérence d'interface pour une présence digitale plus juste et plus crédible.",
           "keywords": [
-            "branding",
-            "création logo",
-            "identité visuelle",
-            "charte graphique",
-            "design graphique"
+            "direction visuelle",
+            "identité interface",
+            "web design",
+            "hiérarchie visuelle",
+            "branding digital"
           ]
         },
-        "ctaTitle": "Donnez vie à votre marque",
-        "ctaDescription": "Créons ensemble une image de marque qui vous ressemble et qui captive."
+        "ctaTitle": "Le projet manque encore de tenue ?",
+        "ctaDescription": "Je peux vous aider à construire une direction visuelle plus cohérente, plus nette et plus crédible."
       },
       "automation": {
-        "heroTitle": "L'IA au service de votre croissance",
-        "heroDescription": "Automatisez vos tâches répétitives et intégrez l'intelligence artificielle pour gagner en efficacité et scaler sans limites.",
-        "longDescription": "L'automatisation n'est pas réservée aux géants de la tech. Aujourd'hui, chaque entreprise peut décupler sa productivité en déléguant les tâches chronophages à des algorithmes intelligents.\n\nNous connectons vos outils existants (CRM, Email, Site Web, Gestion de projet) pour créer des flux de travail fluides. Imaginez : un prospect remplit un formulaire, il est automatiquement ajouté à votre CRM, reçoit un email personnalisé, et une tâche est créée pour votre commercial. Zéro clic, zéro erreur, 100% d'efficacité.",
-        "benefits": [
+        "heroTitle": "Des outils métier et automatisations pensés pour le besoin réel",
+        "heroDescription": "Quand un projet dépasse le simple site web, je peux aussi concevoir des workflows, dashboards, portails ou interfaces internes plus adaptées au quotidien.",
+        "longDescription": "Toutes les entreprises n'ont pas besoin d'un vrai CRM complet ou d'une grosse application interne. En revanche, beaucoup gagnent à avoir des outils plus simples, mieux ajustés, et construits autour d'un vrai besoin métier.\n\nC'est là que je me place: entre le site web classique et l'outil plus spécifique, avec une approche sobre, utile et progressive.",
+        "includes": [
           {
-            "title": "Workflows Intelligents",
-            "description": "Connectez vos outils et automatisez vos processus métiers complexes."
+            "title": "Workflows & automatisations",
+            "description": "Automatisations métier simples pour retirer des tâches répétitives ou améliorer un passage important du parcours."
           },
           {
-            "title": "Chatbots IA",
-            "description": "Répondez à vos clients 24/7 avec des assistants intelligents et personnalisés."
+            "title": "Dashboards & suivi",
+            "description": "Interfaces de suivi, vues synthétiques ou petits outils de pilotage adaptés à votre façon de travailler."
           },
           {
-            "title": "Gain de Temps",
-            "description": "Libérez-vous des tâches à faible valeur ajoutée pour vous concentrer sur l'essentiel."
+            "title": "Portails & espaces dédiés",
+            "description": "Espaces clients, accès réservés, interfaces internes ou outils intermédiaires entre site et back-office."
+          },
+          {
+            "title": "Logique sur mesure",
+            "description": "Une structure pensée autour du besoin concret, plutôt qu'autour d'un produit générique trop large."
           }
         ],
-        "features": [
+        "approach": [
           {
-            "title": "Zapier / Make",
-            "description": "Création de scénarios d'automatisation complexes."
+            "title": "Partir du besoin avant la techno",
+            "description": "Je préfère identifier le vrai problème métier à résoudre plutôt que plaquer un mot-clé comme CRM ou IA trop tôt."
           },
           {
-            "title": "Chatbots GPT",
-            "description": "Agents conversationnels entraînés sur vos données."
+            "title": "Construire petit mais juste",
+            "description": "La bonne solution est souvent plus légère que ce qu'on imagine, à condition qu'elle soit bien pensée."
           },
           {
-            "title": "CRM Automation",
-            "description": "Nettoyage et enrichissement automatique de vos contacts."
-          },
-          {
-            "title": "Génération Contenu",
-            "description": "Outils IA pour rédiger emails et posts sociaux."
-          },
-          {
-            "title": "Scraping de Données",
-            "description": "Extraction automatique de données web."
-          },
-          {
-            "title": "Dashboarding",
-            "description": "Tableaux de bord automatisés pour vos KPIs."
+            "title": "Laisser la porte ouverte",
+            "description": "Même un outil simple doit pouvoir être étendu ensuite si l'usage se confirme et que le besoin grandit."
           }
         ],
-        "faq": [
-          {
-            "question": "L'IA va-t-elle remplacer mes employés ?",
-            "answer": "Non, elle va les augmenter. L'IA les débarrasse des tâches rébarbatives pour qu'ils se concentrent sur la relation client et la stratégie."
-          },
-          {
-            "question": "Est-ce sécurisé ?",
-            "answer": "Oui, nous utilisons des outils reconnus (Make, Zapier, OpenAI) avec des standards de sécurité élevés (SOC2, GDPR)."
-          },
-          {
-            "question": "Combien ça coûte ?",
-            "answer": "L'automatisation a un ROI très rapide. Nous facturons au projet ou à la maintenance des flux, souvent rentabilisé en quelques mois."
-          }
+        "fitGood": [
+          "vous avez besoin d'un outil simple pour mieux suivre, centraliser ou fluidifier certaines opérations",
+          "vous sentez qu'un simple site web ne suffit plus à votre fonctionnement quotidien",
+          "vous voulez un dashboard, un portail, une réservation ou une logique métier plus adaptée",
+          "vous cherchez quelque chose de plus sur mesure qu'un SaaS générique, sans construire une grosse plateforme"
+        ],
+        "fitNot": [
+          "vous avez besoin dès maintenant d'un produit logiciel très large avec équipe dédiée",
+          "le besoin réel n'est pas encore assez clair pour savoir ce qu'il faut construire",
+          "un outil existant du marché répond déjà très bien au problème sans besoin de personnalisation"
         ],
         "seo": {
-          "title": "Agence Automatisation IA & No-Code | Kalissea",
-          "description": "Automatisez votre business avec l'IA et le No-Code. Chatbots, CRM, Workflows. Gagnez du temps et de l'argent.",
+          "title": "Outils métier & automatisations | Kalissea",
+          "description": "Workflows, dashboards, portails et outils internes sur mesure pour des besoins métier concrets.",
           "keywords": [
-            "automatisation business",
-            "agence ia",
-            "no-code",
-            "make",
-            "zapier",
-            "chatbot entreprise"
+            "automatisation métier",
+            "outil sur mesure",
+            "dashboard",
+            "portail client",
+            "workflow digital"
           ]
         },
-        "ctaTitle": "Automatisez votre succès",
-        "ctaDescription": "Découvrez comment l'IA peut transformer radicalement votre productivité."
-      }
+        "ctaTitle": "Besoin de quelque chose de plus spécifique ?",
+        "ctaDescription": "Je peux vous aider à cadrer puis concevoir un outil plus adapté à votre manière de travailler."
+      },
+      "includesTitle": "Ce que cela peut inclure",
+      "approachTitle": "Ma manière de l'aborder",
+      "fitTitle": "Quand c'est pertinent",
+      "fitDescription": "Toutes les entreprises n'ont pas besoin du même niveau d'outil ou de complexité. L'idée est de construire juste ce qu'il faut, au bon moment.",
+      "fitGoodTitle": "Utile quand...",
+      "fitNotTitle": "Souvent inutile quand...",
+      "relatedServicesTitle": "Autres expertises"
     }
   },
   "features": {

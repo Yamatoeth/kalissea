@@ -1,18 +1,13 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import React from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import React from "react";
-import Link from "next/link"; 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 export interface Benefit {
   title: string;
@@ -30,11 +25,6 @@ export interface Feature {
   description: string;
 }
 
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
-
 export interface RelatedService {
   key: string;
   title: string;
@@ -42,34 +32,29 @@ export interface RelatedService {
 }
 
 export interface ServiceDetailTemplateProps {
-  // Content Props
-  title: string; 
+  title: string;
   heroTitle: string;
   heroDescription: string;
-  benefitsTitle: string;
-  benefits: Benefit[];
-  resultsTitle: string;
-  results: Result[];
-  ctaTitle: string;
-  ctaDescription: string;
-  
-  // New SEO sections
   longDescription?: string;
-  featuresTitle?: string;
-  featuresDescription?: string;
-  features?: Feature[];
-  faqTitle?: string;
-  faq?: FAQItem[];
-  
-  // Related services for internal linking
+  includesTitle: string;
+  includes: Feature[];
+  approachTitle: string;
+  approach: Benefit[];
+  fitTitle: string;
+  fitDescription: string;
+  fitGoodTitle: string;
+  fitGood: string[];
+  fitNotTitle: string;
+  fitNot: string[];
   relatedServicesTitle?: string;
   relatedServices?: RelatedService[];
-
-  // UI Labels
+  results?: Result[];
+  ctaTitle: string;
+  ctaDescription: string;
   backLabel: string;
   startProjectLabel: string;
-
-  children?: React.ReactNode;
+  viewWorkLabel: string;
+  learnMoreLabel: string;
 }
 
 const ServiceDetailTemplate = ({
@@ -77,204 +62,192 @@ const ServiceDetailTemplate = ({
   heroTitle,
   heroDescription,
   longDescription,
-  benefitsTitle,
-  benefits,
-  featuresTitle,
-  featuresDescription,
-  features,
-  resultsTitle,
-  results,
-  faqTitle,
-  faq,
+  includesTitle,
+  includes,
+  approachTitle,
+  approach,
+  fitTitle,
+  fitDescription,
+  fitGoodTitle,
+  fitGood,
+  fitNotTitle,
+  fitNot,
   relatedServicesTitle,
   relatedServices,
+  results = [],
   ctaTitle,
   ctaDescription,
   backLabel,
   startProjectLabel,
-  children
+  viewWorkLabel,
+  learnMoreLabel,
 }: ServiceDetailTemplateProps) => {
+  const leadVisual = results[0];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-24 pb-20 relative">
-        {/* Sticky Back Button */}
-        <Link
-          href="/#services"
-          className="fixed top-20 left-4 md:top-24 md:left-6 z-40 flex items-center gap-1 md:gap-2 text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm font-medium group px-2 md:px-3 py-1 md:py-1.5 bg-background/60 backdrop-blur-md rounded-full border border-border/40 shadow-sm"
-        >
-          <div className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors bg-background">
-            <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
-          </div>
-          <span className="pr-1 md:pr-2">{backLabel}</span>
-        </Link>
 
-
-        {/* Hero Section */}
-        <section className="px-6 mb-20 text-center">
-          <div className="container mx-auto max-w-4xl">
-            <div className="section-label justify-center mb-6">
-              {title}
-            </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              {heroTitle}
-            </h1>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              {heroDescription}
-            </p>
-            <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
-              <Link href="/#contact" className="justify-center">
-                {startProjectLabel}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </section>
-
-        {/* Long Description Section - SEO Content */}
-        {longDescription && (
-          <section className="px-6 py-20 bg-muted/20">
-            <div className="container mx-auto max-w-4xl prose prose-invert">
-              <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-wrap">
-                {longDescription}
-              </p>
-            </div>
-          </section>
-        )}
-
-        {/* Benefits Section */}
-        <section className="px-6 py-20 bg-muted/30">
+      <main className="relative pb-24 pt-24">
+        <section className="px-6 pb-24 pt-10 md:pb-28">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-              {benefitsTitle}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, i) => (
-                <div key={i} className="flex gap-4 p-6 bg-card border border-border rounded-xl card-hover">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {benefit.description}
-                    </p>
-                  </div>
+            <Link
+              href="/#services"
+              className="mb-12 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/60 px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>{backLabel}</span>
+            </Link>
+
+            <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
+              <div>
+                <div className="section-label mb-6">{title}</div>
+                <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-foreground text-balance md:text-5xl lg:text-6xl">
+                  {heroTitle}
+                </h1>
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {heroDescription}
+                </p>
+
+                <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
+                    <Link href="/#contact" className="justify-center">
+                      {startProjectLabel}
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button variant="hero-outline" size="lg" asChild className="w-full sm:w-auto">
+                    <Link href="/#portfolio" className="justify-center">
+                      {viewWorkLabel}
+                    </Link>
+                  </Button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
 
-        {/* Results Showcase Section */}
-        <section className="px-6 py-20">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-              {resultsTitle}
-            </h2>
-            <div className={`grid gap-8 ${results.length === 1 ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 md:grid-cols-2'}`}>
-              {results.map((result, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-lg border border-border bg-card">
-                  {result.type === "image" ? (
-                    <div className="relative w-full aspect-video">
+              {leadVisual && (
+                <div className="overflow-hidden rounded-[2rem] border border-white/8 bg-card/60 shadow-[0_28px_70px_rgba(0,0,0,0.28)]">
+                  {leadVisual.type === "image" ? (
+                    <div className="relative aspect-[4/3]">
                       <Image
-                        src={result.url}
-                        alt={result.caption}
+                        src={leadVisual.url}
+                        alt={leadVisual.caption}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 45vw"
                       />
+                      <div className="absolute inset-0 bg-linear-to-t from-background/85 via-background/15 to-transparent" />
                     </div>
                   ) : (
                     <video
-                      src={result.url}
+                      src={leadVisual.url}
                       autoPlay
                       muted
                       loop
                       playsInline
-                      className="w-full aspect-video object-cover"
+                      className="aspect-[4/3] w-full object-cover"
                     />
                   )}
-                  <div className="absolute inset-0 bg-linear-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-foreground font-medium">{result.caption}</p>
-                  </div>
+                  <div className="border-t border-white/8 px-6 py-4 text-sm text-muted-foreground">{leadVisual.caption}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-card/35 px-6 py-24">
+          <div className="container mx-auto max-w-5xl">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
+              <div>
+                {longDescription && (
+                  <p className="text-base leading-relaxed text-muted-foreground whitespace-pre-wrap">{longDescription}</p>
+                )}
+              </div>
+
+              <div className="rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-7">
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/80">{approachTitle}</p>
+                <div className="mt-5 space-y-5">
+                  {approach.map((item) => (
+                    <div key={item.title}>
+                      <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24">
+          <div className="container mx-auto max-w-6xl">
+            <div className="mb-12 max-w-3xl">
+              <h2 className="text-2xl font-semibold text-foreground md:text-3xl">{includesTitle}</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {includes.map((feature) => (
+                <div key={feature.title} className="rounded-[1.5rem] border border-white/8 bg-card p-7">
+                  <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Features Grid Section */}
-        {features && features.length > 0 && (
-          <section className="px-6 py-20 bg-muted/30">
-            <div className="container mx-auto max-w-6xl">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  {featuresTitle || "Fonctionnalités"}
-                </h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  {featuresDescription}
-                </p>
+        <section className="bg-card/35 px-6 py-24">
+          <div className="container mx-auto max-w-6xl">
+            <div className="mb-12 max-w-3xl">
+              <h2 className="text-2xl font-semibold text-foreground md:text-3xl">{fitTitle}</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">{fitDescription}</p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-2">
+              <div className="rounded-[1.75rem] border border-white/8 bg-card p-7">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/85">{fitGoodTitle}</h3>
+                <ul className="mt-5 space-y-3">
+                  {fitGood.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/88">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-             
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {features.map((feature, i) => (
-                  <div key={i} className="p-6 bg-card border border-border rounded-xl">
-                    <h3 className="font-semibold text-lg text-foreground mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
+
+              <div className="rounded-[1.75rem] border border-white/8 bg-card p-7">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/85">{fitNotTitle}</h3>
+                <ul className="mt-5 space-y-3">
+                  {fitNot.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/88">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/55" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* FAQ Section */}
-        {faq && faq.length > 0 && (
-          <section className="px-6 py-20 bg-background" aria-label="Questions fréquemment posées">
-            <div className="container mx-auto max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-                {faqTitle || "FAQ"}
-              </h2>
-              <Accordion type="single" collapsible className="w-full">
-                {faq.map((item, i) => (
-                  <AccordionItem key={i} value={`item-${i}`}>
-                    <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent>
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </section>
-        )}
-
-        {children}
-
-        {/* Related Services Section for Internal Linking */}
         {relatedServices && relatedServices.length > 0 && (
-          <section className="px-6 py-20 bg-muted/30">
+          <section className="px-6 py-24">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-                {relatedServicesTitle || "Nos autres services"}
+              <h2 className="text-center text-2xl font-semibold text-foreground md:text-3xl">
+                {relatedServicesTitle}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
                 {relatedServices.map((service) => (
                   <Link
                     key={service.key}
                     href={service.path}
-                    className="p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-colors group"
+                    className="group rounded-[1.5rem] border border-white/8 bg-card p-7 transition-colors hover:border-primary/35"
                   >
-                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
                       {service.title}
                     </h3>
-                    <span className="text-sm text-primary mt-2 inline-flex items-center gap-1">
-                      En savoir plus <ArrowRight className="w-4 h-4" />
+                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                      {learnMoreLabel}
+                      <ArrowRight className="h-4 w-4" />
                     </span>
                   </Link>
                 ))}
@@ -283,24 +256,22 @@ const ServiceDetailTemplate = ({
           </section>
         )}
 
-        {/* CTA Section */}
-        <section className="px-6 py-20 text-center">
-          <div className="container mx-auto max-w-4xl p-6 md:p-12 bg-primary/10 rounded-xl border border-primary/20">
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-6">
-              {ctaTitle}
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-10">
+        <section className="px-6 py-24">
+          <div className="container mx-auto max-w-4xl rounded-[2rem] border border-primary/15 bg-primary/8 p-8 text-center md:p-12">
+            <h2 className="text-2xl font-semibold text-foreground md:text-4xl">{ctaTitle}</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               {ctaDescription}
             </p>
-            <Button variant="hero" size="lg" asChild className="w-full sm:w-auto">
+            <Button variant="hero" size="lg" asChild className="mt-8 w-full sm:w-auto">
               <Link href="/#contact" className="justify-center">
                 {startProjectLabel}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
   );

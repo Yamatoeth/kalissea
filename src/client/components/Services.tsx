@@ -13,7 +13,7 @@ const Services = () => {
     { key: "creation", icon: Globe, path: "/services/website-creation" },
     { key: "ecommerce", icon: ShoppingBag, path: "/services/e-commerce" },
     { key: "seo", icon: Search, path: "/services/seo-growth" },
-    { key: "automation", icon: Bot, path: "/services/automation-ai" },
+    { key: "automation", icon: Bot, path: "/services/custom-tools" },
     { key: "branding", icon: LayoutTemplate, path: "/services/branding" },
   ];
 

@@ -6,10 +6,9 @@ import path from 'path';
 const SLUG_TO_KEY: Record<string, string> = {
   'website-creation': 'creation',
   'e-commerce': 'ecommerce',
-  'maintenance': 'maintenance',
   'seo-growth': 'seo',
   'branding': 'branding',
-  'automation-ai': 'automation',
+  'custom-tools': 'automation',
 };
 
 const KEY_TO_SLUG: Record<string, string> = Object.entries(SLUG_TO_KEY).reduce((acc, [slug, key]) => {
@@ -17,7 +16,7 @@ const KEY_TO_SLUG: Record<string, string> = Object.entries(SLUG_TO_KEY).reduce((
   return acc;
 }, {} as Record<string, string>);
 
-export type ServiceKey = 'creation' | 'ecommerce' | 'maintenance' | 'seo' | 'branding' | 'automation';
+export type ServiceKey = 'creation' | 'ecommerce' | 'seo' | 'branding' | 'automation';
 
 export interface Benefit {
   title: string;
@@ -49,12 +48,11 @@ export interface ServiceData {
   heroDescription: string;// From services.details.[key].heroDescription
   ctaTitle: string;       // From services.details.[key].ctaTitle
   ctaDescription: string; // From services.details.[key].ctaDescription
-  benefits: Benefit[];    // From services.details.[key].benefits
-  
-  // New SEO Content
+  approach: Benefit[];     // From services.details.[key].approach
   longDescription: string; // From services.details.[key].longDescription
-  features: Feature[];     // From services.details.[key].features
-  faq: FAQItem[];          // From services.details.[key].faq
+  includes: Feature[];     // From services.details.[key].includes
+  fitGood: string[];       // From services.details.[key].fitGood
+  fitNot: string[];        // From services.details.[key].fitNot
   seo: ServiceSEO;         // From services.details.[key].seo
 }
 
@@ -85,10 +83,11 @@ export async function getServiceData(slug: string, locale: string = 'fr'): Promi
     heroDescription: detail.heroDescription,
     ctaTitle: detail.ctaTitle,
     ctaDescription: detail.ctaDescription,
-    benefits: detail.benefits || [],
+    approach: detail.approach || [],
     longDescription: detail.longDescription || "",
-    features: detail.features || [],
-    faq: detail.faq || [],
+    includes: detail.includes || [],
+    fitGood: detail.fitGood || [],
+    fitNot: detail.fitNot || [],
     seo: detail.seo || { title: item.title, description: item.description, keywords: [] },
   };
 }

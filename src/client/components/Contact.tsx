@@ -83,21 +83,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-card/50 px-6 py-24">
+    <section id="contact" className="bg-card/40 px-6 py-28 md:py-32">
       <div className="container mx-auto max-w-6xl">
-        <div className="mb-12 text-center">
-          <div className="section-label mb-4 justify-center">{t("contact.label")}</div>
-          <h2 className="mb-4 text-2xl font-bold text-foreground text-balance md:text-4xl">{t("contact.title")}</h2>
-          <p className="mx-auto max-w-2xl text-sm text-muted-foreground text-balance md:text-base">
+        <div className="mb-14 text-center">
+          <div className="section-label mb-5 justify-center">{t("contact.label")}</div>
+          <h2 className="mb-5 text-3xl font-semibold text-foreground text-balance md:text-4xl">{t("contact.title")}</h2>
+          <p className="mx-auto max-w-2xl text-sm text-balance text-muted-foreground md:text-base">
             {t("contact.description")}
           </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.85fr)]">
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm md:p-8">
-            <div className="mb-8">
+          <div className="rounded-[1.9rem] border border-border bg-card p-6 shadow-sm md:p-8">
+            <div className="mb-9">
               <h3 className="text-xl font-semibold text-foreground">{t("contact.form.title")}</h3>
-              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t("contact.form.description")}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t("contact.form.description")}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -222,8 +222,8 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-muted-foreground">{t("contact.form.note")}</p>
+              <div className="flex flex-col gap-3 border-t border-border pt-7 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm leading-relaxed text-muted-foreground">{t("contact.form.note")}</p>
                 <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
@@ -242,12 +242,12 @@ const Contact = () => {
           </div>
 
           <aside className="flex flex-col gap-6">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <CheckCircle2 className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-semibold text-foreground">{t("contact.sidebar.title")}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t("contact.sidebar.description")}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("contact.sidebar.description")}</p>
 
               <ul className="mt-6 space-y-3">
                 {checklist.map((item) => (
@@ -259,9 +259,9 @@ const Contact = () => {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-foreground">{t("contact.alternatives.title")}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t("contact.alternatives.description")}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("contact.alternatives.description")}</p>
 
               <div className="mt-6 space-y-3">
                 <a

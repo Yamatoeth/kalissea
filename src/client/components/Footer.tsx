@@ -11,7 +11,7 @@ const Footer = () => {
     { key: "ecommerce", path: "/services/e-commerce" },
     { key: "seo", path: "/services/seo-growth" },
     { key: "branding", path: "/services/branding" },
-    { key: "automation", path: "/services/automation-ai" },
+    { key: "automation", path: "/services/custom-tools" },
   ];
   
   return (

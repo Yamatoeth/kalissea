@@ -46,7 +46,7 @@ const RESULTS_MAP: Record<
       caption: "Une identité qui vous ressemble",
     },
   ],
-  "automation-ai": [
+  "custom-tools": [
     {
       type: "image",
       url: "/images/results/automation-ai.avif",
@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    keywords: [...keywords, "agence web", "Kalissea"],
+    keywords: [...keywords, "studio digital", "Kalissea"],
     alternates: {
       canonical: serviceUrl,
       languages: {
@@ -139,10 +139,9 @@ export default async function ServicePage({ params }: Props) {
   const allServices = [
     { key: "creation", path: "/services/website-creation" },
     { key: "ecommerce", path: "/services/e-commerce" },
-    { key: "maintenance", path: "/services/maintenance" },
     { key: "seo", path: "/services/seo-growth" },
     { key: "branding", path: "/services/branding" },
-    { key: "automation", path: "/services/automation-ai" },
+    { key: "automation", path: "/services/custom-tools" },
   ];
 
   const relatedServices = allServices
@@ -163,6 +162,9 @@ export default async function ServicePage({ params }: Props) {
   }
 
   const baseUrl = "https://kalissea.com";
+  const backLabel = locale === "fr" ? "Retour aux expertises" : "Back to capabilities";
+  const startProjectLabel =
+    locale === "fr" ? "Discuter du projet" : "Discuss the project";
 
   return (
     <>
@@ -198,25 +200,6 @@ export default async function ServicePage({ params }: Props) {
         }}
       />
 
-      {serviceData.faq && serviceData.faq.length > 0 && (
-        <Script
-          id={`faq-${slug}`}
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: serviceData.faq.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: { "@type": "Answer", text: item.answer },
-              })),
-            }),
-          }}
-        />
-      )}
-
       <Script
         id={`service-${slug}`}
         type="application/ld+json"
@@ -249,24 +232,28 @@ export default async function ServicePage({ params }: Props) {
         heroTitle={serviceData.heroTitle}
         heroDescription={serviceData.heroDescription}
         longDescription={serviceData.longDescription}
-        benefitsTitle={dict.services.details.benefitsTitle}
-        benefits={serviceData.benefits}
-        featuresTitle={dict.services.details.featuresTitle}
-        featuresDescription={dict.services.details.featuresDescription}
-        features={serviceData.features}
-        resultsTitle={dict.services.details.resultsTitle}
+        includesTitle={dict.services.details.includesTitle}
+        includes={serviceData.includes}
+        approachTitle={dict.services.details.approachTitle}
+        approach={serviceData.approach}
+        fitTitle={dict.services.details.fitTitle}
+        fitDescription={dict.services.details.fitDescription}
+        fitGoodTitle={dict.services.details.fitGoodTitle}
+        fitGood={serviceData.fitGood}
+        fitNotTitle={dict.services.details.fitNotTitle}
+        fitNot={serviceData.fitNot}
         results={results}
-        faqTitle={dict.services.details.faqTitle}
-        faq={serviceData.faq}
         relatedServicesTitle={
           dict.services.details.relatedServicesTitle ||
-          "Découvrez nos autres services"
+          (locale === "fr" ? "Autres expertises" : "Related capabilities")
         }
         relatedServices={relatedServices}
         ctaTitle={serviceData.ctaTitle}
         ctaDescription={serviceData.ctaDescription}
-        backLabel={dict.header.capabilities}
-        startProjectLabel={dict.hero.startProject}
+        backLabel={backLabel}
+        startProjectLabel={startProjectLabel}
+        viewWorkLabel={locale === "fr" ? "Voir les réalisations" : "View selected work"}
+        learnMoreLabel={locale === "fr" ? "En savoir plus" : "Learn more"}
       />
     </>
   );

@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import teclis from "../assets/teclis.avif";
-import terrathread from "../assets/terrathread.avif";
-import glc from "../assets/glc.avif";
-import villa88 from "../assets/villa88.avif";
-import alplomberie from "../assets/alplomberie.avif";
-import upArena from "../assets/project-wf.avif";
+import teclis from "../assets/teclis.webp";
+import terrathread from "../assets/terrathread.webp";
+import glc from "../assets/glc.webp";
+import villa88 from "../assets/villa88.webp";
+import alplomberie from "../assets/alplomberie.webp";
+import upArena from "../assets/project-wf.webp";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
@@ -72,7 +72,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 px-6 relative overflow-hidden">
+    <section id="portfolio" className="relative overflow-hidden px-6 py-28 md:py-32">
       {/* Background accent */}
       <motion.div
         className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"
@@ -87,9 +87,9 @@ const Portfolio = () => {
         }}
       />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container relative z-10 mx-auto max-w-6xl">
         <motion.div
-          className="section-label mb-4"
+          className="section-label mb-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -99,7 +99,7 @@ const Portfolio = () => {
         </motion.div>
 
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-foreground mb-12"
+          className="mb-6 max-w-4xl text-3xl font-semibold text-foreground md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -109,7 +109,7 @@ const Portfolio = () => {
         </motion.h2>
 
         <motion.p
-          className="max-w-3xl text-base md:text-lg text-muted-foreground mb-12 text-balance"
+          className="mb-14 max-w-3xl text-base text-balance text-muted-foreground md:text-lg"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -119,7 +119,7 @@ const Portfolio = () => {
         </motion.p>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
@@ -132,7 +132,7 @@ const Portfolio = () => {
               direction={index % 2 === 0 ? "up" : "down"}
             >
               <motion.div
-                className="group bg-card border border-border rounded-xl overflow-hidden card-hover relative"
+                className="group relative overflow-hidden rounded-[1.4rem] border border-border bg-card card-hover"
                 variants={fadeInUpChildVariants}
                 whileHover={{
                   y: -12,
@@ -182,7 +182,7 @@ const Portfolio = () => {
 
               {/* Content layer with depth stagger */}
               <motion.div
-                className="p-5 relative z-20"
+                className="relative z-20 p-6"
                 initial={{ y: 10, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{
@@ -192,19 +192,19 @@ const Portfolio = () => {
                 viewport={whileInViewConfig}
               >
                 <motion.h3
-                  className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors"
+                  className="mb-1 text-lg font-semibold text-foreground transition-colors group-hover:text-primary"
                   whileHover={{ x: 4 }}
                 >
                   {t(`portfolio.projects.${project.key}.title`)}
                 </motion.h3>
-                <motion.p className="text-sm text-primary mb-3">
+                <motion.p className="mb-4 text-sm text-primary">
                   {t(`portfolio.projects.${project.key}.category`)}
                 </motion.p>
-                <motion.p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                <motion.p className="mb-5 text-sm leading-relaxed text-foreground/80">
                   {t(`portfolio.projects.${project.key}.summary`)}
                 </motion.p>
 
-                <div className="space-y-3 mb-5">
+                <div className="mb-6 space-y-4">
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-1">
                       {t("portfolio.labels.challenge")}
@@ -247,18 +247,18 @@ const Portfolio = () => {
         </motion.div>
 
         <motion.div
-          className="mt-20"
+          className="mt-24 border-t border-white/8 pt-16 md:mt-28 md:pt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={whileInViewConfig}
         >
-          <div className="mb-8">
-            <p className="section-label mb-4">{t("portfolio.featured.label")}</p>
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <div className="mb-10">
+            <p className="section-label mb-5">{t("portfolio.featured.label")}</p>
+            <h3 className="mb-4 max-w-3xl text-2xl font-semibold text-foreground md:text-3xl">
               {t("portfolio.featured.title")}
             </h3>
-            <p className="max-w-3xl text-muted-foreground text-balance">
+            <p className="max-w-3xl text-balance text-muted-foreground">
               {t("portfolio.featured.description")}
             </p>
           </div>
@@ -267,7 +267,7 @@ const Portfolio = () => {
             {featuredCaseStudies.map((project, index) => (
               <motion.article
                 key={project.key}
-                className="overflow-hidden rounded-2xl border border-border bg-card"
+                className="overflow-hidden rounded-[1.75rem] border border-border bg-card"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.08 }}
@@ -285,17 +285,17 @@ const Portfolio = () => {
                 </div>
 
                 <div className="p-6 md:p-8">
-                  <p className="text-sm text-primary mb-2">
+                  <p className="mb-3 text-sm text-primary">
                     {t(`portfolio.projects.${project.key}.category`)}
                   </p>
                   <h4 className="text-2xl font-semibold text-foreground">
                     {t(`portfolio.projects.${project.key}.title`)}
                   </h4>
-                  <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
                     {t(`portfolio.projects.${project.key}.summary`)}
                   </p>
 
-                  <div className="mt-8 space-y-6">
+                  <div className="mt-9 space-y-7">
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
                         {t("portfolio.featured.labels.context")}
