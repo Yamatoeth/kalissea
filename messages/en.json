@@ -791,17 +791,27 @@
   "about": {
     "label": "About",
     "title": "A studio mindset, with hands-on execution",
+    "lead": "I design websites and digital tools that need to build trust quickly, work smoothly, and stay clear over time without becoming heavy or confusing.",
     "quote": "Designing something credible, clear, and well executed is often more valuable than adding feature after feature.",
     "paragraphs": {
       "first": "Kalissea is my independent digital studio. I work with small businesses, local brands, and solopreneurs who need more than a template and less than a bloated agency process.",
-      "second": "I care about clarity, visual quality, performance, and usefulness. Some projects stay within websites or e-commerce. Others grow into automations, booking flows, dashboards, or more tailored internal tools. The goal stays the same: build something professional, coherent, and genuinely useful."
+      "second": "I care about clarity, visual quality, performance, and usefulness. Some projects stay within websites or e-commerce. Others grow into automations, booking flows, dashboards, or more tailored internal tools. The goal stays the same: build something professional, coherent, and genuinely useful.",
+      "third": "What I try to bring, beyond execution, is judgment. Knowing when to simplify, when to refine a detail, when to structure a page more carefully, and when a project needs a proper tool rather than another visual layer."
     },
     "panelTitle": "Where I tend to bring the most value",
+    "signatureTitle": "What people tend to notice when we work together",
+    "signatureText": "Real care for the final result, but also for the decisions that make it feel credible: hierarchy, rhythm, coherence, front-end precision, and a good understanding of what the interface actually needs to achieve.",
+    "workingStyleTitle": "How I tend to work",
     "highlights": [
       "A strong bridge between design and development",
       "Interfaces that feel clean, readable, and carefully executed",
       "Real attention to structure, performance, and detail",
       "The ability to extend from a website into more tailored tools when a project needs it"
+    ],
+    "workingStyle": [
+      "I prefer a clear collaboration style, with less noise and better-justified decisions.",
+      "I look for solutions that match the actual need, not extra layers of unnecessary complexity.",
+      "I treat presentation and implementation as one whole, so the final result feels coherent all the way through."
     ]
   },
   "portfolio": {

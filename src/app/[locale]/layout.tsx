@@ -39,14 +39,6 @@ export default async function LocaleLayout({ children, params }: Props) {
       lang={locale}
       className={`${dmSans.variable} ${spaceGrotesk.variable}`}
     >
-      <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      </head>
       <body>
         {/* Organization structured data */}
         <Script
@@ -80,11 +72,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="+ru5y+rFf5tU3296F8N/OQ"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://trustviews.io/script.js"
-          data-token="187a8715-d78c-4c85-bef5-f5ab5c0461e1"
           strategy="afterInteractive"
         />
         <NextIntlClientProvider messages={messages}>

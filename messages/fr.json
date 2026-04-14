@@ -791,17 +791,27 @@
   "about": {
     "label": "À propos",
     "title": "Une approche studio, avec exécution directe",
+    "lead": "Je conçois des sites et des outils digitaux qui doivent inspirer confiance rapidement, bien fonctionner, et tenir dans le temps sans devenir lourds ni confus.",
     "quote": "Concevoir quelque chose de crédible, clair et bien exécuté compte souvent plus que d'ajouter toujours plus de fonctionnalités.",
     "paragraphs": {
       "first": "Kalissea est mon studio digital indépendant. Je travaille avec des petites entreprises, des marques locales et des indépendants qui ont besoin de plus qu'un template, et de moins qu'un processus d'agence trop lourd.",
-      "second": "Je privilégie la clarté, la qualité visuelle, la performance et l'utilité. Certains projets restent des sites vitrines ou e-commerce. D'autres évoluent vers des automatisations, des réservations, des dashboards ou des outils internes plus spécifiques. L'objectif reste le même : construire quelque chose de professionnel, cohérent et réellement utile."
+      "second": "Je privilégie la clarté, la qualité visuelle, la performance et l'utilité. Certains projets restent des sites vitrines ou e-commerce. D'autres évoluent vers des automatisations, des réservations, des dashboards ou des outils internes plus spécifiques. L'objectif reste le même : construire quelque chose de professionnel, cohérent et réellement utile.",
+      "third": "Ce que j'essaie d'apporter, au-delà de l'exécution, c'est une forme de discernement. Savoir quand simplifier, quand pousser un détail, quand structurer davantage, et quand un projet a besoin d'un vrai outil plutôt que d'une couche visuelle en plus."
     },
     "panelTitle": "Là où j'apporte le plus de valeur",
+    "signatureTitle": "Ce que l'on perçoit en travaillant avec moi",
+    "signatureText": "Une attention réelle au rendu final, mais aussi aux décisions qui le rendent crédible: hiérarchie, rythme, cohérence, précision front-end, et compréhension du besoin derrière l'interface.",
+    "workingStyleTitle": "Ma manière de travailler",
     "highlights": [
       "Un lien naturel entre design et développement",
       "Des interfaces propres, lisibles et bien exécutées",
       "Une attention réelle à la structure, à la performance et aux détails",
       "La capacité à aller du site vitrine à des outils plus sur mesure si le projet l'exige"
+    ],
+    "workingStyle": [
+      "Je préfère une collaboration claire, avec peu de bruit et des décisions justifiées.",
+      "Je cherche des solutions proportionnées au besoin réel, pas des couches de complexité inutiles.",
+      "Je traite autant la présentation que l'implémentation, pour que le résultat soit cohérent jusqu'au bout."
     ]
   },
   "portfolio": {

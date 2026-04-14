@@ -11,7 +11,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "metadata" });
   const title = t("title");
   const description = t("description");
-  const socialImage = "https://kalissea.com/kalissealogo.png";
   const canonicalUrl =
     locale === "fr" ? "https://kalissea.com/" : "https://kalissea.com/en/";
 
@@ -33,21 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Kalissea",
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      images: [
-        {
-          url: socialImage,
-          width: 1024,
-          height: 1024,
-          alt: title,
-          type: "image/png",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [socialImage],
     },
   };
 }

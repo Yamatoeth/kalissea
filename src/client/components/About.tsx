@@ -8,6 +8,7 @@ import { fadeInUpChildVariants, staggerContainerVariants, whileInViewConfig } fr
 const About = () => {
   const t = useTranslations();
   const highlights = t.raw("about.highlights") as string[];
+  const workingStyle = t.raw("about.workingStyle") as string[];
 
   return (
     <section id="about" className="bg-card/40 px-6 py-24">
@@ -24,10 +25,14 @@ const About = () => {
             <h2 className="max-w-3xl text-3xl font-semibold text-foreground text-balance md:text-4xl">
               {t("about.title")}
             </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-foreground/88 md:text-xl">
+              {t("about.lead")}
+            </p>
 
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>{t("about.paragraphs.first")}</p>
               <p>{t("about.paragraphs.second")}</p>
+              <p>{t("about.paragraphs.third")}</p>
             </div>
           </motion.div>
 
@@ -36,9 +41,20 @@ const About = () => {
             variants={fadeInUpChildVariants}
           >
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/35 to-transparent" />
-            <p className="font-serif text-2xl leading-tight text-foreground md:text-3xl">
-              {t("about.quote")}
-            </p>
+            <div className="space-y-8">
+              <p className="font-serif text-2xl leading-tight text-foreground md:text-3xl">
+                {t("about.quote")}
+              </p>
+
+              <div className="rounded-3xl border border-white/8 bg-black/10 p-5">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/85">
+                  {t("about.signatureTitle")}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/82 md:text-base">
+                  {t("about.signatureText")}
+                </p>
+              </div>
+            </div>
 
             <div className="mt-8 border-t border-white/8 pt-6">
               <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/85">
@@ -49,6 +65,20 @@ const About = () => {
                   <li key={highlight} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/88 md:text-base">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-8 border-t border-white/8 pt-6">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/85">
+                {t("about.workingStyleTitle")}
+              </h3>
+              <ul className="mt-5 space-y-4">
+                {workingStyle.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-foreground/72 md:text-base">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/50" />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
