@@ -43,7 +43,7 @@ const Services = () => {
                 <motion.a
                   key={key}
                   href={path}
-                  className={`group flex min-h-[320px] flex-col rounded-[1.5rem] border border-white/8 bg-card/70 p-6 transition-colors duration-200 hover:border-primary/35 hover:bg-card ${
+                  className={`group flex min-h-80 flex-col rounded-3xl border border-white/8 bg-card/70 p-6 transition-colors duration-200 hover:border-primary/35 hover:bg-card ${
                     index === 0 ? "md:col-span-2" : ""
                   }`}
                   variants={fadeInUpChildVariants}

@@ -37,7 +37,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="relative overflow-hidden rounded-[2rem] border border-white/8 bg-white/[0.03] p-6 md:p-8"
+            className="relative overflow-hidden rounded-4xl border border-white/8 bg-white/3 p-6 md:p-8"
             variants={fadeInUpChildVariants}
           >
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/35 to-transparent" />

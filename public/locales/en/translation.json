@@ -17,10 +17,15 @@
     "viewPricing": "How does it work?",
     "stats": {
       "projects": "Tradesmen helped",
+      "sectors": "Sectors explored",
       "satisfaction": "Satisfaction rate",
+      "responsive": "Responsive by default",
       "delivery": "To get visible",
-      "support": "Support available"
-    }
+      "support": "Support available",
+      "systems": "Custom systems possible"
+    },
+    "panelLabel": "At a glance",
+    "panelText": "A quieter, more studio-like approach than a stack of services: less noise, stronger structure, and careful execution from visual direction down to front-end detail."
   },
   "problem": {
     "label": "The problem",
@@ -84,6 +89,8 @@
   "services": {
     "label": "What you get",
     "title": "Your client generation system",
+    "intro": "I propose well-defined capabilities rather than stacking generic offers.",
+    "viewService": "Learn more",
     "flipHint": "Hover to see details",
     "items": {
       "creation": {
@@ -836,5 +843,8 @@
   "metadata": {
     "title": "Kalissea – Web agency specializing in development, SEO and automation",
     "description": "Kalissea is a web agency specializing in high-performance website development, technical SEO and automation. Clear, measurable and lasting solutions."
+  },
+  "about": {
+    "highlights": ""
   }
 }

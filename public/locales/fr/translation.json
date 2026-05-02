@@ -17,10 +17,15 @@
     "viewPricing": "Comment ça marche ?",
     "stats": {
       "projects": "Artisans accompagnés",
+      "sectors": "Secteurs d'activité",
       "satisfaction": "Taux de satisfaction",
+      "responsive": "Responsive par défaut",
       "delivery": "Pour être visible",
-      "support": "Support disponible"
-    }
+      "support": "Support disponible",
+      "systems": "Outils sur mesure possibles"
+    },
+    "panelLabel": "En bref",
+    "panelText": "Une approche plus proche d'un studio que d'un catalogue de prestations: moins de bruit, plus de structure, et une exécution soignée du design jusqu'au front-end."
   },
   "problem": {
     "label": "Le problème",
@@ -84,6 +89,8 @@
   "services": {
     "label": "Ce que vous obtenez",
     "title": "Votre système de génération de clients",
+    "intro": "Je propose des capacités bien définies plutôt qu'empiler des offres génériques.",
+    "viewService": "En savoir plus",
     "flipHint": "Survolez pour voir les détails",
     "items": {
       "creation": {

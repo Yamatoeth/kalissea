@@ -67,7 +67,7 @@ const Hero = ({ t }: { t: (key: string) => string }) => {
           </div>
 
           <motion.aside
-            className="relative overflow-hidden rounded-[1.75rem] border border-white/8 bg-white/[0.03] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-8"
+            className="relative overflow-hidden rounded-[1.75rem] border border-white/8 bg-white/3 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm md:p-8"
             variants={fadeInUpChildVariants}
           >
             <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/35 to-transparent" />
